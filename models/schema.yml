@@ -1,0 +1,318 @@
+version: 2
+seeds:
+- name: transactions
+  description: CSV literal extraido do HTML original, sem limpeza manual.
+  columns:
+  - name: transaction_id
+    description: Valor bruto preservado. Identificador da transacao; payload igual
+      com ID distinto permanece como fato distinto.
+    data_tests:
+    - not_null
+    - unique
+  - name: client_id
+    description: Valor bruto preservado. Identificador natural do cliente.
+    data_tests:
+    - not_null:
+        config: &id001
+          severity: warn
+          tags:
+          - quality_alert
+    - relationships:
+        arguments:
+          to: ref('clients')
+          field: client_id
+  - name: asset_ticker
+    description: Valor bruto preservado. Codigo do ativo em maiusculas.
+    data_tests:
+    - not_null
+  - name: operation
+    description: 'Valor bruto preservado. Tipo da operacao: BUY (compra) ou SELL (venda).'
+    data_tests:
+    - not_null
+    - accepted_values:
+        arguments:
+          values:
+          - BUY
+          - SELL
+  - name: quantity
+    description: Valor bruto preservado. Quantidade positiva negociada, decimal(18,4).
+    data_tests:
+    - not_null
+  - name: unit_price
+    description: Valor bruto preservado. Preco unitario da operacao, decimal(18,4);
+      moeda nao informada na fonte.
+    data_tests:
+    - not_null
+  - name: transaction_date
+    description: Valor bruto preservado. Data da negociacao; controle do incremental,
+      nao timestamp de ingestao.
+    data_tests:
+    - not_null
+- name: clients
+  description: CSV literal extraido do HTML original, sem limpeza manual.
+  columns:
+  - name: client_id
+    description: Valor bruto preservado. Identificador natural do cliente.
+    data_tests:
+    - not_null
+    - unique:
+        config: *id001
+  - name: name
+    description: Valor bruto preservado. Nome original do cliente, sem modificacao
+      na seed.
+    data_tests:
+    - not_null
+  - name: city
+    description: Valor bruto preservado. Cidade cadastral.
+    data_tests:
+    - not_null:
+        config: *id001
+  - name: state
+    description: Valor bruto preservado. UF cadastral em maiusculas.
+    data_tests:
+    - not_null
+  - name: created_at
+    description: Valor bruto preservado. Data de criacao do cadastro.
+    data_tests:
+    - not_null
+models:
+- name: stg_transactions
+  description: Transacoes tipadas; invalidez estrutural e cliente desconhecido filtrados
+    com auditoria em teste singular.
+  columns:
+  - name: transaction_id
+    description: Identificador da transacao; payload igual com ID distinto permanece
+      como fato distinto.
+    data_tests:
+    - not_null
+    - unique
+  - name: client_id
+    description: Identificador natural do cliente.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('stg_clients')
+          field: client_id
+  - name: asset_ticker
+    description: Codigo do ativo em maiusculas.
+    data_tests:
+    - not_null
+  - name: operation
+    description: 'Tipo da operacao: BUY (compra) ou SELL (venda).'
+    data_tests:
+    - not_null
+    - accepted_values:
+        arguments:
+          values:
+          - BUY
+          - SELL
+  - name: quantity
+    description: Quantidade positiva negociada, decimal(18,4).
+    data_tests:
+    - not_null
+  - name: unit_price
+    description: Preco unitario da operacao, decimal(18,4); moeda nao informada na
+      fonte.
+    data_tests:
+    - not_null
+  - name: transaction_date
+    description: Data da negociacao; controle do incremental, nao timestamp de ingestao.
+    data_tests:
+    - not_null
+- name: stg_clients
+  description: Um cadastro por cliente; maior completude, depois ordem lexicografica
+    deterministica.
+  columns:
+  - name: client_id
+    description: Identificador natural do cliente.
+    data_tests:
+    - not_null
+    - unique
+  - name: client_name
+    description: Nome cadastral normalizado, sem espacos nas extremidades.
+    data_tests:
+    - not_null
+  - name: city
+    description: Cidade cadastral.
+    data_tests:
+    - not_null
+  - name: state
+    description: UF cadastral em maiusculas.
+    data_tests:
+    - not_null
+  - name: created_at
+    description: Data de criacao do cadastro.
+    data_tests:
+    - not_null
+- name: int_transactions
+  description: Join com clientes canonicos e calculo dos valores com sinal.
+  columns:
+  - name: transaction_id
+    description: Identificador da transacao; payload igual com ID distinto permanece
+      como fato distinto.
+    data_tests:
+    - not_null
+    - unique
+  - name: client_id
+    description: Identificador natural do cliente.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('stg_clients')
+          field: client_id
+  - name: asset_ticker
+    description: Codigo do ativo em maiusculas.
+    data_tests:
+    - not_null
+  - name: operation
+    description: 'Tipo da operacao: BUY (compra) ou SELL (venda).'
+    data_tests:
+    - not_null
+    - accepted_values:
+        arguments:
+          values:
+          - BUY
+          - SELL
+  - name: quantity
+    description: Quantidade positiva negociada, decimal(18,4).
+    data_tests:
+    - not_null
+  - name: unit_price
+    description: Preco unitario da operacao, decimal(18,4); moeda nao informada na
+      fonte.
+    data_tests:
+    - not_null
+  - name: transaction_date
+    description: Data da negociacao; controle do incremental, nao timestamp de ingestao.
+    data_tests:
+    - not_null
+  - name: transaction_amount
+    description: Quantidade vezes preco unitario, decimal(28,8), antes do sinal.
+    data_tests:
+    - not_null
+  - name: signed_quantity
+    description: Quantidade com sinal positivo para BUY e negativo para SELL.
+    data_tests:
+    - not_null
+  - name: signed_amount
+    description: Valor financeiro com sinal positivo para BUY e negativo para SELL;
+      nao e lucro.
+    data_tests:
+    - not_null
+- name: fact_transactions
+  description: Fato incremental no grao transaction_id; janela de reprocessamento
+    por transaction_date.
+  columns:
+  - name: transaction_id
+    description: Identificador da transacao; payload igual com ID distinto permanece
+      como fato distinto.
+    data_tests:
+    - not_null
+    - unique
+  - name: client_id
+    description: Identificador natural do cliente.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_clients')
+          field: client_id
+  - name: asset_ticker
+    description: Codigo do ativo em maiusculas.
+    data_tests:
+    - not_null
+  - name: operation
+    description: 'Tipo da operacao: BUY (compra) ou SELL (venda).'
+    data_tests:
+    - not_null
+    - accepted_values:
+        arguments:
+          values:
+          - BUY
+          - SELL
+  - name: quantity
+    description: Quantidade positiva negociada, decimal(18,4).
+    data_tests:
+    - not_null
+  - name: unit_price
+    description: Preco unitario da operacao, decimal(18,4); moeda nao informada na
+      fonte.
+    data_tests:
+    - not_null
+  - name: transaction_date
+    description: Data da negociacao; controle do incremental, nao timestamp de ingestao.
+    data_tests:
+    - not_null
+  - name: transaction_amount
+    description: Quantidade vezes preco unitario, decimal(28,8), antes do sinal.
+    data_tests:
+    - not_null
+  - name: signed_quantity
+    description: Quantidade com sinal positivo para BUY e negativo para SELL.
+    data_tests:
+    - not_null
+  - name: signed_amount
+    description: Valor financeiro com sinal positivo para BUY e negativo para SELL;
+      nao e lucro.
+    data_tests:
+    - not_null
+- name: dim_clients
+  description: Dimensao atual de clientes, incluindo clientes sem transacoes; sem
+    historico SCD.
+  columns:
+  - name: client_id
+    description: Identificador natural do cliente.
+    data_tests:
+    - not_null
+    - unique
+  - name: client_name
+    description: Nome cadastral normalizado, sem espacos nas extremidades.
+    data_tests:
+    - not_null
+  - name: city
+    description: Cidade cadastral.
+    data_tests:
+    - not_null
+  - name: state
+    description: UF cadastral em maiusculas.
+    data_tests:
+    - not_null
+  - name: created_at
+    description: Data de criacao do cadastro.
+    data_tests:
+    - not_null
+- name: mart_client_portfolio
+  description: Posicao liquida historica por cliente/ativo; nao inclui saldo inicial
+    ou cotacao atual.
+  columns:
+  - name: client_id
+    description: Identificador natural do cliente.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_clients')
+          field: client_id
+  - name: asset_ticker
+    description: Codigo do ativo em maiusculas.
+    data_tests:
+    - not_null
+  - name: net_quantity
+    description: Soma BUY menos SELL em quantidade, somente no historico fornecido.
+    data_tests:
+    - not_null
+  - name: net_financial_amount
+    description: Soma BUY menos SELL em valor financeiro historico; nao e lucro nem
+      valor de mercado.
+    data_tests:
+    - not_null
+  - name: transaction_count
+    description: Numero de transacoes validas do cliente/ativo.
+    data_tests:
+    - not_null
+  - name: last_transaction_date
+    description: Data mais recente de transacao valida do cliente/ativo.
+    data_tests:
+    - not_null

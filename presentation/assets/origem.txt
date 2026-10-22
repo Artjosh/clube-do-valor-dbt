@@ -1,0 +1,1 @@
+﻿Como transformar arquivos com defeitos em uma carteira confiável? Esta apresentação gerada explica a solução com dbt e DuckDB. Os arquivos originais são preservados nos seeds. O tratamento acontece nos modelos, enquanto testes mantêm os problemas da fonte visíveis para auditoria.

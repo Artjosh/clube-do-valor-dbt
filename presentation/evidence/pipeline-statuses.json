@@ -1,0 +1,10 @@
+{
+  "test": {
+    "pass": 71,
+    "warn": 6
+  },
+  "strict": {
+    "pass": 71,
+    "fail": 6
+  }
+}

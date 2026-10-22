@@ -1,0 +1,287 @@
+{
+  "executed_at": "2026-10-22T20:10:20.291739+00:00",
+  "commands": [
+    {
+      "command": "dbt seed --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 2
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt run --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 6
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt test --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "pass": 71,
+        "warn": 6
+      },
+      "nonpassing": [
+        {
+          "test": "test.clube_do_valor.assert_no_negative_position",
+          "status": "warn",
+          "failures": 6
+        },
+        {
+          "test": "test.clube_do_valor.audit_duplicate_transaction_payload",
+          "status": "warn",
+          "failures": 2
+        },
+        {
+          "test": "test.clube_do_valor.audit_invalid_transactions",
+          "status": "warn",
+          "failures": 2
+        },
+        {
+          "test": "test.clube_do_valor.not_null_clients_city.913dd09c1b",
+          "status": "warn",
+          "failures": 1
+        },
+        {
+          "test": "test.clube_do_valor.not_null_transactions_client_id.d57cf6e0fe",
+          "status": "warn",
+          "failures": 1
+        },
+        {
+          "test": "test.clube_do_valor.unique_clients_client_id.135dfeaa10",
+          "status": "warn",
+          "failures": 2
+        }
+      ]
+    },
+    {
+      "command": "dbt run --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 6
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt --warn-error test --profiles-dir .",
+      "exit_code": 1,
+      "statuses": {
+        "pass": 71,
+        "fail": 6
+      },
+      "nonpassing": [
+        {
+          "test": "test.clube_do_valor.assert_no_negative_position",
+          "status": "fail",
+          "failures": 6
+        },
+        {
+          "test": "test.clube_do_valor.audit_duplicate_transaction_payload",
+          "status": "fail",
+          "failures": 2
+        },
+        {
+          "test": "test.clube_do_valor.audit_invalid_transactions",
+          "status": "fail",
+          "failures": 2
+        },
+        {
+          "test": "test.clube_do_valor.not_null_clients_city.913dd09c1b",
+          "status": "fail",
+          "failures": 1
+        },
+        {
+          "test": "test.clube_do_valor.not_null_transactions_client_id.d57cf6e0fe",
+          "status": "fail",
+          "failures": 1
+        },
+        {
+          "test": "test.clube_do_valor.unique_clients_client_id.135dfeaa10",
+          "status": "fail",
+          "failures": 2
+        }
+      ]
+    },
+    {
+      "command": "dbt docs generate --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 85
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt run --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 6
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt run --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 6
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt run --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 6
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt run --full-refresh --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 6
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt seed --full-refresh --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 2
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt run --full-refresh --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "success": 6
+      },
+      "nonpassing": []
+    },
+    {
+      "command": "dbt test --profiles-dir .",
+      "exit_code": 0,
+      "statuses": {
+        "pass": 71,
+        "warn": 6
+      },
+      "nonpassing": [
+        {
+          "test": "test.clube_do_valor.assert_no_negative_position",
+          "status": "warn",
+          "failures": 6
+        },
+        {
+          "test": "test.clube_do_valor.audit_duplicate_transaction_payload",
+          "status": "warn",
+          "failures": 2
+        },
+        {
+          "test": "test.clube_do_valor.audit_invalid_transactions",
+          "status": "warn",
+          "failures": 2
+        },
+        {
+          "test": "test.clube_do_valor.not_null_clients_city.913dd09c1b",
+          "status": "warn",
+          "failures": 1
+        },
+        {
+          "test": "test.clube_do_valor.not_null_transactions_client_id.d57cf6e0fe",
+          "status": "warn",
+          "failures": 1
+        },
+        {
+          "test": "test.clube_do_valor.unique_clients_client_id.135dfeaa10",
+          "status": "warn",
+          "failures": 2
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Expected counts in every layer",
+    "Complete C6 registration preferred",
+    "Distinct IDs with equal payload both preserved",
+    "Invalid records excluded and auditable",
+    "Negative positions match expected pairs",
+    "Unchanged incremental run is idempotent",
+    "Documentation catalog generated",
+    "New and in-window late records inserted",
+    "In-window correction replaced by transaction_id",
+    "Incremental inserts and corrections remain idempotent",
+    "Beyond-window late arrival deferred",
+    "Beyond-window correction deferred",
+    "Deletes and newly-invalid records require full refresh",
+    "Full refresh incorporates old arrival",
+    "Full refresh incorporates old correction",
+    "Full refresh removes deleted and newly-invalid records",
+    "Original dataset restored exactly after scenario suite"
+  ],
+  "seed_sha256": {
+    "clients.csv": "841233442713977cc671da281cfb51fc2151419c53103bdc3199b339af33ba11",
+    "transactions.csv": "93456af8df4f44f772109ce3074daf209f86460bc2af3c0711ffa65c4ed27aab"
+  },
+  "baseline_counts": {
+    "transactions": 100,
+    "clients": 27,
+    "stg_clients": 25,
+    "stg_transactions": 98,
+    "int_transactions": 98,
+    "dim_clients": 25,
+    "fact_transactions": 98,
+    "mart_client_portfolio": 55
+  },
+  "rejected": [
+    [
+      "T021",
+      "missing_client_id"
+    ],
+    [
+      "T037",
+      "nonpositive_quantity"
+    ]
+  ],
+  "negative_positions": [
+    [
+      "C1",
+      "BBDC4",
+      "-50.0000",
+      "-800.00000000"
+    ],
+    [
+      "C3",
+      "WEGE3",
+      "-30.0000",
+      "-1194.00000000"
+    ],
+    [
+      "C5",
+      "BBDC4",
+      "-400.0000",
+      "-6140.00000000"
+    ],
+    [
+      "C6",
+      "ITUB4",
+      "-50.0000",
+      "-1445.00000000"
+    ],
+    [
+      "C7",
+      "WEGE3",
+      "-60.0000",
+      "-2430.00000000"
+    ],
+    [
+      "C8",
+      "VALE3",
+      "-30.0000",
+      "-2130.00000000"
+    ]
+  ],
+  "result": "passed"
+}

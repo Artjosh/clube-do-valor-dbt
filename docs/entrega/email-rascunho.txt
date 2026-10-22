@@ -1,0 +1,26 @@
+RASCUNHO LOCAL — NÃO ENVIADO
+
+Para: fernando@clubedovalor.com.br
+Assunto: Teste técnico — Engenheiro de Dados — [NOME DO CANDIDATO]
+
+Olá, Fernando,
+
+Segue minha entrega do teste técnico de Engenharia de Dados:
+
+Repositório: https://github.com/Artjosh/clube-do-valor-dbt
+Vídeo explicativo (2min04s): https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.0.0/apresentacao-cdv.mp4
+Página da release: https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.0.0
+
+O README contém os comandos de reprodução local com dbt e DuckDB, as decisões de modelagem e os limites do incremental. A entrega inclui os dados originais, seis modelos, documentação de todas as colunas e validação independente.
+
+O vídeo utiliza narração com voz sintética em português para apresentar as decisões e a reprodução do projeto.
+
+Os problemas intencionais da fonte são expostos: a execução padrão apresenta 71 testes aprovados e seis alertas, e o modo estrito promove esses alertas a falhas. As seis posições negativas permanecem auditáveis; o valor financeiro líquido não é apresentado como lucro ou valor de mercado.
+
+Fico à disposição para esclarecer as decisões e os resultados.
+
+Atenciosamente,
+[NOME / ASSINATURA]
+[CONTATO, SE DESEJADO]
+
+NOTA INTERNA — REMOVER ANTES DO ENVIO: os destinos de publicação estão preenchidos, mas nesta revisão o push e o upload da release ainda serão feitos pelo coordenador; não enviar até confirmar que os links abrem corretamente. Assistir ao vídeo para revisar conteúdo, pronúncia e ritmo da voz sintética, substituir os placeholders de nome/assinatura/contato e obter autorização do usuário para envio.

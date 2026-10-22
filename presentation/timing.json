@@ -1,0 +1,41 @@
+{
+  "duration": 124,
+  "scenes": [
+    {
+      "id": "origem",
+      "start": 0,
+      "duration": 19,
+      "audio": 16.405333
+    },
+    {
+      "id": "camadas",
+      "start": 19,
+      "duration": 21,
+      "audio": 18.581333
+    },
+    {
+      "id": "carteira",
+      "start": 40,
+      "duration": 20,
+      "audio": 18.090667
+    },
+    {
+      "id": "qualidade",
+      "start": 60,
+      "duration": 22,
+      "audio": 19.882667
+    },
+    {
+      "id": "incremental",
+      "start": 82,
+      "duration": 22,
+      "audio": 19.605333
+    },
+    {
+      "id": "rodar",
+      "start": 104,
+      "duration": 20,
+      "audio": 18.090667
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+﻿[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "09E93D65983903D73BF96B41E751305319FE7AD27CA43DE6892CE6937B7C4E2B",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\README.md"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "1DA84EB3178D3E04374283E41C606AF5234E4497C6A2B8AA9932D071276905E8",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\scripts\\validation_results.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F05DE38F258950CC7814C16D5EB3DAA18CB27E30B5927926588BE4741BB7A01A",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\target\\evidence\\test.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "69CD3C18437034C43B77C0B91D3B453D75A95BA8792CE090252E9F23F66AA7FB",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\target\\evidence\\strict.json"
+    }
+]

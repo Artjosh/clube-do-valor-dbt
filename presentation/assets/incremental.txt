@@ -1,0 +1,1 @@
+﻿A fato é incremental: a data da transação controla uma janela retrospectiva de trinta dias. A chave de transação permite substituir registros sem duplicar identificadores. Correções antigas e exclusões exigem reconstrução completa. Macros reutilizam limpeza, tipagem e validação, mantendo a mesma regra entre transformação e auditoria.

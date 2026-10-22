@@ -1,0 +1,111 @@
+1
+00:00:00,500 --> 00:00:04,101
+Como transformar arquivos com defeitos em uma carteira confiável?
+
+2
+00:00:04,101 --> 00:00:08,102
+Esta apresentação gerada explica a solução com dbt e DuckDB.
+
+3
+00:00:08,102 --> 00:00:10,903
+Os arquivos originais são preservados nos seeds.
+
+4
+00:00:10,903 --> 00:00:16,905
+O tratamento acontece nos modelos, enquanto testes mantêm os problemas da fonte visíveis para auditoria.
+
+5
+00:00:19,500 --> 00:00:21,612
+A arquitetura tem três camadas.
+
+6
+00:00:21,612 --> 00:00:25,412
+Staging padroniza textos, converte tipos e filtra transações inválidas.
+
+7
+00:00:25,412 --> 00:00:29,213
+Clientes repetidos são resolvidos por completude e desempate determinístico.
+
+8
+00:00:29,213 --> 00:00:32,591
+Intermediate relaciona transações e clientes, sem multiplicar eventos.
+
+9
+00:00:32,591 --> 00:00:38,081
+Marts publica a fato, a dimensão e a carteira por cliente e ativo.
+
+10
+00:00:40,500 --> 00:00:44,646
+Na carteira, compras somam e vendas subtraem quantidade e valor financeiro.
+
+11
+00:00:44,646 --> 00:00:52,937
+Por exemplo, as duas primeiras operações de C1 em PETR4, compra de cem e venda de quarenta, deixam sessenta unidades nesse recorte.
+
+12
+00:00:52,937 --> 00:00:55,576
+O saldo financeiro usa preços das operações.
+
+13
+00:00:55,576 --> 00:00:58,591
+Não representa valor de mercado nem lucro realizado.
+
+14
+00:01:00,500 --> 00:01:04,035
+Testes genéricos protegem chaves, campos obrigatórios e domínios.
+
+15
+00:01:04,035 --> 00:01:07,128
+Auditorias expõem registros inválidos e possíveis duplicidades.
+
+16
+00:01:07,128 --> 00:01:10,662
+O teste singular retorna carteiras com posição negativa.
+
+17
+00:01:10,662 --> 00:01:14,197
+Esses defeitos conhecidos geram avisos no fluxo padrão.
+
+18
+00:01:14,197 --> 00:01:16,848
+No modo estrito, avisos viram falhas.
+
+19
+00:01:16,848 --> 00:01:20,383
+Portanto, execução concluída não significa dados sem problemas.
+
+20
+00:01:22,500 --> 00:01:28,893
+A fato é incremental: a data da transação controla uma janela retrospectiva de trinta dias.
+
+21
+00:01:28,893 --> 00:01:33,155
+A chave de transação permite substituir registros sem duplicar identificadores.
+
+22
+00:01:33,155 --> 00:01:36,138
+Correções antigas e exclusões exigem reconstrução completa.
+
+23
+00:01:36,138 --> 00:01:42,105
+Macros reutilizam limpeza, tipagem e validação, mantendo a mesma regra entre transformação e auditoria.
+
+24
+00:01:44,500 --> 00:01:51,110
+Para reproduzir, siga o README na raiz: crie o ambiente Python, instale os requisitos e configure o perfil local.
+
+25
+00:01:51,110 --> 00:01:53,893
+Execute dbt seed, dbt run e dbt test.
+
+26
+00:01:53,893 --> 00:01:56,676
+Revise os avisos e as tabelas de falhas.
+
+27
+00:01:56,676 --> 00:01:59,807
+Use o modo estrito para exigir bloqueio por qualidade.
+
+28
+00:01:59,807 --> 00:02:02,591
+A entrega mantém decisões, código e evidências verificáveis.

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teste Técnico — Engenheiro de Dados | Clube do Valor</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #090c12;
+    --surface: #0f1520;
+    --surface2: #141c2a;
+    --border: #1e2a3a;
+    --blue: #5b9bd5;
+    --blue-dim: #0d1e35;
+    --blue-mid: #1a3558;
+    --text: #d8e4f0;
+    --muted: #5a7a9a;
+    --dim: #2a3d52;
+    --warn: #fbbf24;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.75; }
+  .page { max-width: 720px; margin: 0 auto; padding: 64px 32px 100px; }
+
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 8px #3a7cc0; animation: blink 2.5s ease-in-out infinite; }
+  @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+
+  h1 { font-family: 'Inter', sans-serif; font-size: 42px; font-weight: 700; line-height: 1.1; margin-bottom: 10px; }
+  h1 em { color: var(--blue); font-style: normal; }
+
+  .pills { display: flex; gap: 8px; flex-wrap: wrap; margin: 24px 0 48px; }
+  .pill { font-family: 'IBM Plex Mono', monospace; font-size: 11px; padding: 5px 12px; border-radius: 100px; border: 1px solid var(--border); color: var(--muted); background: var(--surface); }
+  .pill.g { border-color: var(--blue-mid); color: var(--blue); background: var(--blue-dim); }
+
+  hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  .block { margin-bottom: 40px; }
+  .block-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+  h2 { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+  p { font-size: 14px; color: var(--muted); line-height: 1.8; }
+  strong { color: var(--text); font-weight: 500; }
+  code { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: var(--surface2); border: 1px solid var(--border); padding: 1px 6px; border-radius: 3px; color: var(--blue); }
+
+  .tasks { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+  .tasks li { display: flex; gap: 14px; align-items: flex-start; padding: 14px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; font-size: 14px; color: var(--text); line-height: 1.65; transition: border-color 0.15s; }
+  .tasks li:hover { border-color: var(--blue-mid); }
+  .n { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--dim); flex-shrink: 0; margin-top: 2px; }
+  .bonus-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 7px; border-radius: 3px; background: #221a00; border: 1px solid #5a4010; color: var(--warn); margin-left: 6px; vertical-align: middle; }
+
+  .download-row { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+  .download-box { background: var(--blue-dim); border: 1px solid var(--blue-mid); border-radius: 8px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .download-info { font-size: 13px; color: var(--text); }
+  .download-info span { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .btn-download { display: inline-flex; align-items: center; gap: 8px; background: var(--blue); color: #0d0f0e; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; padding: 9px 18px; border-radius: 6px; white-space: nowrap; transition: opacity 0.15s; cursor: pointer; border: none; }
+  .btn-download:hover { opacity: 0.85; }
+
+  .tree { white-space: pre; background: #0a0c0a; border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #7aaed4; line-height: 2; margin-top: 14px; }
+  .tree .dir { color: var(--blue); }
+  .tree .comment { color: var(--dim); }
+
+  .cmd-block { background: #0a0c0a; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-top: 14px; }
+  .cmd-line { padding: 12px 18px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--blue); border-bottom: 1px solid var(--border); }
+  .cmd-line:last-child { border-bottom: none; }
+  .cmd-line .desc { font-size: 11px; color: var(--muted); margin-left: 12px; }
+
+  .note { margin-top: 12px; padding: 11px 16px; background: #1e1800; border: 1px solid #5a4010; border-radius: 6px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--warn); }
+
+  .footer { border-top: 1px solid var(--border); padding-top: 32px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--dim); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="eyebrow"><div class="dot"></div> Clube do Valor — Recrutamento Técnico</div>
+  <h1>Teste Técnico<br><em>Engenheiro de Dados</em></h1>
+
+
+  <!-- CONTEXTO -->
+  <div class="block">
+    <div class="block-label">Contexto</div>
+    <p>Você recebeu dois arquivos de uma corretora fictícia. Sua missão é criar um projeto dbt funcional que transforme esses dados brutos em modelos analíticos confiáveis — com estrutura de camadas, testes e documentação.</p>
+    <p style="margin-top:8px">O critério principal é simples: <strong>o projeto roda limpo com <code>dbt run && dbt test</code>.</strong></p>
+  </div>
+
+  <hr>
+
+  <!-- DADOS -->
+  <div class="block">
+    <div class="block-label">Dados de entrada</div>
+    <h2>Seeds do projeto</h2>
+    <p>Adicione os dois arquivos na pasta <code>seeds/</code> e carregue com <code>dbt seed</code>.</p>
+    <div class="download-row">
+      <div class="download-box">
+        <div class="download-info">
+          transactions.csv
+          <span>compras e vendas de ativos por cliente</span>
+        </div>
+        <button class="btn-download" onclick="downloadTransactions()">↓ Baixar</button>
+      </div>
+      <div class="download-box">
+        <div class="download-info">
+          clients.csv
+          <span>cadastro de clientes</span>
+        </div>
+        <button class="btn-download" onclick="downloadClients()">↓ Baixar</button>
+      </div>
+    </div>
+    <div class="note">⚠ Os arquivos contêm problemas intencionais de qualidade. Esperamos que seus testes dbt os sinalizem — não que você limpe os dados manualmente.</div>
+  </div>
+
+  <hr>
+
+  <!-- ESTRUTURA -->
+  <div class="block">
+    <div class="block-label">Estrutura esperada</div>
+    <h2>Três camadas de modelos</h2>
+    <div class="tree">
+<span class="dir">models/</span>
+  <span class="dir">staging/</span>
+    stg_transactions.sql &nbsp;&nbsp;<span class="comment">-- limpeza e tipagem da fonte</span>
+    stg_clients.sql &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">-- limpeza e tipagem da fonte</span>
+  <span class="dir">intermediate/</span>
+    int_transactions.sql &nbsp;&nbsp;<span class="comment">-- joins e regras de negócio</span>
+  <span class="dir">marts/</span>
+    fact_transactions.sql &nbsp;&nbsp;<span class="comment">-- tabela fato de transações</span>
+    dim_clients.sql &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">-- dimensão de clientes</span>
+    mart_client_portfolio.sql &nbsp;<span class="comment">-- posição atual por cliente/ativo</span>
+<span class="dir">tests/</span>
+  assert_no_negative_position.sql &nbsp;<span class="comment">-- teste singular obrigatório</span>
+    </div>
+  </div>
+
+  <!-- REQUISITOS -->
+  <div class="block">
+    <div class="block-label">Requisitos</div>
+    <ul class="tasks">
+      <li>
+        <span class="n">1</span>
+        <span>Crie os modelos de <strong>staging</strong> com renomeação de colunas para snake_case, tipos corretos e filtro de registros inválidos.</span>
+      </li>
+      <li>
+        <span class="n">2</span>
+        <span>Crie o modelo <code>mart_client_portfolio</code> que calcula a <strong>posição líquida</strong> de cada cliente por ativo (BUY − SELL em quantidade e valor financeiro).</span>
+      </li>
+      <li>
+        <span class="n">3</span>
+        <span>Adicione <strong>testes genéricos</strong> nos modelos via <code>schema.yml</code>: <code>not_null</code>, <code>unique</code> e <code>accepted_values</code> onde fizer sentido.</span>
+      </li>
+      <li>
+        <span class="n">4</span>
+        <span>Crie o <strong>teste singular</strong> <code>assert_no_negative_position.sql</code> que retorna linhas onde a posição líquida de algum cliente seja negativa.</span>
+      </li>
+      <li>
+        <span class="n">5</span>
+        <span>Documente todos os modelos no <code>schema.yml</code> com descrição de cada coluna.</span>
+      </li>
+      <li>
+        <span class="n">6</span>
+        <span>Transforme o modelo <code>fact_transactions</code> em <strong>incremental</strong>, usando <code>transaction_date</code> como chave de controle. <span class="bonus-tag">bônus</span></span>
+      </li>
+      <li>
+        <span class="n">7</span>
+        <span>Crie uma <strong>macro</strong> reutilizável para qualquer lógica repetida em mais de um modelo. <span class="bonus-tag">bônus</span></span>
+      </li>
+      <li>
+        <span class="n">8</span>
+        <span>Grave um vídeo de <strong>no máximo 5 minutos</strong> explicando o que foi feito: decisões tomadas, estrutura do projeto e como rodar. Envie o link junto com o repositório. <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;padding:2px 7px;border-radius:3px;background:#0d2a1a;border:1px solid #1a5c30;color:#4ade80;margin-left:6px;vertical-align:middle;">obrigatório</span></span>
+      </li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <!-- VALIDAÇÃO -->
+  <div class="block">
+    <div class="block-label">Como vamos validar</div>
+    <h2>Três comandos. Tudo tem que passar.</h2>
+    <div class="cmd-block">
+      <div class="cmd-line">dbt seed <span class="desc">carrega os CSVs</span></div>
+      <div class="cmd-line">dbt run &nbsp;<span class="desc">builda todos os modelos sem erro</span></div>
+      <div class="cmd-line">dbt test <span class="desc">roda todos os testes — o teste singular deve detectar o problema nos dados</span></div>
+    </div>
+    <div class="note">Se o projeto não rodar a partir do README sem precisar de ajuda externa, a entrega não será avaliada.</div>
+    <div class="note" style="margin-top:8px; background:#0d1520; border-color:#1a3558; color:#7aaed4;">Publique o projeto em um repositório no seu GitHub e envie o link para fernando@clubedovalor.com.br.</div>
+  </div>
+
+  <hr>
+  <div class="footer">Clube do Valor &nbsp;·&nbsp; Engenharia de Dados</div>
+
+</div>
+
+<script>
+  function downloadTransactions() {
+    var rows = [
+      "transaction_id,client_id,asset_ticker,operation,quantity,unit_price,transaction_date",
+      "T001,C1,PETR4,BUY,100,32.50,2024-01-05",
+      "T002,C1,VALE3,BUY,50,68.00,2024-01-08",
+      "T003,C2,PETR4,BUY,200,33.10,2024-01-10",
+      "T004,C3,ITUB4,BUY,150,27.80,2024-01-12",
+      "T005,C4,BBDC4,BUY,300,14.20,2024-01-15",
+      "T006,C5,MGLU3,BUY,1000,2.60,2024-01-18",
+      "T007,C6,VALE3,BUY,80,67.50,2024-01-20",
+      "T008,C7,PETR4,BUY,250,32.90,2024-01-22",
+      "T009,C8,ITUB4,BUY,100,28.10,2024-01-25",
+      "T010,C9,WEGE3,BUY,60,35.40,2024-01-28",
+      "T011,C1,PETR4,SELL,40,35.00,2024-02-02",
+      "T012,C2,VALE3,BUY,100,70.20,2024-02-05",
+      "T013,C3,MGLU3,BUY,500,2.80,2024-02-07",
+      "T014,C4,WEGE3,BUY,120,36.00,2024-02-10",
+      "T015,C5,PETR4,BUY,200,33.50,2024-02-12",
+      "T016,C6,ITUB4,SELL,50,28.90,2024-02-14",
+      "T017,C7,BBDC4,BUY,400,14.50,2024-02-16",
+      "T018,C8,VALE3,SELL,30,71.00,2024-02-18",
+      "T019,C9,PETR4,BUY,180,34.10,2024-02-20",
+      "T020,C10,MGLU3,BUY,800,2.75,2024-02-22",
+      "T021,,MGLU3,BUY,100,2.90,2024-02-24",
+      "T022,C1,VALE3,SELL,20,72.00,2024-03-01",
+      "T023,C2,PETR4,BUY,80,34.50,2024-03-03",
+      "T024,C3,ITUB4,SELL,60,29.20,2024-03-05",
+      "T025,C4,BBDC4,SELL,100,15.10,2024-03-07",
+      "T026,C5,WEGE3,BUY,90,37.20,2024-03-09",
+      "T027,C6,VALE3,BUY,110,72.50,2024-03-11",
+      "T028,C7,PETR4,SELL,80,35.80,2024-03-13",
+      "T029,C8,MGLU3,BUY,600,2.95,2024-03-15",
+      "T030,C9,ITUB4,BUY,200,29.50,2024-03-17",
+      "T031,C10,BBDC4,BUY,250,15.30,2024-03-19",
+      "T032,C1,PETR4,BUY,60,34.50,2024-03-21",
+      "T033,C2,VALE3,SELL,200,69.00,2024-03-23",
+      "T034,C3,MGLU3,SELL,50,3.10,2024-03-25",
+      "T035,C4,ITUB4,BUY,120,28.50,2024-03-27",
+      "T036,C4,ITUB4,BUY,120,28.50,2024-03-27",
+      "T037,C5,PETR4,BUY,-50,34.00,2024-03-29",
+      "T038,C6,WEGE3,SELL,40,38.10,2024-03-31",
+      "T039,C7,VALE3,BUY,70,73.40,2024-04-02",
+      "T040,C8,BBDC4,BUY,300,15.50,2024-04-04",
+      "T041,C9,PETR4,SELL,90,36.20,2024-04-06",
+      "T042,C10,MGLU3,SELL,200,3.20,2024-04-08",
+      "T043,C1,WEGE3,BUY,50,38.50,2024-04-10",
+      "T044,C2,ITUB4,BUY,160,29.80,2024-04-12",
+      "T045,C3,BBDC4,BUY,180,15.70,2024-04-14",
+      "T046,C4,VALE3,SELL,60,74.00,2024-04-16",
+      "T047,C5,PETR4,BUY,220,35.50,2024-04-18",
+      "T048,C6,MGLU3,BUY,400,3.05,2024-04-20",
+      "T049,C7,ITUB4,SELL,80,30.10,2024-04-22",
+      "T050,C8,WEGE3,BUY,110,39.20,2024-04-24",
+      "T051,C9,VALE3,BUY,90,74.80,2024-05-02",
+      "T052,C10,PETR4,BUY,130,36.10,2024-05-04",
+      "T053,C1,BBDC4,SELL,50,16.00,2024-05-06",
+      "T054,C2,MGLU3,BUY,700,3.15,2024-05-08",
+      "T055,C3,WEGE3,SELL,30,39.80,2024-05-10",
+      "T056,C4,PETR4,BUY,170,36.50,2024-05-12",
+      "T057,C5,ITUB4,BUY,140,30.40,2024-05-14",
+      "T058,C6,VALE3,SELL,40,75.20,2024-05-16",
+      "T059,C7,BBDC4,BUY,220,16.10,2024-05-18",
+      "T060,C8,MGLU3,SELL,150,3.20,2024-05-20",
+      "T061,C9,PETR4,BUY,100,37.00,2024-05-22",
+      "T062,C10,WEGE3,BUY,80,40.10,2024-05-24",
+      "T063,C1,VALE3,BUY,60,75.50,2024-05-26",
+      "T064,C2,ITUB4,SELL,70,30.80,2024-05-28",
+      "T065,C3,PETR4,SELL,100,37.40,2024-05-30",
+      "T066,C4,BBDC4,BUY,190,16.30,2024-06-03",
+      "T067,C5,VALE3,BUY,150,76.00,2024-06-05",
+      "T068,C6,MGLU3,BUY,500,3.30,2024-06-07",
+      "T069,C7,WEGE3,SELL,60,40.50,2024-06-09",
+      "T070,C8,PETR4,BUY,200,37.80,2024-06-11",
+      "T071,C9,ITUB4,BUY,110,31.20,2024-06-13",
+      "T072,C10,BBDC4,SELL,80,16.50,2024-06-15",
+      "T073,C1,MGLU3,BUY,300,3.40,2024-06-17",
+      "T074,C2,PETR4,BUY,140,38.20,2024-06-19",
+      "T075,C3,VALE3,BUY,100,76.50,2024-06-21",
+      "T076,C4,WEGE3,BUY,70,41.00,2024-06-23",
+      "T077,C5,ITUB4,SELL,90,31.50,2024-06-25",
+      "T078,C6,BBDC4,BUY,260,16.70,2024-06-27",
+      "T079,C7,VALE3,SELL,50,77.00,2024-06-29",
+      "T080,C8,PETR4,SELL,110,38.60,2024-07-01",
+      "T081,C9,MGLU3,BUY,400,3.50,2024-07-03",
+      "T082,C10,WEGE3,SELL,40,41.40,2024-07-05",
+      "T083,C1,ITUB4,BUY,130,31.80,2024-07-07",
+      "T084,C2,BBDC4,BUY,200,16.90,2024-07-09",
+      "T085,C3,PETR4,BUY,160,39.00,2024-07-11",
+      "T086,C4,VALE3,BUY,90,77.50,2024-07-13",
+      "T087,C5,MGLU3,SELL,300,3.55,2024-07-15",
+      "T088,C6,WEGE3,BUY,80,42.00,2024-07-17",
+      "T089,C7,ITUB4,BUY,150,32.10,2024-07-19",
+      "T090,C8,BBDC4,SELL,120,17.10,2024-07-21",
+      "T091,C9,VALE3,BUY,70,78.00,2024-07-23",
+      "T092,C10,PETR4,SELL,60,39.50,2024-07-25",
+      "T093,C5,BBDC4,BUY,200,14.90,2024-07-27",
+      "T094,C5,BBDC4,SELL,600,15.20,2024-07-29",
+      "T095,C1,WEGE3,SELL,20,42.30,2024-07-31",
+      "T096,C2,VALE3,BUY,120,78.50,2024-08-02",
+      "T097,C3,ITUB4,BUY,180,32.40,2024-08-04",
+      "T098,C4,MGLU3,BUY,350,3.60,2024-08-06",
+      "T099,C6,PETR4,BUY,190,40.00,2024-08-08",
+      "T100,C7,BBDC4,BUY,230,17.30,2024-08-10"
+    ];
+    triggerDownload(rows.join("\r\n"), "transactions.csv");
+  }
+
+  function downloadClients() {
+    var rows = [
+      "client_id,name,city,state,created_at",
+      "C1,Ana Souza,Sao Paulo,SP,2023-01-10",
+      "C2,Bruno Lima,Rio de Janeiro,RJ,2023-02-14",
+      "C3,Carla Mendes,Curitiba,PR,2023-03-05",
+      "C4,Diego Rocha,Belo Horizonte,MG,2023-03-22",
+      "C5,Elena Costa,Porto Alegre,RS,2023-04-11",
+      "C6,Felipe Nunes,Brasilia,DF,2023-04-30",
+      "C7,Gabriela Alves,Salvador,BA,2023-05-17",
+      "C8,Henrique Pinto,Fortaleza,CE,2023-06-02",
+      "C9,Isabela Ferreira,Recife,PE,2023-06-19",
+      "C10,Joao Martins,Manaus,AM,2023-07-08",
+      "C11,Karen Ribeiro,Florianopolis,SC,2023-07-25",
+      "C12,Lucas Dias,Goiania,GO,2023-08-13",
+      "C13,Mariana Teixeira,Natal,RN,2023-08-28",
+      "C14,Nicolas Barbosa,Belem,PA,2023-09-10",
+      "C15,Olivia Carvalho,Vitoria,ES,2023-09-24",
+      "C16,Pedro Araujo,Campinas,SP,2023-10-07",
+      "C17,Quintina Moura,Santos,SP,2023-10-20",
+      "C18,Rafael Gomes,Ribeirao Preto,SP,2023-11-03",
+      "C19,Sandra Oliveira,Sao Luis,MA,2023-11-18",
+      "C20,Thiago Pereira,Joao Pessoa,PB,2023-12-01",
+      "C21,Ursula Nascimento,Maceio,AL,2023-12-15",
+      "C22,Victor Campos,Teresina,PI,2023-12-28",
+      "C23,Wanessa Lima,Campo Grande,MS,2024-01-10",
+      "C24,Xavier Rocha,Cuiaba,MT,2024-01-22",
+      "C25,Yasmin Costa,Porto Velho,RO,2024-02-04",
+      "C6,Felipe Nunes,,DF,2023-04-30",
+      "C1,Ana Souza,Sao Paulo,SP,2023-01-10"
+    ];
+    triggerDownload(rows.join("\r\n"), "clients.csv");
+  }
+
+  function triggerDownload(content, filename) {
+    var blob = new Blob([content], { type: "text/csv" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+  }
+</script>
+</body>
+</html>

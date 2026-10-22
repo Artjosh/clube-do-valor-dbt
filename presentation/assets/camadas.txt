@@ -1,0 +1,1 @@
+﻿A arquitetura tem três camadas. Staging padroniza textos, converte tipos e filtra transações inválidas. Clientes repetidos são resolvidos por completude e desempate determinístico. Intermediate relaciona transações e clientes, sem multiplicar eventos. Marts publica a fato, a dimensão e a carteira por cliente e ativo.

@@ -1,0 +1,1 @@
+﻿Na carteira, compras somam e vendas subtraem quantidade e valor financeiro. Por exemplo, as duas primeiras operações de C1 em PETR4, compra de cem e venda de quarenta, deixam sessenta unidades nesse recorte. O saldo financeiro usa preços das operações. Não representa valor de mercado nem lucro realizado.

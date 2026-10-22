@@ -1,0 +1,3 @@
+# Preserve original download bytes and source SHA-256 across Git checkouts.
+/seeds/*.csv -text
+/docs/entrega/enunciado.html -text

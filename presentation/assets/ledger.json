@@ -1,0 +1,16 @@
+{
+  "voice": {
+    "provider": "kokoro-onnx local",
+    "voice": "pf_dora",
+    "lang": "pt-br",
+    "speed": 1.05,
+    "files": ["origem.wav", "camadas.wav", "carteira.wav", "qualidade.wav", "incremental.wav", "rodar.wav"],
+    "source": "Roteiro próprio em scenes.json",
+    "generated_at": "2026-10-22",
+    "identity": "Voz sintética, não representa candidato",
+    "account_required": false
+  },
+  "fonts": {"source": "Arial instalada no Windows local", "git": "excluídas; regeneradas por build.mjs"},
+  "motion": {"source": "HyperFrames registry inline-highlight", "path": "compositions/components/inline-highlight.html", "usage": "receita do marcador adaptada nas cenas"},
+  "gsap": {"version": "3.14.2", "source": "pacote npm local"}
+}

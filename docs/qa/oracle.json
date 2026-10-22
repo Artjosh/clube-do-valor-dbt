@@ -1,0 +1,443 @@
+{
+  "source_sha256": "42794781c81193e097686a75f14cebe6009d57647e4ab8161f3a87c1bcf99f33",
+  "raw_transactions": 100,
+  "valid_transactions": 98,
+  "invalid_transactions": {
+    "T021": [
+      "missing_required_field"
+    ],
+    "T037": [
+      "nonpositive_quantity"
+    ]
+  },
+  "duplicate_transaction_ids": {},
+  "duplicate_payload_ids": [
+    [
+      "T035",
+      "T036"
+    ]
+  ],
+  "raw_clients": 27,
+  "canonical_clients": 25,
+  "complete_client_rows": 26,
+  "duplicate_client_ids": {
+    "C1": 2,
+    "C6": 2
+  },
+  "active_clients": [
+    "C1",
+    "C10",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9"
+  ],
+  "clients_without_transactions": [
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "C18",
+    "C19",
+    "C20",
+    "C21",
+    "C22",
+    "C23",
+    "C24",
+    "C25"
+  ],
+  "operation_counts": {
+    "BUY": 67,
+    "SELL": 31
+  },
+  "totals": {
+    "BUY": {
+      "quantity": "13970",
+      "financial_value": "297849.00"
+    },
+    "SELL": {
+      "quantity": "3070",
+      "financial_value": "81934.00"
+    }
+  },
+  "net_quantity": "10900",
+  "net_financial_value": "215915.00",
+  "portfolio_count": 55,
+  "negative_positions": [
+    {
+      "client_id": "C1",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "-50",
+      "net_financial_value": "-800.00"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "-30",
+      "net_financial_value": "-1194.00"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "-400",
+      "net_financial_value": "-6140.00"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "-50",
+      "net_financial_value": "-1445.00"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "-60",
+      "net_financial_value": "-2430.00"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "VALE3",
+      "net_quantity": "-30",
+      "net_financial_value": "-2130.00"
+    }
+  ],
+  "portfolio": [
+    {
+      "client_id": "C1",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "-50",
+      "net_financial_value": "-800.00"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "130",
+      "net_financial_value": "4134.00"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "300",
+      "net_financial_value": "1020.00"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "PETR4",
+      "net_quantity": "120",
+      "net_financial_value": "3920.00"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "VALE3",
+      "net_quantity": "90",
+      "net_financial_value": "6490.00"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "30",
+      "net_financial_value": "1079.00"
+    },
+    {
+      "client_id": "C10",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "170",
+      "net_financial_value": "2505.00"
+    },
+    {
+      "client_id": "C10",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "600",
+      "net_financial_value": "1560.00"
+    },
+    {
+      "client_id": "C10",
+      "asset_ticker": "PETR4",
+      "net_quantity": "70",
+      "net_financial_value": "2323.00"
+    },
+    {
+      "client_id": "C10",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "40",
+      "net_financial_value": "1552.00"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "200",
+      "net_financial_value": "3380.00"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "90",
+      "net_financial_value": "2612.00"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "700",
+      "net_financial_value": "2205.00"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "PETR4",
+      "net_quantity": "420",
+      "net_financial_value": "14728.00"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "VALE3",
+      "net_quantity": "20",
+      "net_financial_value": "2640.00"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "180",
+      "net_financial_value": "2826.00"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "270",
+      "net_financial_value": "8250.00"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "450",
+      "net_financial_value": "1245.00"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "PETR4",
+      "net_quantity": "60",
+      "net_financial_value": "2500.00"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "VALE3",
+      "net_quantity": "100",
+      "net_financial_value": "7650.00"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "-30",
+      "net_financial_value": "-1194.00"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "390",
+      "net_financial_value": "5847.00"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "240",
+      "net_financial_value": "6840.00"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "350",
+      "net_financial_value": "1260.00"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "PETR4",
+      "net_quantity": "170",
+      "net_financial_value": "6205.00"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "VALE3",
+      "net_quantity": "30",
+      "net_financial_value": "2535.00"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "190",
+      "net_financial_value": "7190.00"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "-400",
+      "net_financial_value": "-6140.00"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "50",
+      "net_financial_value": "1421.00"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "700",
+      "net_financial_value": "1535.00"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "PETR4",
+      "net_quantity": "420",
+      "net_financial_value": "14510.00"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "VALE3",
+      "net_quantity": "150",
+      "net_financial_value": "11400.00"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "90",
+      "net_financial_value": "3348.00"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "260",
+      "net_financial_value": "4342.00"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "-50",
+      "net_financial_value": "-1445.00"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "900",
+      "net_financial_value": "2870.00"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "PETR4",
+      "net_quantity": "190",
+      "net_financial_value": "7600.00"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "VALE3",
+      "net_quantity": "150",
+      "net_financial_value": "10367.00"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "40",
+      "net_financial_value": "1836.00"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "850",
+      "net_financial_value": "13321.00"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "70",
+      "net_financial_value": "2407.00"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "PETR4",
+      "net_quantity": "170",
+      "net_financial_value": "5361.00"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "VALE3",
+      "net_quantity": "20",
+      "net_financial_value": "1288.00"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "-60",
+      "net_financial_value": "-2430.00"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "180",
+      "net_financial_value": "2598.00"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "100",
+      "net_financial_value": "2810.00"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "450",
+      "net_financial_value": "1290.00"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "PETR4",
+      "net_quantity": "90",
+      "net_financial_value": "3314.00"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "VALE3",
+      "net_quantity": "-30",
+      "net_financial_value": "-2130.00"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "110",
+      "net_financial_value": "4312.00"
+    },
+    {
+      "client_id": "C9",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "310",
+      "net_financial_value": "9332.00"
+    },
+    {
+      "client_id": "C9",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "400",
+      "net_financial_value": "1400.00"
+    },
+    {
+      "client_id": "C9",
+      "asset_ticker": "PETR4",
+      "net_quantity": "190",
+      "net_financial_value": "6580.00"
+    },
+    {
+      "client_id": "C9",
+      "asset_ticker": "VALE3",
+      "net_quantity": "160",
+      "net_financial_value": "12192.00"
+    },
+    {
+      "client_id": "C9",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "60",
+      "net_financial_value": "2124.00"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+﻿Para reproduzir, siga o README na raiz: crie o ambiente Python, instale os requisitos e configure o perfil local. Execute dbt seed, dbt run e dbt test. Revise os avisos e as tabelas de falhas. Use o modo estrito para exigir bloqueio por qualidade. A entrega mantém decisões, código e evidências verificáveis.

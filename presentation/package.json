@@ -1,0 +1,16 @@
+{
+  "name": "presentation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "postinstall": "node disable-auto-lint.mjs",
+    "dev": "hyperframes preview --no-open",
+    "snapshot": "hyperframes snapshot",
+    "render": "hyperframes render --quality delivery --output renders/apresentacao-cdv.mp4"
+  },
+  "devDependencies": {
+    "gsap": "3.14.2",
+    "hyperframes": "0.8.186"
+  }
+}

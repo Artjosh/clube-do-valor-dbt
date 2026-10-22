@@ -1,0 +1,1 @@
+﻿Testes genéricos protegem chaves, campos obrigatórios e domínios. Auditorias expõem registros inválidos e possíveis duplicidades. O teste singular retorna carteiras com posição negativa. Esses defeitos conhecidos geram avisos no fluxo padrão. No modo estrito, avisos viram falhas. Portanto, execução concluída não significa dados sem problemas.

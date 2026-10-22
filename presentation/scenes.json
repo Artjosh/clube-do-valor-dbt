@@ -1,0 +1,68 @@
+[
+  {
+    "id": "origem",
+    "title": "Dados confiáveis começam na origem",
+    "label": "01 / FONTE PRESERVADA",
+    "lines": [
+      "transactions.csv + clients.csv",
+      "CSV original → dbt seed",
+      "Problemas ficam auditáveis"
+    ],
+    "voice": "Como transformar arquivos com defeitos em uma carteira confiável? Esta apresentação gerada explica a solução com dbt e DuckDB. Os arquivos originais são preservados nos seeds. O tratamento acontece nos modelos, enquanto testes mantêm os problemas da fonte visíveis para auditoria."
+  },
+  {
+    "id": "camadas",
+    "title": "Uma responsabilidade por camada",
+    "label": "02 / ARQUITETURA",
+    "lines": [
+      "staging → tipos e filtros",
+      "intermediate → joins e regras",
+      "marts → fato, dimensão e carteira"
+    ],
+    "voice": "A arquitetura tem três camadas. Staging padroniza textos, converte tipos e filtra transações inválidas. Clientes repetidos são resolvidos por completude e desempate determinístico. Intermediate relaciona transações e clientes, sem multiplicar eventos. Marts publica a fato, a dimensão e a carteira por cliente e ativo."
+  },
+  {
+    "id": "carteira",
+    "title": "Compra soma. Venda subtrai.",
+    "label": "03 / REGRA DE NEGÓCIO",
+    "lines": [
+      "BUY 100 − SELL 40 = 60",
+      "C1 / PETR4 • exemplo parcial da fonte",
+      "Valor líquido ≠ valor de mercado"
+    ],
+    "voice": "Na carteira, compras somam e vendas subtraem quantidade e valor financeiro. Por exemplo, as duas primeiras operações de C1 em PETR4, compra de cem e venda de quarenta, deixam sessenta unidades nesse recorte. O saldo financeiro usa preços das operações. Não representa valor de mercado nem lucro realizado."
+  },
+  {
+    "id": "qualidade",
+    "title": "Alertar também é validar",
+    "label": "04 / QUALIDADE EXPLÍCITA",
+    "lines": [
+      "not_null • unique • accepted_values",
+      "Posição negativa → WARN",
+      "Modo estrito → falha esperada"
+    ],
+    "voice": "Testes genéricos protegem chaves, campos obrigatórios e domínios. Auditorias expõem registros inválidos e possíveis duplicidades. O teste singular retorna carteiras com posição negativa. Esses defeitos conhecidos geram avisos no fluxo padrão. No modo estrito, avisos viram falhas. Portanto, execução concluída não significa dados sem problemas."
+  },
+  {
+    "id": "incremental",
+    "title": "Incremental com limites claros",
+    "label": "05 / BÔNUS IMPLEMENTADOS",
+    "lines": [
+      "transaction_date → janela de 30 dias",
+      "transaction_id → delete + insert",
+      "Histórico fora da janela → full-refresh"
+    ],
+    "voice": "A fato é incremental: a data da transação controla uma janela retrospectiva de trinta dias. A chave de transação permite substituir registros sem duplicar identificadores. Correções antigas e exclusões exigem reconstrução completa. Macros reutilizam limpeza, tipagem e validação, mantendo a mesma regra entre transformação e auditoria."
+  },
+  {
+    "id": "rodar",
+    "title": "Reproduza pelo README",
+    "label": "06 / EXECUÇÃO LOCAL",
+    "lines": [
+      "Python 3.12 + requirements-lock.txt",
+      "dbt seed → dbt run → dbt test",
+      "dbt --warn-error test --profiles-dir ."
+    ],
+    "voice": "Para reproduzir, siga o README na raiz: crie o ambiente Python, instale os requisitos e configure o perfil local. Execute dbt seed, dbt run e dbt test. Revise os avisos e as tabelas de falhas. Use o modo estrito para exigir bloqueio por qualidade. A entrega mantém decisões, código e evidências verificáveis."
+  }
+]

@@ -1,0 +1,6 @@
+node_modules/
+.voice-env/
+renders/
+.hyperframes/
+assets/fonts/
+assets/test-voice.wav
