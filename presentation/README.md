@@ -1,3 +1,5 @@
+> **Versão 2:** edição de 3min51s com pipeline e extensão Vinext, em versões narrada e sem áudio para facecam. Veja [v2/README.md](v2/README.md) e [roteiro por cena](v2/ROTEIRO.md). A versão 1 descrita abaixo permanece preservada.
+
 # Apresentação técnica — Clube do Valor
 
 Vídeo gerado, narrado em português brasileiro por voz sintética local Kokoro `pf_dora`, sem imitar o candidato. Duração planejada e renderizada: 124 segundos (2min04s), 1920×1080, 30 fps. Arquivo de entrega: `renders/apresentacao-cdv.mp4`.

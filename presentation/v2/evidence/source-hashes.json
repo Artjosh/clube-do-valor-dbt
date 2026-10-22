@@ -1,0 +1,30 @@
+﻿[
+    {
+        "path":  "README.md",
+        "sha256":  "7A449F646CA2640D1D2F8E588C4980050043ACC1476E0484D1DD2BAD98666B2B"
+    },
+    {
+        "path":  "models/marts/fact_transactions.sql",
+        "sha256":  "4E45F976484F2B53FB6E5981615D52724D42E08542FC3A2C78A341EA5066409B"
+    },
+    {
+        "path":  "docs/qa/web_access_review.md",
+        "sha256":  "4659D181895B72B517910ACCE2949CE6FBCC006FFCA189CB0C703C2DD584E539"
+    },
+    {
+        "path":  "docs/qa/web_access_sessions.json",
+        "sha256":  "92C64E8334B0B128961413206EBD54BDAB7CCE85D493CBE623860896F8D645A5"
+    },
+    {
+        "path":  "docs/qa/web_access_http_production_sessions.json",
+        "sha256":  "623104A931A1D2A564F57A84A0A212FBBD6A568FAC67AD4ECA4377D96E998605"
+    },
+    {
+        "path":  "scripts/validation_results.json",
+        "sha256":  "1DA84EB3178D3E04374283E41C606AF5234E4497C6A2B8AA9932D071276905E8"
+    },
+    {
+        "path":  "docs/qa/web_desktop_copper.png",
+        "sha256":  "303A7AEEEFDE7EE4CED1FF7D341A82DAFA8676E6D08CCDE1E96FB837286109A8"
+    }
+]

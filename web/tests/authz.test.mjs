@@ -83,7 +83,8 @@ test('invite claim sends only hash to database, returns HttpOnly binding and no 
 test('client claim IDs, user metadata and permission fields cannot attach invite to normal login',async()=>{
   mock((url,payload)=>url.includes('/otp?')?{}:{status:'created',expires_at:new Date(Date.now()+300000).toISOString()});
   const response=await start(request('/api/auth/device/start','POST',{email:'user@example.test',claim_id:id,permissions:['analytics:read'],user_metadata:{role:'analyst'}}));
-  assert.equal(response.status,200);assert.equal((await response.json()).otpLength,6);
+  assert.equal(response.status,200);const challenge=await response.json();assert.equal(challenge.otpLength,6);
+  assert.match(challenge.displayCode,/^\d{8}$/);
   assert.ok(!('claim_id'in calls[0].payload.p_payload));
   const missing=await start(request('/api/auth/device/start','POST',{email:'user@example.test',useInvite:true}));assert.equal(missing.status,403);
 });
@@ -94,9 +95,10 @@ test('OTP verification uses bound challenge email and real provider verify contr
     if(p.p_action==='complete_otp')return{status:'approved',expires_at:new Date(Date.now()+300000).toISOString(),authorized:false,role:null,permissions:[]};
     throw new Error('Unexpected call');
   });
-  const response=await verifyOtp(request('/api/auth/device/verify','POST',{challengeId:id,code:'123456',email:'attacker@example.test',role:'analyst'},deviceCookie));
+  const response=await verifyOtp(request('/api/auth/device/verify','POST',{challengeId:id,code:'012345',email:'attacker@example.test',role:'analyst'},deviceCookie));
   assert.equal(response.status,200);assert.deepEqual(await response.json(),{authenticated:true,authorized:false,role:null,permissions:[]});
   assert.equal(calls[1].payload.email,'bound@example.test');assert.equal(calls[1].payload.type,'email');
+  assert.equal(calls[1].payload.token,'012345');
   assert.equal(calls[2].payload.p_payload.email,'bound@example.test');
   assert.match(response.headers.get('set-cookie'),/HttpOnly/);
 });

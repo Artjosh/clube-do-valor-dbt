@@ -1,0 +1,85 @@
+{
+  "executedAt": "2026-10-22T22:44:24.982Z",
+  "projectRef": "igucxanapndewkbtarfn",
+  "mode": "hosted-three-identities-no-email",
+  "deployment": "appgdep_6ada9064f1bc8191b60c95ab16a9b248",
+  "environmentRevision": 4,
+  "responses": [
+    {
+      "route": "/api/export?kind=transactions",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/csv; charset=utf-8",
+      "cacheControl": "private, no-store",
+      "vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+      "bytes": 11818
+    },
+    {
+      "route": "/api/export?kind=clients",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/csv; charset=utf-8",
+      "cacheControl": "private, no-store",
+      "vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+      "bytes": 1922
+    },
+    {
+      "route": "/api/export?kind=portfolios",
+      "method": "GET",
+      "status": 200,
+      "contentType": "text/csv; charset=utf-8",
+      "cacheControl": "private, no-store",
+      "vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+      "bytes": 4128
+    },
+    {
+      "route": "/api/auth/logout",
+      "method": "POST",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": "no-store, private",
+      "vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+      "bytes": 23
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 401,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": "no-store, private",
+      "vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+      "bytes": 35
+    }
+  ],
+  "checks": [
+    "Valid shared invitation creates browser-bound claim",
+    "Bound email challenge created without SMTP",
+    "HTTPS session cookies use __Host prefix",
+    "Minimal real fixtures have expected authorization",
+    "Focused hosted CSV transactions status 200",
+    "Focused CSV transactions: every byte after transport BOM normalization equals local export",
+    "Focused hosted CSV clients status 200",
+    "Focused CSV clients: every byte after transport BOM normalization equals local export",
+    "Focused hosted CSV portfolios status 200",
+    "Focused CSV portfolios: every byte after transport BOM normalization equals local export",
+    "Hosted logout succeeds for analyst",
+    "Replaying hosted logged-out session denied",
+    "Hosted logout revocation confirmed directly in database guard"
+  ],
+  "cleanup": true,
+  "otpLength": 8,
+  "result": "passed",
+  "cleanupRemaining": {
+    "challenges": 0,
+    "claims": 0,
+    "entitlements": 0,
+    "invites": 0,
+    "roles": 0,
+    "sessions": 0,
+    "users": 0
+  },
+  "fixtureFileRemoved": true,
+  "emailSent": false,
+  "hostedDeviceStartCalls": 0,
+  "generatedLinks": 1
+}

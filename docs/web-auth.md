@@ -6,11 +6,11 @@ Identidade, desafios, convites, sessões e permissões ficam no PostgreSQL do Su
 
 ## Estado comprovado e pendências
 
-Em 22/10/2026 o coordenador aplicou as migrations [001](../web/supabase/migrations/202610220001_device_auth.sql) e [002 aditiva](../web/supabase/migrations/202610220002_private_analytics.sql). A 001 aplicada permanece inalterada. A suíte atual passou **19 testes locais de core/autorização**, mais **2 testes focados de provider**, e **46 verificações com Supabase/PostgreSQL reais**, sem enviar e-mail. Evidência sanitizada: [authz-live-results.json](../web/tests/authz-live-results.json). O provedor gerou OTP de **oito dígitos**. As 7/42 verificações anteriores em [auth-live-results.json](../web/tests/auth-live-results.json) são evidência histórica do fluxo inicial, não a validação da autorização atual.
+Em 22/10/2026 o coordenador aplicou as migrations [001](../web/supabase/migrations/202610220001_device_auth.sql) e [002 aditiva](../web/supabase/migrations/202610220002_private_analytics.sql). A 001 aplicada permanece inalterada. A suíte atual passou **19 testes locais de core/autorização**, mais **2 testes focados de provider**, e **46 verificações com Supabase/PostgreSQL reais**, sem enviar e-mail. Evidência sanitizada: [authz-live-results.json](../web/tests/authz-live-results.json). Na rodada histórica o provedor gerou OTP de oito dígitos; a configuração atual foi ajustada para **seis dígitos**, a pedido do usuário. As 7/42 verificações anteriores em [auth-live-results.json](../web/tests/auth-live-results.json) são evidência histórica do fluxo inicial, não a validação da autorização atual.
 
 As fixtures principais e as duas sessões temporárias de QA foram removidas. A consulta final confirmou zero usuários, desafios, sessões, claims, entitlements, roles e convites próprios restantes; o arquivo ignorado de cookies também foi removido, conforme o relatório live. O convite de entrega não foi alterado. O coordenador confirmou QA independente aprovado com 205 verificações HTTP e 54 Edge: veja [revisão independente](qa/web_access_review.md) e [HTTP com sessões reais](qa/web_access_http_production_sessions.json). Nenhum segredo ou cookie consta dos relatórios versionados.
 
-**SMTP Brevo e templates ainda pendentes.** O provedor recusou templates personalizados com seu serviço de e-mail padrão gratuito; SMTP próprio autorizado é necessário. Não houve upgrade nem envio alternativo. Produção e `.dev.vars` permanecem `AUTH_ENABLED=false`; apenas processos de teste expressamente autorizados habilitam auth. Isso bloqueia analytics e export com **503**, sem fallback público ou login simulado. A validação atual não certifica entrega SMTP nem o fluxo completo em PC/celular físicos. Ver [ativação Brevo](brevo-activation.md).
+**SMTP Brevo e templates configurados em 22/10/2026.** A credencial existente foi recuperada dos projetos locais autorizados, validada por STARTTLS/AUTH235 e aplicada ao Supabase dedicado. A configuração posterior apresentou zero diferenças declaradas. A hospedagem usa `AUTH_ENABLED=true` na revisão 5; `.dev.vars` continua desabilitada localmente. Anônimos e contas sem role continuam sem dados. Não houve upgrade ou criação de chave nova. O usuário confirmou o recebimento do primeiro OTP real em 22/10/2026. A conclusão do fluxo em PC/celular físicos ainda está em validação; essa confirmação não é inferida apenas do SMTP. Ver [ativação Brevo](brevo-activation.md).
 
 ## Contrato HTTP
 
@@ -69,13 +69,13 @@ Modelo sem credenciais: [auth.env.example](../web/supabase/auth.env.example). To
 
 | Variável | Condição |
 |---|---|
-| `AUTH_ENABLED` | `false` até SMTP/templates e revisão; auth desligada bloqueia dados |
+| `AUTH_ENABLED` | `true` na hospedagem após configurar SMTP/templates; `false` local. Auth desligada bloqueia dados |
 | `AUTH_ORIGIN` | Origin exato, sem slash final; HTTPS em produção |
 | `SUPABASE_URL` | `https://igucxanapndewkbtarfn.supabase.co`, identidade dedicada |
 | `SUPABASE_ANON_KEY` | Chave pública usada pelo servidor para OTP/verify |
 | `SUPABASE_SERVICE_ROLE_KEY` | Secret só de servidor para RPC/admin, nunca cliente |
 | `AUTH_COOKIE_KEY` | 32 bytes aleatórios em 64 hex; AES-GCM e HMAC |
-| `AUTH_OTP_LENGTH` | `8` no projeto observado; aceita 6 ou 8, deve coincidir com o provedor |
+| `AUTH_OTP_LENGTH` | `6` obrigatório para o OTP de e-mail; deve coincidir com o provedor |
 | `AUTH_TRUST_CLOUDFLARE` | `true` apenas se a borda sobrescreve CF-Connecting-IP e bloqueia acesso direto ao origin |
 
 Em HTTPS: cookies `__Host-`, Secure, HttpOnly, SameSite=Lax, Path=/ e sem Domain. HTTP só é aceito em loopback fora de produção, com nomes sem prefixo e sem Secure. Origin localhost e 127.0.0.1 não são intercambiáveis. `.dev.vars` permanece ignorado. Rotacionar cookie key invalida confirmações pendentes e muda pseudônimos dos limites; sessões emitidas ainda exigem revogação no banco.
@@ -108,7 +108,7 @@ Validade é verificada em toda operação, independentemente de limpeza. Não h�
 
 ## E-mail e proteção de logs
 
-[config.toml](../web/supabase/config.toml), [magic_link.html](../web/supabase/templates/magic_link.html) e [confirmation.html](../web/supabase/templates/confirmation.html) estão preparados. Ambos os templates devem exibir `{{ .Token }}` e link `{{ .RedirectTo }}&amp;token_hash={{ .TokenHash }}&amp;type=email`; RedirectTo já contém challengeId. Não usar ConfirmationURL, pois verificaria o token antes do POST explícito. Alinhar OTP length=8 e validade300s no provedor antes de ativar. Aplicação depende do SMTP Brevo autorizado, domínio/remetente verificados, credenciais protegidas, hostname/porta/TLS e limites do serviço. Desabilitar tracking/reescrita de links. Não enviar e-mail antes de autorização.
+[config.toml](../web/supabase/config.toml), [magic_link.html](../web/supabase/templates/magic_link.html) e [confirmation.html](../web/supabase/templates/confirmation.html) foram aplicados. Ambos os templates exibem `{{ .Token }}` e link `{{ .RedirectTo }}&amp;token_hash={{ .TokenHash }}&amp;type=email`; RedirectTo já contém challengeId. Não usar ConfirmationURL, pois verificaria o token antes do POST explícito. OTP length=6 e validade de 300 segundos estão configurados. O código visual do PC tem oito dígitos e é independente do OTP do e-mail. SMTP usa credencial existente, remetente ativo e TLS validado; o domínio público do remetente não está autenticado pela conta Brevo. Confirmar a entrega e a preservação dos links em teste autorizado; nenhuma configuração de tracking foi alterada.
 
 O token_hash é segredo descartável inevitável no link; o handler o remove no primeiro redirect, cifra no cookie e não o registra. Não guardar query strings do callback em observabilidade/CDN ou enviar a analytics; usar Referrer-Policy:no-referrer. O coordenador desativou invocation logs/traces na configuração do runtime, mas isso não certifica a retenção interna do provedor. Revisar toda a cadeia de logs antes da ativação. Não existe redirect aberto: destino fixo `/confirm` no origin configurado.
 

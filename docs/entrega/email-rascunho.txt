@@ -8,8 +8,9 @@ Olá, Fernando,
 Segue minha entrega do teste técnico de Engenharia de Dados:
 
 Repositório: https://github.com/Artjosh/clube-do-valor-dbt
-Vídeo explicativo (2min04s): https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.0.0/apresentacao-cdv.mp4
-Página da release: https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.0.0
+Vídeo explicativo narrado (3min51s): https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-narrada.mp4
+Alternativa sem áudio para apresentação pessoal (3min51s): https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-sem-audio.mp4
+Página da release: https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.1.0
 
 O README contém os comandos de reprodução local com dbt e DuckDB, as decisões de modelagem e os limites do incremental. A entrega inclui os dados originais, seis modelos, documentação de todas as colunas e validação independente.
 
@@ -23,4 +24,4 @@ Atenciosamente,
 [NOME / ASSINATURA]
 [CONTATO, SE DESEJADO]
 
-NOTA INTERNA — REMOVER ANTES DO ENVIO: os destinos de publicação estão preenchidos, mas nesta revisão o push e o upload da release ainda serão feitos pelo coordenador; não enviar até confirmar que os links abrem corretamente. Assistir ao vídeo para revisar conteúdo, pronúncia e ritmo da voz sintética, substituir os placeholders de nome/assinatura/contato e obter autorização do usuário para envio.
+NOTA INTERNA — REMOVER ANTES DO ENVIO: os dois arquivos finais foram conferidos com ffprobe: 231 segundos, abaixo de cinco minutos, versão silenciosa sem stream de áudio. Os links acima correspondem aos arquivos finais da release v1.1.0, coordenada separadamente da QA. A v1.0.0 foi preservada como histórico. Assistir ao material para revisar conteúdo, pronúncia e ritmo, substituir nome/assinatura/contato e obter autorização do usuário para envio; nenhum email foi enviado por esta revisão.

@@ -1,0 +1,100 @@
+{
+  "at": "2026-10-22T22:49:46.690Z",
+  "files": [
+    {
+      "file": "renders/apresentacao-cdv-v2-narrada.mp4",
+      "sha256": "06115a2d2ada28866998047de23461e19138c2484ce60c95b9e7414a47a7271d",
+      "bytes": 11622435,
+      "duration": 231,
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": "30/1",
+        "frames": "6930"
+      },
+      "audio": [
+        {
+          "codec": "aac",
+          "sampleRate": "48000",
+          "channels": 2
+        }
+      ],
+      "decodeExit": 0,
+      "videoPacketHash": "SHA256=f4f9e69faa1c704214603a20ded104c91dedf77a0a6725a7302fd1f9483cd7f9"
+    },
+    {
+      "file": "renders/apresentacao-cdv-v2-sem-audio.mp4",
+      "sha256": "f256b71c66cd9e16e296343096f5de53a994f20f6a73fa3cd9ea7b080f71db58",
+      "bytes": 6371871,
+      "duration": 231,
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": "30/1",
+        "frames": "6930"
+      },
+      "audio": [],
+      "decodeExit": 0,
+      "videoPacketHash": "SHA256=f4f9e69faa1c704214603a20ded104c91dedf77a0a6725a7302fd1f9483cd7f9"
+    }
+  ],
+  "v1Preserved": true,
+  "videoPacketsIdentical": true,
+  "decoded": [
+    {
+      "time": 0,
+      "file": "evidence/decoded/frame-00-0s.png"
+    },
+    {
+      "time": 10,
+      "file": "evidence/decoded/frame-01-10s.png"
+    },
+    {
+      "time": 31,
+      "file": "evidence/decoded/frame-02-31s.png"
+    },
+    {
+      "time": 54,
+      "file": "evidence/decoded/frame-03-54s.png"
+    },
+    {
+      "time": 77,
+      "file": "evidence/decoded/frame-04-77s.png"
+    },
+    {
+      "time": 102,
+      "file": "evidence/decoded/frame-05-102s.png"
+    },
+    {
+      "time": 127,
+      "file": "evidence/decoded/frame-06-127s.png"
+    },
+    {
+      "time": 149,
+      "file": "evidence/decoded/frame-07-149s.png"
+    },
+    {
+      "time": 170,
+      "file": "evidence/decoded/frame-08-170s.png"
+    },
+    {
+      "time": 193,
+      "file": "evidence/decoded/frame-09-193s.png"
+    },
+    {
+      "time": 218,
+      "file": "evidence/decoded/frame-10-218s.png"
+    },
+    {
+      "time": 230,
+      "file": "evidence/decoded/frame-11-230s.png"
+    }
+  ],
+  "audioMeasurement": {
+    "integratedLUFS": -21.7,
+    "truePeakDbfs": -1.5,
+    "measuredNotHumanAudition": true
+  }
+}

@@ -1,0 +1,1 @@
+A extensão Vinext oferece três profundidades, sem planos pagos. Copper resume os movimentos. Silver permite investigar clientes, ativos e transações, com filtros, detalhes e exportação CSV. Gold expõe qualidade, linhagem e evidências. O site lê um snapshot exportado do DuckDB em modo somente leitura. Não é uma consulta de mercado em tempo real, nem altera o pipeline.

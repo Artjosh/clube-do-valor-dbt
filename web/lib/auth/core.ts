@@ -2,7 +2,7 @@
 if (typeof window !== "undefined") throw new Error("Auth helpers must only run on the server");
 export type AuthConfig = {
   origin: string; supabaseUrl: string; publicKey: string; serviceKey: string;
-  sealKey: string; secure: boolean; trustCloudflare: boolean; otpLength: 6 | 8;
+  sealKey: string; secure: boolean; trustCloudflare: boolean; otpLength: 6;
 };
 export class AuthError extends Error {
   status: number;
@@ -21,10 +21,10 @@ export function config(env: Record<string, string | undefined> = process.env): A
     if (origin.protocol !== "https:" && !(env.NODE_ENV !== "production" && local(origin) && origin.protocol === "http:")) return null;
     if (supabase.protocol !== "https:" && !(env.NODE_ENV !== "production" && local(supabase) && supabase.protocol === "http:")) return null;
     if (!/^[a-fA-F0-9]{64}$/.test(AUTH_COOKIE_KEY)) return null;
-    if (env.AUTH_OTP_LENGTH && !["6", "8"].includes(env.AUTH_OTP_LENGTH)) return null;
+    if (env.AUTH_OTP_LENGTH && env.AUTH_OTP_LENGTH !== "6") return null;
     return { origin: origin.origin, supabaseUrl: supabase.origin, publicKey: SUPABASE_ANON_KEY,
       serviceKey: SUPABASE_SERVICE_ROLE_KEY, sealKey: AUTH_COOKIE_KEY, secure: origin.protocol === "https:",
-      trustCloudflare: env.AUTH_TRUST_CLOUDFLARE === "true", otpLength: env.AUTH_OTP_LENGTH === "8" ? 8 : 6 };
+      trustCloudflare: env.AUTH_TRUST_CLOUDFLARE === "true", otpLength: 6 };
   } catch { return null; }
 }
 export function requireConfig(): AuthConfig {

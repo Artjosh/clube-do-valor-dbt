@@ -1,18 +1,14 @@
-# Clube do Valor — Observatório de dados
+# Clube do Valor — Teste técnico de Engenharia de Dados
 
-Dashboard **Vinext** com níveis **Copper, Silver e Gold**, APIs de leitura e autenticação entre dispositivos preparada em **Supabase/PostgreSQL**, sobre o pipeline dbt/DuckDB original. Os níveis são profundidades de análise, sem cobrança. Veja [como executar o site](web/README.md), [arquitetura](docs/web-architecture.md) e [autenticação e limitações de ativação](docs/web-auth.md).
+Projeto **dbt + DuckDB**: dois CSVs originais, seis modelos em três camadas, documentação e testes que expõem os problemas intencionais da fonte. A avaliação do núcleo é inteiramente local: **não exige site, Supabase, login, credenciais ou servidor**. Python **3.12** é a versão validada; dependências diretas estão fixadas em `requirements.txt` e o ambiente completo em `requirements-lock.txt`.
 
-[Abrir o dashboard](https://clube-do-valor-intelligence.artjosh.chatgpt.site). Entrada por e-mail/OTP, sem senha ou cadastro separado. Uma conta verificada nasce sem acesso; a contrassenha de convite concede a role `analyst`, exigida no servidor para páginas, APIs e CSV. A configuração do Brevo está [preparada neste guia](docs/brevo-activation.md); o login e os dados permanecem indisponíveis até conectar SMTP e validar a jornada real. [Evidências históricas da análise e interface](docs/qa/web_validacao.md).
+Comece pelos [comandos de reprodução](#reprodução). O resultado esperado é `seed` 2/2, `run` 6/6 e `test` **71 PASS / 6 WARN / 0 ERROR**, exit 0. Os alertas são intencionais e visíveis; o [modo estrito](#qualidade-e-ambiguidade-do-enunciado) termina com exit 1. A [matriz de requisitos e revisão da entrega](docs/qa/delivery-review.md) liga cada exigência do enunciado às evidências.
 
-[Estado da publicação e continuidade](docs/web-publication.md) · [Validação atual de acesso privado](docs/qa/web_access_review.md).
+Documentação da entrega: [índice e pendências](docs/entrega/README.md), [enunciado original](docs/entrega/enunciado.html), [auditoria da fonte](docs/qa/auditoria.md), [validação independente](docs/qa/validacao.md), [roteiro v2](presentation/v2/ROTEIRO.md) e [relatório histórico do vídeo v1](presentation/ENTREGA.md).
 
-Pipeline local do teste técnico: dois CSVs originais, seis modelos em três camadas e testes que expõem os problemas intencionais sem apagar fatos suspeitos. Não exige conta, servidor, credenciais nem serviços pagos. Python **3.12** é a versão validada; dependências diretas estão fixadas em `requirements.txt` e o ambiente completo em `requirements-lock.txt`.
+Código: [repositório](https://github.com/Artjosh/clube-do-valor-dbt). A release v1.1.0 reúne as duas versões finais da apresentação. Veja [arquivos, links e estado da entrega](docs/entrega/README.md#apresentação-e-passos-externos).
 
-Documentação da entrega: [índice e pendências](docs/entrega/README.md), [enunciado original](docs/entrega/enunciado.html), [auditoria da fonte](docs/qa/auditoria.md), [validação independente](docs/qa/validacao.md), [apresentação](presentation/README.md) e [relatório do vídeo concluído](presentation/ENTREGA.md).
-
-Links da entrega: [repositório](https://github.com/Artjosh/clube-do-valor-dbt), [release v1.0.0](https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.0.0) e [vídeo MP4](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.0.0/apresentacao-cdv.mp4).
-
-O vídeo local `presentation/renders/apresentacao-cdv.mp4` está pronto: **124 segundos (2min04s), 1920×1080, 30 fps e 6.178.878 bytes**, conforme o relatório de verificação. Foi gerado com voz sintética em português, sem imitar o candidato. Assista antes do envio para revisar conteúdo, pronúncia e ritmo; a verificação técnica não substitui essa revisão humana.
+Vídeo obrigatório v2: **231 segundos (3min51s)**, 1920×1080, 30 fps, narração sintética em português. Downloads da v1.1.0: [versão narrada](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-narrada.mp4) e [versão sem áudio](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-sem-audio.mp4). A silenciosa tem a mesma duração e nenhum stream de áudio, para gravação pessoal com o [roteiro/timecodes](presentation/v2/ROTEIRO.md) e as [instruções de facecam](presentation/v2/README.md). Os arquivos locais ficam em `presentation/v2/renders/`; os MP4s são assets da release, não arquivos Git. A v1 de 124s foi preservada. Recomenda-se assistir antes do envio; metadados técnicos não substituem revisão humana da fala.
 
 ## Reprodução
 
@@ -45,7 +41,24 @@ O arquivo `profiles.yml` está na raiz. O banco padrão é `clube_do_valor.duckd
 
 ## Modelagem e dados
 
-| Modelo | Grão e regra | Linhas originais |
+O diagrama abaixo representa as dependências reais (`ref`). A canonização de clientes precede a validação de transações; a dimensão mantém também os clientes sem negociação.
+
+```mermaid
+flowchart LR
+  C[seeds/clients.csv] --> SC[stg_clients]
+  T[seeds/transactions.csv] --> ST[stg_transactions]
+  SC --> ST
+  SC --> I[int_transactions]
+  ST --> I
+  SC --> D[dim_clients]
+  I --> F[fact_transactions incremental]
+  F --> P[mart_client_portfolio]
+  P --> N[assert_no_negative_position]
+```
+
+Para cada par cliente/ativo: `net_quantity = SUM(BUY.quantity) − SUM(SELL.quantity)` e `net_financial_amount = SUM(BUY.quantity × unit_price) − SUM(SELL.quantity × unit_price)`. O teste singular seleciona `net_quantity < 0` no mesmo grão.
+
+| Modelo | Grão e regra | Linhas no resultado-base |
 |---|---|---:|
 | `stg_clients` | Um cadastro por `client_id`, escolhendo o mais completo | 25 |
 | `stg_transactions` | Uma transação válida por ID, com tipos e filtros | 98 |
@@ -54,7 +67,7 @@ O arquivo `profiles.yml` está na raiz. O banco padrão é `clube_do_valor.duckd
 | `fact_transactions` | Fato incremental, chave `transaction_id` | 98 |
 | `mart_client_portfolio` | Cliente/ativo com ao menos uma transação válida | 55 |
 
-As seeds conservam **100 transações e 27 cadastros**, incluindo todos os defeitos. `scripts/extract_seeds.py` extrai os arrays JSON literais do HTML UTF-8, preservando os bytes que o download geraria (CRLF, sem newline extra). Os CSVs e uma cópia byte a byte do HTML estão incluídos; o pipeline não depende do caminho original na máquina do autor. A [origem e o SHA-256](docs/entrega/README.md#origem-do-enunciado) permitem conferir a proveniência. Para reextrair as seeds originais:
+As seeds conservam **100 transações e 27 cadastros**, incluindo todos os defeitos. `scripts/extract_seeds.py` extrai os arrays JSON literais do HTML UTF-8, preservando os bytes que o download geraria (CRLF, sem newline extra). Os CSVs e uma cópia byte a byte do HTML estão incluídos; o pipeline não depende do caminho original na máquina do autor. A [origem e o SHA-256](docs/entrega/README.md#origem-do-enunciado) permitem conferir a proveniência. Reextração opcional (reescreve as seeds; não é necessária para executar ou avaliar):
 
 ```sh
 python scripts/extract_seeds.py docs/entrega/enunciado.html
@@ -142,8 +155,12 @@ A suíte copia somente o projeto dbt para uma pasta temporária, usa banco isola
 
 Execução validada em Windows/Python 3.12.10: `seed` 2/2, `run` 6/6, `test` **71 PASS / 6 WARN / 0 ERROR**, modo estrito **71 PASS / 6 FAIL** (código 1 esperado), catálogo gerado e **17 verificações funcionais aprovadas**. `pip check` não encontrou incompatibilidades. As 55 linhas do portfólio também foram comparadas com o oracle independente de QA: quantidade líquida total 10.900 e valor financeiro líquido total 215.915,00. Os comandos POSIX são fornecidos para reprodução, mas não foram executados nesta máquina.
 
-`dbt docs generate --profiles-dir .` gera `target/index.html`, `manifest.json` e `catalog.json`. Para visualizar localmente, execute `dbt docs serve --profiles-dir . --no-browser` e abra a URL indicada num navegador externo. O vídeo explicativo está concluído e abaixo do limite de cinco minutos; consulte o [roteiro](presentation/ROTEIRO.md). Publicação e envio são etapas externas ao pipeline, que não publica nem envia e-mail.
+`dbt docs generate --profiles-dir .` gera `target/index.html`, `manifest.json` e `catalog.json`. Para visualizar localmente, execute `dbt docs serve --profiles-dir . --no-browser` e abra a URL indicada num navegador externo. No PowerShell sem ativar o ambiente, use `.\.venv\Scripts\dbt.exe docs serve --profiles-dir . --no-browser`. O catálogo inclui o DAG navegável. Para o vídeo obrigatório de até cinco minutos, consulte o [índice da entrega](docs/entrega/README.md) e o [roteiro v2](presentation/v2/ROTEIRO.md); publicação e envio são etapas externas ao pipeline.
 
-## Escopo arquitetural
+A revisão atual executou novamente seed/run/test/docs e modo estrito em `target/delivery-check/`, com banco novo e runtime já instalado, reconciliando as 55 posições com Decimal e verificando os hashes dos 23 arquivos protegidos antes/depois. Comando opcional: `.\.venv\Scripts\python.exe -B scripts/qa/delivery_check.py` (POSIX: `python scripts/qa/delivery_check.py` no ambiente ativado). Evidências: [relatório](docs/qa/delivery-review.md) e [resultado estruturado](scripts/qa/delivery_results.json). Isso não alega nova instalação de dependências nem execução POSIX.
 
-Após a entrega v1.0.0, a extensão web foi autorizada e implementada em `web/`: Vinext com rotas server-side, dashboard Copper/Silver/Gold e login entre PC e celular por polling e aprovação explícita. O DuckDB permanece analítico e somente leitura para o site; um PostgreSQL Supabase dedicado contém apenas identidade, desafios e sessões. Os testes do dashboard têm evidências separadas em `docs/qa/web*`. O login publicado fica desativado até configurar SMTP próprio: o Supabase Free recusou os templates customizados com o provedor de e-mail padrão. O pipeline dbt continua executável de forma independente, sem conta ou servidor.
+## Extensão opcional: dashboard
+
+[Dashboard](https://clube-do-valor-intelligence.artjosh.chatgpt.site) · [execução do site](web/README.md) · [arquitetura](docs/web-architecture.md) · [autenticação](docs/web-auth.md) · [estado da publicação](docs/web-publication.md) · [QA de acesso privado](docs/qa/web_access_review.md). Essa extensão não é pré-requisito para os comandos dbt nem substitui a documentação do teste.
+
+Após a entrega v1.0.0, a extensão web foi implementada em `web/`: Vinext com rotas server-side, dashboard Copper/Silver/Gold e login por e-mail/OTP, com alternativa entre PC/celular. Os níveis são profundidades de análise, sem cobrança. O pipeline e o banco DuckDB originais foram preservados; o site consome um snapshot analítico derivado, enquanto PostgreSQL Supabase dedicado contém identidade, desafios, sessões e permissões. Os testes do dashboard têm evidências separadas em `docs/qa/web*`. Estado informado pelo coordenador nesta revisão: SMTP Brevo e dois templates configurados e relidos sem diferenças, login publicado habilitado (`AUTH_ENABLED=true`, env revision 4), primeiro recebimento de e-mail confirmado. Ajustes de OTP de seis dígitos e HTML do e-mail seguem em tarefa separada; esta QA do core não certifica essa jornada final, que não é pré-requisito para avaliar dbt. Consulte o [estado operacional](docs/web-publication.md) e o [guia Brevo](docs/brevo-activation.md) para atualizações.

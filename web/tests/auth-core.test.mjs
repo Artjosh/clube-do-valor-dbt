@@ -14,6 +14,10 @@ test('configuration fails closed for missing settings, insecure production and n
   assert.equal(config({...env, AUTH_ORIGIN:'https://example.test/path'}), null);
   assert.equal(config({...env, SUPABASE_URL:'https://name:password@auth.example.test'}), null);
   assert.ok(cfg);
+  assert.equal(cfg.otpLength,6);
+  assert.equal(config({...env,AUTH_OTP_LENGTH:'6'}).otpLength,6);
+  assert.equal(config({...env,AUTH_OTP_LENGTH:'8'}),null);
+  assert.equal(config({...env,AUTH_OTP_LENGTH:'7'}),null);
 });
 
 test('256-bit secrets and independent device/session hashes', async () => {

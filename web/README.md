@@ -26,7 +26,7 @@ Na raiz, com a venv existente, execute `./.venv/Scripts/python.exe scripts/expor
 
 ## Identidade
 
-Rotas em `app/api/auth`, código de servidor em `lib/auth` e schema em `supabase/migrations`. A migration inicial já foi aplicada ao projeto dedicado; não a reaplique. Consulte o relatório de publicação antes de aplicar migrations posteriores. SMTP próprio é necessário: o Supabase Free recusou templates personalizados com o provedor padrão. A publicação mantém `AUTH_ENABLED=false` até configurar SMTP; isso bloqueia login e acesso aos dados. Não há envio/login simulado.
+Rotas em `app/api/auth`, código de servidor em `lib/auth` e schema em `supabase/migrations`. As migrations 001/002 já foram aplicadas ao projeto dedicado; não as reaplique. Consulte o relatório de publicação antes de aplicar migrations posteriores. SMTP Brevo e templates estão configurados; a publicação usa `AUTH_ENABLED=true` na revisão de ambiente 5. Localmente a configuração permanece desabilitada até ser preparada, bloqueando login e dados. O usuário confirmou o recebimento do primeiro OTP real. A jornada completa PC/celular está em validação; não há envio/login simulado na aplicação.
 
 Login normal por OTP cria uma conta sem privilégio. O botão Contrassenha inicia um convite; após verificar o e-mail, a role `analyst` permite ler todos os níveis. A permissão é verificada no servidor em SSR/RSC, APIs e exportações; mudar o estado do frontend não concede acesso.
 

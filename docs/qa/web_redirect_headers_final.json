@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-22T22:50:53.076Z",
+  "deployment": "appgdep_6ada91dd1cb08191b86c3045a538991c",
+  "results": [
+    {
+      "path": "/?tier=copper",
+      "status": 307,
+      "location": "/login",
+      "cacheControl": "private, no-store",
+      "vary": "Cookie",
+      "bytes": 0,
+      "pass": true
+    },
+    {
+      "path": "/.rsc?tier=copper",
+      "status": 200,
+      "location": null,
+      "cacheControl": "private, no-store",
+      "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode, Cookie",
+      "bytes": 50,
+      "pass": true
+    },
+    {
+      "path": "/?tier=silver",
+      "status": 307,
+      "location": "/login",
+      "cacheControl": "private, no-store",
+      "vary": "Cookie",
+      "bytes": 0,
+      "pass": true
+    },
+    {
+      "path": "/.rsc?tier=silver",
+      "status": 200,
+      "location": null,
+      "cacheControl": "private, no-store",
+      "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode, Cookie",
+      "bytes": 50,
+      "pass": true
+    },
+    {
+      "path": "/?tier=gold",
+      "status": 307,
+      "location": "/login",
+      "cacheControl": "private, no-store",
+      "vary": "Cookie",
+      "bytes": 0,
+      "pass": true
+    },
+    {
+      "path": "/.rsc?tier=gold",
+      "status": 200,
+      "location": null,
+      "cacheControl": "private, no-store",
+      "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode, Cookie",
+      "bytes": 50,
+      "pass": true
+    }
+  ]
+}

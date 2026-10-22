@@ -43,7 +43,7 @@ export function DeviceLogin(){
  async function start(e:FormEvent){e.preventDefault();setBusy(true);setError('');try{
   if(mode==='invite'&&(!inviteAccepted||!Number.isFinite(inviteExpires)||Date.now()>=inviteExpires)){setInviteAccepted(false);throw new Error('A validação da contrassenha expirou. Informe o código novamente.')}
   const value=await authRequest('/api/auth/device/start',{email:email.trim(),useInvite:mode==='invite'});
-  if(!Number.isInteger(value.otpLength)||value.otpLength<6||value.otpLength>8)throw new Error('O serviço retornou um formato de código inesperado. Tente novamente.');
+  if(value.otpLength!==6)throw new Error('O serviço retornou um formato de código inesperado. Tente novamente.');
   setChallenge(value);setOtp('');setStatus('pending');setCooldown(60);
  }catch(e){fail(e)}finally{setBusy(false)}}
  async function verify(e:FormEvent){e.preventDefault();if(!challenge)return;setBusy(true);setError('');try{const value=await authRequest('/api/auth/device/verify',{challengeId:challenge.challengeId,code:otp});if(value.authenticated!==true)throw new Error('Não foi possível confirmar a sessão.');finish(value)}catch(e){if(!completed.current)fail(e)}finally{setBusy(false)}}

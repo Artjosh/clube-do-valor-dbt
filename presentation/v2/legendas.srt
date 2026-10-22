@@ -1,0 +1,199 @@
+1
+00:00:00,500 --> 00:00:05,386
+Esta apresentação explica a solução do teste de engenharia de dados do Clube do Valor.
+
+2
+00:00:05,386 --> 00:00:09,947
+O núcleo é um projeto dbt com DuckDB, executável localmente a partir do README.
+
+3
+00:00:09,947 --> 00:00:12,878
+A extensão web transforma os resultados em análise navegável.
+
+4
+00:00:12,878 --> 00:00:17,439
+O foco é preservar a fonte, explicitar decisões e mostrar os limites dos dados.
+
+5
+00:00:19,500 --> 00:00:24,229
+Os arquivos originais foram preservados: cem transações e vinte e sete cadastros.
+
+6
+00:00:24,229 --> 00:00:29,746
+O staging produz noventa e oito transações válidas e vinte e cinco clientes canônicos.
+
+7
+00:00:29,746 --> 00:00:32,111
+Registros rejeitados continuam auditáveis na fonte.
+
+8
+00:00:32,111 --> 00:00:35,657
+A escolha de cadastro prioriza completude, com desempate determinístico.
+
+9
+00:00:35,657 --> 00:00:41,175
+Transações de conteúdo igual, mas identificadores distintos, não são apagadas sem confirmação de negócio.
+
+10
+00:00:43,500 --> 00:00:45,502
+A estrutura separa três responsabilidades.
+
+11
+00:00:45,502 --> 00:00:49,104
+Staging normaliza textos, converte tipos e filtra registros inválidos.
+
+12
+00:00:49,104 --> 00:00:54,308
+Intermediate junta transações ao cliente canônico e calcula quantidades e valores com sinal.
+
+13
+00:00:54,308 --> 00:00:59,913
+Marts entrega dimensão de clientes, fato de transações e carteira por cliente e ativo.
+
+14
+00:00:59,913 --> 00:01:03,916
+Macros reutilizam regras, e testes e documentação acompanham os modelos.
+
+15
+00:01:06,500 --> 00:01:10,879
+A carteira soma compras menos vendas em quantidade e valor financeiro.
+
+16
+00:01:10,879 --> 00:01:14,462
+Valores usam tipos decimais, evitando cálculos aproximados no núcleo.
+
+17
+00:01:14,462 --> 00:01:21,229
+Esse resultado não representa patrimônio, lucro ou valor de mercado: faltam cotações atuais, taxas e saldo inicial.
+
+18
+00:01:21,229 --> 00:01:25,210
+Clientes sem negociação permanecem na dimensão, sem gerar posições artificiais.
+
+19
+00:01:25,210 --> 00:01:27,599
+As seis posições negativas ficam visíveis.
+
+20
+00:01:29,500 --> 00:01:34,458
+A validação registrada teve setenta e um testes aprovados e seis alertas.
+
+21
+00:01:34,458 --> 00:01:38,590
+Eles expõem posições negativas, transações inválidas, duplicidades e cadastro incompleto.
+
+22
+00:01:38,590 --> 00:01:41,069
+Invariantes dos modelos continuam sendo erros.
+
+23
+00:01:41,069 --> 00:01:45,201
+Os diagnósticos conhecidos usam avisos, com linhas de falha persistidas.
+
+24
+00:01:45,201 --> 00:01:48,920
+No modo estrito, os seis avisos viram falhas esperadas.
+
+25
+00:01:48,920 --> 00:01:53,878
+Código de saída zero no modo normal não significa fonte sem problemas.
+
+26
+00:01:55,500 --> 00:01:59,991
+O fato é incremental pela chave da transação, usando delete mais insert.
+
+27
+00:01:59,991 --> 00:02:06,354
+A janela padrão reprocessa trinta dias em relação à maior data já carregada, não ao relógio atual.
+
+28
+00:02:06,354 --> 00:02:11,594
+Isso permite repetir a entrada sem duplicar identificadores e aplicar correções dentro da janela.
+
+29
+00:02:11,594 --> 00:02:14,588
+Alterações antigas, exclusões e invalidações exigem reconstrução completa.
+
+30
+00:02:14,588 --> 00:02:16,833
+Esses limites estão documentados e testados.
+
+31
+00:02:18,500 --> 00:02:24,853
+Para reproduzir, siga o README da raiz: crie o ambiente Python três ponto doze e instale as dependências fixadas.
+
+32
+00:02:24,853 --> 00:02:30,202
+Com o ambiente ativado, execute dbt seed, dbt run e dbt test, usando profiles dir ponto.
+
+33
+00:02:30,202 --> 00:02:35,217
+O README também traz os caminhos completos para PowerShell, geração de documentação e full refresh.
+
+34
+00:02:35,217 --> 00:02:37,892
+O pipeline não depende da autenticação do site.
+
+35
+00:02:39,500 --> 00:02:42,710
+A extensão Vinext oferece três profundidades, sem planos pagos.
+
+36
+00:02:42,710 --> 00:02:44,137
+Copper resume os movimentos.
+
+37
+00:02:44,137 --> 00:02:48,774
+Silver permite investigar clientes, ativos e transações, com filtros, detalhes e exportação CSV.
+
+38
+00:02:48,774 --> 00:02:50,914
+Gold expõe qualidade, linhagem e evidências.
+
+39
+00:02:50,914 --> 00:02:55,194
+O site lê um snapshot exportado do DuckDB em modo somente leitura.
+
+40
+00:02:55,194 --> 00:02:59,831
+Não é uma consulta de mercado em tempo real, nem altera o pipeline.
+
+41
+00:03:01,500 --> 00:03:05,869
+DuckDB guarda a análise; Supabase e PostgreSQL cuidam da identidade e das permissões.
+
+42
+00:03:05,869 --> 00:03:09,566
+O login por código de e-mail cria uma conta sem acesso.
+
+43
+00:03:09,566 --> 00:03:14,271
+A contrassenha é um convite, e só concede permissão depois da verificação do e-mail.
+
+44
+00:03:14,271 --> 00:03:18,304
+Página, APIs e CSV exigem sessão e role de analista no servidor.
+
+45
+00:03:18,304 --> 00:03:22,001
+A confirmação pelo celular preserva comparação de código e aprovação explícita.
+
+46
+00:03:24,500 --> 00:03:32,103
+A integração local registrou duzentas e cinco verificações HTTP e cinquenta e quatro no navegador Edge com sessões reais.
+
+47
+00:03:32,103 --> 00:03:38,506
+Esses testes comprovam as jornadas avaliadas, mas não substituem a validação operacional do envio de e-mail.
+
+48
+00:03:38,506 --> 00:03:41,707
+O repositório reúne comandos, decisões, evidências e limitações.
+
+49
+00:03:41,707 --> 00:03:44,908
+Consulte a documentação para o estado da publicação.
+
+50
+00:03:44,908 --> 00:03:49,710
+Assim, o avaliador pode reproduzir o pipeline e conferir a extensão separadamente.

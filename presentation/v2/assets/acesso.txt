@@ -1,0 +1,1 @@
+DuckDB guarda a análise; Supabase e PostgreSQL cuidam da identidade e das permissões. O login por código de e-mail cria uma conta sem acesso. A contrassenha é um convite, e só concede permissão depois da verificação do e-mail. Página, APIs e CSV exigem sessão e role de analista no servidor. A confirmação pelo celular preserva comparação de código e aprovação explícita.

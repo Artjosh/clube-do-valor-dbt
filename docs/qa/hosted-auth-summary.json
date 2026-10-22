@@ -1,0 +1,23 @@
+{
+  "executedAt": "2026-10-22T22:45:22.511Z",
+  "target": "https://clube-do-valor-intelligence.artjosh.chatgpt.site",
+  "environmentRevision": 4,
+  "declaredDeployment": "appgdep_6ada9064f1bc8191b60c95ab16a9b248",
+  "result": "passed-with-observation",
+  "matrixPassedAssertions": 140,
+  "focusedPassedAssertions": 13,
+  "csvComparisonsResolvedByTransportBomNormalization": true,
+  "redirectsWithoutExplicitCacheControl": 6,
+  "canonicalRedirects": 18,
+  "allRunsCleanup": true,
+  "fixtureFileAbsent": true,
+  "emailSent": false,
+  "hostedDeviceStartCalls": 0,
+  "smtpDeliveryVerified": false,
+  "artifacts": [
+    "hosted-auth-initial-results.json",
+    "hosted-auth-canonical-redirect-results.json",
+    "hosted-auth-results.json",
+    "hosted-auth-csv-results.json"
+  ]
+}

@@ -1,0 +1,1 @@
+A estrutura separa três responsabilidades. Staging normaliza textos, converte tipos e filtra registros inválidos. Intermediate junta transações ao cliente canônico e calcula quantidades e valores com sinal. Marts entrega dimensão de clientes, fato de transações e carteira por cliente e ativo. Macros reutilizam regras, e testes e documentação acompanham os modelos.

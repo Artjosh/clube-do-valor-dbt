@@ -12,7 +12,7 @@ enable_signup = true
 enable_confirmations = true
 double_confirm_changes = true
 otp_expiry = 300
-otp_length = 8
+otp_length = 6
 
 [auth.email.template.magic_link]
 subject = "Confirme o acesso no computador — Clube do Valor"

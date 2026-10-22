@@ -1,0 +1,8 @@
+{
+  "voice": {"provider":"local Kokoro ONNX","voice":"pf_dora","language":"pt-br","speed":1.12,"synthetic":true,"impersonatesCandidate":false,"source":"scenes.json and per-scene txt","generated":"2026-10-22"},
+  "screenshot": {"file":"dashboard-crop.png","source":"../../../docs/qa/web_desktop_copper.png","nature":"historical QA capture of the real interface","operation":"ffmpeg crop=1110:595:288:405","reason":"Exclude historical public-access labels and focus on actual dataset metrics","secrets":false},
+  "fonts": {"source":"licensed local Windows installation","files":["arial.ttf","arialbd.ttf","georgia.ttf","consola.ttf"],"git":"excluded"},
+  "registry": {"component":"terminal-simulator","use":"adapted chrome and terminal layout with the actual three dbt commands; no simulated success output"},
+  "music":"none",
+  "facecam":"No face asset; negative space reserved for user recording"
+}

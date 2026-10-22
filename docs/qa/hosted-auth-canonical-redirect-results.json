@@ -1,0 +1,103 @@
+{
+  "executedAt": "2026-10-22T22:41:58.051Z",
+  "projectRef": "igucxanapndewkbtarfn",
+  "mode": "hosted-three-identities-no-email",
+  "deployment": "appgdep_6ada9064f1bc8191b60c95ab16a9b248",
+  "environmentRevision": 4,
+  "responses": [
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 401,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": "no-store, private",
+      "vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+      "bytes": 35
+    },
+    {
+      "route": "/api/export?kind=transactions",
+      "method": "GET",
+      "status": 401,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": "no-store, private",
+      "vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+      "bytes": 35
+    },
+    {
+      "route": "/api/export?kind=clients",
+      "method": "GET",
+      "status": 401,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": "no-store, private",
+      "vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+      "bytes": 35
+    },
+    {
+      "route": "/api/export?kind=portfolios",
+      "method": "GET",
+      "status": 401,
+      "contentType": "application/json; charset=utf-8",
+      "cacheControl": "no-store, private",
+      "vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+      "bytes": 35
+    },
+    {
+      "route": "/?tier=copper",
+      "method": "GET",
+      "status": 307,
+      "contentType": null,
+      "cacheControl": null,
+      "vary": null,
+      "bytes": 0
+    },
+    {
+      "route": "/?tier=copper&_rsc=hostedqa",
+      "method": "GET",
+      "status": 307,
+      "contentType": null,
+      "cacheControl": null,
+      "vary": null,
+      "bytes": 0
+    }
+  ],
+  "checks": [
+    "Valid shared invitation creates browser-bound claim",
+    "Bound email challenge created without SMTP",
+    "Bound email challenge created without SMTP",
+    "HTTPS session cookies use __Host prefix",
+    "Minimal real fixtures have analyst and no-role state",
+    "anonymous: /api/analytics status 401",
+    "anonymous: /api/analytics no-store",
+    "anonymous: /api/analytics no data",
+    "anonymous: /api/export?kind=transactions status 401",
+    "anonymous: /api/export?kind=transactions no-store",
+    "anonymous: /api/export?kind=transactions no data",
+    "anonymous: /api/export?kind=clients status 401",
+    "anonymous: /api/export?kind=clients no-store",
+    "anonymous: /api/export?kind=clients no data",
+    "anonymous: /api/export?kind=portfolios status 401",
+    "anonymous: /api/export?kind=portfolios no-store",
+    "anonymous: /api/export?kind=portfolios no data",
+    "anonymous: copper/html no data",
+    "anonymous: copper/html access redirect",
+    "anonymous: copper/rsc-header no data"
+  ],
+  "cleanup": true,
+  "otpLength": 8,
+  "redirectsWithoutExplicitCacheControl": 2,
+  "result": "failed",
+  "failure": "anonymous: copper/rsc-header access redirect",
+  "cleanupRemaining": {
+    "challenges": 0,
+    "claims": 0,
+    "entitlements": 0,
+    "invites": 0,
+    "roles": 0,
+    "sessions": 0,
+    "users": 0
+  },
+  "fixtureFileRemoved": true,
+  "emailSent": false,
+  "hostedDeviceStartCalls": 0,
+  "generatedLinks": 2
+}

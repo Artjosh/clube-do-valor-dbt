@@ -1,0 +1,206 @@
+{
+  "started_at": "2026-10-22T22:34:31.943486+00:00",
+  "project": "C:\\Users\\josh\\Desktop\\ClubeDoValor\\target\\delivery-check\\20261022T223431942486\\project",
+  "runtime": "C:\\Users\\josh\\Desktop\\ClubeDoValor\\.venv\\Scripts\\python.exe",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\josh\\Desktop\\ClubeDoValor\\.venv\\Scripts\\dbt.exe",
+        "seed",
+        "--profiles-dir",
+        "."
+      ],
+      "label": "seed",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "statuses": {
+        "success": 2
+      },
+      "diagnostics": []
+    },
+    {
+      "command": [
+        "C:\\Users\\josh\\Desktop\\ClubeDoValor\\.venv\\Scripts\\dbt.exe",
+        "run",
+        "--profiles-dir",
+        "."
+      ],
+      "label": "run",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "statuses": {
+        "success": 6
+      },
+      "diagnostics": []
+    },
+    {
+      "command": [
+        "C:\\Users\\josh\\Desktop\\ClubeDoValor\\.venv\\Scripts\\dbt.exe",
+        "test",
+        "--profiles-dir",
+        "."
+      ],
+      "label": "test",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "statuses": {
+        "pass": 71,
+        "warn": 6
+      },
+      "diagnostics": [
+        {
+          "unique_id": "test.clube_do_valor.assert_no_negative_position",
+          "status": "warn",
+          "failures": 6
+        },
+        {
+          "unique_id": "test.clube_do_valor.audit_duplicate_transaction_payload",
+          "status": "warn",
+          "failures": 2
+        },
+        {
+          "unique_id": "test.clube_do_valor.audit_invalid_transactions",
+          "status": "warn",
+          "failures": 2
+        },
+        {
+          "unique_id": "test.clube_do_valor.not_null_clients_city.913dd09c1b",
+          "status": "warn",
+          "failures": 1
+        },
+        {
+          "unique_id": "test.clube_do_valor.not_null_transactions_client_id.d57cf6e0fe",
+          "status": "warn",
+          "failures": 1
+        },
+        {
+          "unique_id": "test.clube_do_valor.unique_clients_client_id.135dfeaa10",
+          "status": "warn",
+          "failures": 2
+        }
+      ]
+    },
+    {
+      "command": [
+        "C:\\Users\\josh\\Desktop\\ClubeDoValor\\.venv\\Scripts\\dbt.exe",
+        "docs",
+        "generate",
+        "--profiles-dir",
+        "."
+      ],
+      "label": "docs",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "statuses": {
+        "success": 85
+      },
+      "diagnostics": []
+    },
+    {
+      "command": [
+        "C:\\Users\\josh\\Desktop\\ClubeDoValor\\.venv\\Scripts\\dbt.exe",
+        "--warn-error",
+        "test",
+        "--profiles-dir",
+        "."
+      ],
+      "label": "strict",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "statuses": {
+        "pass": 71,
+        "fail": 6
+      },
+      "diagnostics": [
+        {
+          "unique_id": "test.clube_do_valor.assert_no_negative_position",
+          "status": "fail",
+          "failures": 6
+        },
+        {
+          "unique_id": "test.clube_do_valor.audit_duplicate_transaction_payload",
+          "status": "fail",
+          "failures": 2
+        },
+        {
+          "unique_id": "test.clube_do_valor.audit_invalid_transactions",
+          "status": "fail",
+          "failures": 2
+        },
+        {
+          "unique_id": "test.clube_do_valor.not_null_clients_city.913dd09c1b",
+          "status": "fail",
+          "failures": 1
+        },
+        {
+          "unique_id": "test.clube_do_valor.not_null_transactions_client_id.d57cf6e0fe",
+          "status": "fail",
+          "failures": 1
+        },
+        {
+          "unique_id": "test.clube_do_valor.unique_clients_client_id.135dfeaa10",
+          "status": "fail",
+          "failures": 2
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "23 original protected files match baseline before execution",
+      "passed": true
+    },
+    {
+      "name": "seed expected exit",
+      "passed": true
+    },
+    {
+      "name": "run expected exit",
+      "passed": true
+    },
+    {
+      "name": "test expected exit",
+      "passed": true
+    },
+    {
+      "name": "docs expected exit",
+      "passed": true
+    },
+    {
+      "name": "strict expected exit",
+      "passed": true
+    },
+    {
+      "name": "fact_transactions count 98",
+      "passed": true
+    },
+    {
+      "name": "dim_clients count 25",
+      "passed": true
+    },
+    {
+      "name": "mart_client_portfolio count 55",
+      "passed": true
+    },
+    {
+      "name": "All 55 client/asset positions reconcile to independent Decimal oracle",
+      "passed": true
+    },
+    {
+      "name": "Six negative positions retained",
+      "passed": true
+    },
+    {
+      "name": "Six models and two seeds have model and column descriptions",
+      "passed": true
+    },
+    {
+      "name": "Documentation artifacts generated",
+      "passed": true
+    }
+  ],
+  "status": "passed",
+  "documented_columns": 55,
+  "original_hashes_unchanged": true,
+  "completed_at": "2026-10-22T22:34:47.236471+00:00"
+}
