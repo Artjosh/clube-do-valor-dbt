@@ -49,6 +49,7 @@ O vídeo local está em `presentation/renders/apresentacao-cdv.mp4`: **124 segun
 Links da entrega:
 
 - [Repositório](https://github.com/Artjosh/clube-do-valor-dbt).
+- [Dashboard Copper / Silver / Gold](https://clube-do-valor-intelligence.artjosh.chatgpt.site) — entrada por OTP e dados restritos à role de analista, concedida por contrassenha. Ativar o Brevo e validar a jornada antes de enviar aos avaliadores.
 - [Release v1.0.0](https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.0.0).
 - [Download do vídeo MP4](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.0.0/apresentacao-cdv.mp4).
 
@@ -59,4 +60,4 @@ O MP4 é distribuído como asset da release, separado do código versionado.
 3. Revisar o [rascunho de e-mail](email-rascunho.txt), que já contém os links finais, e substituir os placeholders de nome, assinatura e contato.
 4. Enviar somente após autorização do usuário. O rascunho local não representa mensagem enviada; esta edição documental não publica conteúdo nem envia e-mail.
 
-Frontend, Supabase e autenticação não fazem parte da entrega implementada. A preferência para eventual extensão web futura está registrada no README principal e não é critério de aceite do pipeline atual.
+Uma extensão web foi implementada após a release v1.0.0: [dashboard Vinext](../../web/README.md), [arquitetura](../web-architecture.md) e [autenticação Supabase/PostgreSQL](../web-auth.md). Copper, Silver e Gold são níveis de análise sem cobrança. O pipeline e os dados originais foram preservados. O usuário determinou entrada aberta com OTP e dados privados: primeiro login sem acesso, role de analista somente via contrassenha. A ativação depende de [conectar o Brevo](../brevo-activation.md). O vídeo v1.0.0 explica o pipeline e não apresenta a extensão posterior.

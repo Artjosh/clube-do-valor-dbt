@@ -1,0 +1,223 @@
+{
+  "at": "2026-10-22T21:29:41.461Z",
+  "base": "http://127.0.0.1:3001",
+  "checks": [
+    {
+      "name": "analyst 1440 copper server permission",
+      "passed": true
+    },
+    {
+      "name": "analyst 1440 copper no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440 copper tier controls present",
+      "passed": true
+    },
+    {
+      "name": "analyst 1440 silver server permission",
+      "passed": true
+    },
+    {
+      "name": "analyst 1440 silver no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440 silver tier controls present",
+      "passed": true
+    },
+    {
+      "name": "analyst 1440 gold server permission",
+      "passed": false
+    },
+    {
+      "name": "analyst 1440 gold no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440 gold tier controls present",
+      "passed": true
+    },
+    {
+      "name": "analyst 390 copper server permission",
+      "passed": true
+    },
+    {
+      "name": "analyst 390 copper no overflow",
+      "passed": true
+    },
+    {
+      "name": "390 copper tier controls present",
+      "passed": false
+    },
+    {
+      "name": "analyst 390 silver server permission",
+      "passed": true
+    },
+    {
+      "name": "analyst 390 silver no overflow",
+      "passed": true
+    },
+    {
+      "name": "390 silver tier controls present",
+      "passed": false
+    },
+    {
+      "name": "analyst 390 gold server permission",
+      "passed": false
+    },
+    {
+      "name": "analyst 390 gold no overflow",
+      "passed": true
+    },
+    {
+      "name": "390 gold tier controls present",
+      "passed": false
+    },
+    {
+      "name": "analyst browser GET /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "analyst browser GET /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "analyst browser GET /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "analyst browser GET /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "noRole 1440 copper server permission",
+      "passed": true
+    },
+    {
+      "name": "noRole 1440 copper no overflow",
+      "passed": true
+    },
+    {
+      "name": "noRole 1440 silver server permission",
+      "passed": true
+    },
+    {
+      "name": "noRole 1440 silver no overflow",
+      "passed": true
+    },
+    {
+      "name": "noRole 1440 gold server permission",
+      "passed": true
+    },
+    {
+      "name": "noRole 1440 gold no overflow",
+      "passed": true
+    },
+    {
+      "name": "noRole 390 copper server permission",
+      "passed": true
+    },
+    {
+      "name": "noRole 390 copper no overflow",
+      "passed": true
+    },
+    {
+      "name": "noRole 390 silver server permission",
+      "passed": true
+    },
+    {
+      "name": "noRole 390 silver no overflow",
+      "passed": true
+    },
+    {
+      "name": "noRole 390 gold server permission",
+      "passed": true
+    },
+    {
+      "name": "noRole 390 gold no overflow",
+      "passed": true
+    },
+    {
+      "name": "noRole browser GET /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "noRole browser GET /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "noRole browser GET /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "noRole browser GET /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "anonymous 1440 copper server permission",
+      "passed": true
+    },
+    {
+      "name": "anonymous 1440 copper no overflow",
+      "passed": true
+    },
+    {
+      "name": "anonymous 1440 silver server permission",
+      "passed": true
+    },
+    {
+      "name": "anonymous 1440 silver no overflow",
+      "passed": true
+    },
+    {
+      "name": "anonymous 1440 gold server permission",
+      "passed": true
+    },
+    {
+      "name": "anonymous 1440 gold no overflow",
+      "passed": true
+    },
+    {
+      "name": "anonymous 390 copper server permission",
+      "passed": true
+    },
+    {
+      "name": "anonymous 390 copper no overflow",
+      "passed": true
+    },
+    {
+      "name": "anonymous 390 silver server permission",
+      "passed": true
+    },
+    {
+      "name": "anonymous 390 silver no overflow",
+      "passed": true
+    },
+    {
+      "name": "anonymous 390 gold server permission",
+      "passed": true
+    },
+    {
+      "name": "anonymous 390 gold no overflow",
+      "passed": true
+    },
+    {
+      "name": "anonymous browser GET /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "anonymous browser GET /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "anonymous browser GET /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "anonymous browser GET /api/export?kind=portfolios",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

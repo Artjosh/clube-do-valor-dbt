@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-22T21:17:59.135Z",
+  "checks": [
+    {
+      "name": "401 removes all rendered analytics",
+      "pass": true
+    },
+    {
+      "name": "401 redirects fail-closed",
+      "pass": true
+    },
+    {
+      "name": "403 removes all rendered analytics",
+      "pass": true
+    },
+    {
+      "name": "403 redirects fail-closed",
+      "pass": true
+    },
+    {
+      "name": "503 removes all rendered analytics",
+      "pass": true
+    },
+    {
+      "name": "503 redirects fail-closed",
+      "pass": true
+    },
+    {
+      "name": "Logout removes analytics while request is pending",
+      "pass": true
+    },
+    {
+      "name": "Logout navigates to login",
+      "pass": true
+    },
+    {
+      "name": "Export 403 removes data and routes to access denied",
+      "pass": true
+    },
+    {
+      "name": "Denied screen has no metrics",
+      "pass": true
+    },
+    {
+      "name": "Denied screen links to invitation",
+      "pass": true
+    },
+    {
+      "name": "Denied mobile has no overflow",
+      "pass": true
+    },
+    {
+      "name": "Denied screen logout works",
+      "pass": true
+    },
+    {
+      "name": "No dashboard UI runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "scope": "Isolated real components mounted with synthetic empty fixture; navigation aborted to inspect cleared DOM; auth and analytics intercepted."
+}

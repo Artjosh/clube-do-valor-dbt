@@ -1,0 +1,13 @@
+{
+  "scope": "Synthetic UI only; all auth requests intercepted, no real provider/email/session",
+  "checks": [
+    "Disabled state has no sending form or simulated authorization",
+    "approved: PC displays synthetic code from challenge",
+    "Polling waits at least three seconds and stops after approval",
+    "expired: PC displays synthetic code from challenge",
+    "Expired challenge stops without polling provider",
+    "Confirmation cannot approve before explicit checkbox even with code",
+    "Explicit checkbox and code submit exactly one approval"
+  ],
+  "errors": []
+}

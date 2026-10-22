@@ -1,0 +1,47 @@
+{
+  "at": "2026-10-22T21:04:50.921Z",
+  "url": "https://clube-do-valor-intelligence.artjosh.chatgpt.site",
+  "access": "owner credential supplied in memory; no emails sent",
+  "checks": [
+    {
+      "name": "/ HTTP 200",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "name": "Production dashboard rendered",
+      "passed": true
+    },
+    {
+      "name": "Root security headers",
+      "passed": true
+    },
+    {
+      "name": "/api/health HTTP 200",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "name": "Health reports correct disabled auth",
+      "passed": true
+    },
+    {
+      "name": "/api/analytics HTTP 200",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "name": "Deployed analytics equals validated local response",
+      "passed": true
+    },
+    {
+      "name": "/api/auth/session HTTP 200",
+      "passed": true,
+      "status": 200
+    },
+    {
+      "name": "Auth remains disabled and anonymous",
+      "passed": true
+    }
+  ]
+}

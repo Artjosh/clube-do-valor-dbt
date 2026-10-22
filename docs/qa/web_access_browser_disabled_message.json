@@ -1,0 +1,182 @@
+{
+  "at": "2026-10-22T21:22:48.959Z",
+  "base": "http://127.0.0.1:3000",
+  "browser": "Edg/155.0.4283.62",
+  "checks": [
+    {
+      "name": "1440 /login no dataset",
+      "passed": true
+    },
+    {
+      "name": "1440 /login no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440 /login no signup action",
+      "passed": true
+    },
+    {
+      "name": "1440 passwordless login",
+      "passed": true
+    },
+    {
+      "name": "1440 /login explicit unavailable with no submission",
+      "passed": false
+    },
+    {
+      "name": "1440 /login?mode=invite no dataset",
+      "passed": true
+    },
+    {
+      "name": "1440 /login?mode=invite no overflow",
+      "passed": true
+    },
+    {
+      "name": "1440 /login?mode=invite no signup action",
+      "passed": true
+    },
+    {
+      "name": "1440 invitation before email",
+      "passed": true
+    },
+    {
+      "name": "1440 /login?mode=invite explicit unavailable with no submission",
+      "passed": false
+    },
+    {
+      "name": "390 /login no dataset",
+      "passed": true
+    },
+    {
+      "name": "390 /login no overflow",
+      "passed": true
+    },
+    {
+      "name": "390 /login no signup action",
+      "passed": true
+    },
+    {
+      "name": "390 passwordless login",
+      "passed": true
+    },
+    {
+      "name": "390 /login explicit unavailable with no submission",
+      "passed": false
+    },
+    {
+      "name": "390 /login?mode=invite no dataset",
+      "passed": true
+    },
+    {
+      "name": "390 /login?mode=invite no overflow",
+      "passed": true
+    },
+    {
+      "name": "390 /login?mode=invite no signup action",
+      "passed": true
+    },
+    {
+      "name": "390 invitation before email",
+      "passed": true
+    },
+    {
+      "name": "390 /login?mode=invite explicit unavailable with no submission",
+      "passed": false
+    }
+  ],
+  "pages": [
+    {
+      "viewport": 1440,
+      "path": "/login",
+      "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS\nUM AMBIENTE DE CONFIANÇA\nClareza nos dados.\nCuidado no acesso.\n\nSeu e-mail identifica você. Uma permissão validada pelo servidor libera os dados.\n\n01\nIdentifique-se pelo e-mail\n02\nConfirme com um código ou link\n03\nAcesse com permissão liberada\nDataset técnico · ambiente privado\nVoltar ao login\nACESSO PRIVADO\nEntre com seu e-mail\n\nSem senha. No primeiro login, sua conta é criada automaticamente, ainda sem acesso aos dados.\n\nO serviço retornou uma resposta inválida. Tente novamente.\nLogin\nContrassenha\nSeu e-mail\nServiço indisponível\n\nEntrar confirma sua identidade. A liberação dos dados depende de uma permissão de acesso.\n\nTentar novamente\n\nCódigos são temporários. Não compartilhe códigos nem aprove pedidos iniciados por outras pessoas.\n\nDados de teste, acesso restrito. Copper, Silver e Gold são profundidades de análise, sem planos ou cobrança.",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "inputs": [
+        {
+          "id": "auth-email",
+          "type": "email",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        "cv↗clube do valorOBSERVATÓRIO DE DADOS",
+        "Voltar ao login",
+        "Login",
+        "Contrassenha",
+        "Serviço indisponível",
+        "Tentar novamente"
+      ]
+    },
+    {
+      "viewport": 1440,
+      "path": "/login?mode=invite",
+      "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS\nUM AMBIENTE DE CONFIANÇA\nClareza nos dados.\nCuidado no acesso.\n\nSeu e-mail identifica você. Uma permissão validada pelo servidor libera os dados.\n\n01\nIdentifique-se pelo e-mail\n02\nConfirme com um código ou link\n03\nAcesse com permissão liberada\nDataset técnico · ambiente privado\nVoltar ao login\nACESSO PRIVADO\nEntre por contrassenha\n\nA contrassenha é um convite de acesso. Após validar o convite, confirme seu e-mail para liberar a análise.\n\nO serviço retornou uma resposta inválida. Tente novamente.\nLogin\nContrassenha\nContrassenha de acesso\nValidar contrassenha\n\nSeu e-mail será solicitado somente após a validação.\n\nTentar novamente\n\nCódigos são temporários. Não compartilhe códigos nem aprove pedidos iniciados por outras pessoas.\n\nDados de teste, acesso restrito. Copper, Silver e Gold são profundidades de análise, sem planos ou cobrança.",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "inputs": [
+        {
+          "id": "invite-code",
+          "type": "password",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        "cv↗clube do valorOBSERVATÓRIO DE DADOS",
+        "Voltar ao login",
+        "Login",
+        "Contrassenha",
+        "Validar contrassenha",
+        "Tentar novamente"
+      ]
+    },
+    {
+      "viewport": 390,
+      "path": "/login",
+      "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS\nVoltar ao login\nACESSO PRIVADO\nEntre com seu e-mail\n\nSem senha. No primeiro login, sua conta é criada automaticamente, ainda sem acesso aos dados.\n\nO serviço retornou uma resposta inválida. Tente novamente.\nLogin\nContrassenha\nSeu e-mail\nServiço indisponível\n\nEntrar confirma sua identidade. A liberação dos dados depende de uma permissão de acesso.\n\nTentar novamente\n\nCódigos são temporários. Não compartilhe códigos nem aprove pedidos iniciados por outras pessoas.\n\nDados de teste, acesso restrito. Copper, Silver e Gold são profundidades de análise, sem planos ou cobrança.",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "inputs": [
+        {
+          "id": "auth-email",
+          "type": "email",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        "cv↗clube do valorOBSERVATÓRIO DE DADOS",
+        "Voltar ao login",
+        "Login",
+        "Contrassenha",
+        "Serviço indisponível",
+        "Tentar novamente"
+      ]
+    },
+    {
+      "viewport": 390,
+      "path": "/login?mode=invite",
+      "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS\nVoltar ao login\nACESSO PRIVADO\nEntre por contrassenha\n\nA contrassenha é um convite de acesso. Após validar o convite, confirme seu e-mail para liberar a análise.\n\nO serviço retornou uma resposta inválida. Tente novamente.\nLogin\nContrassenha\nContrassenha de acesso\nValidar contrassenha\n\nSeu e-mail será solicitado somente após a validação.\n\nTentar novamente\n\nCódigos são temporários. Não compartilhe códigos nem aprove pedidos iniciados por outras pessoas.\n\nDados de teste, acesso restrito. Copper, Silver e Gold são profundidades de análise, sem planos ou cobrança.",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "inputs": [
+        {
+          "id": "invite-code",
+          "type": "password",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        "cv↗clube do valorOBSERVATÓRIO DE DADOS",
+        "Voltar ao login",
+        "Login",
+        "Contrassenha",
+        "Validar contrassenha",
+        "Tentar novamente"
+      ]
+    }
+  ],
+  "errors": []
+}

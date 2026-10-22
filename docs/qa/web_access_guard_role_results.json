@@ -1,0 +1,25 @@
+{
+  "scope": "Synthetic identity responses only; no network or real cookies",
+  "passed": true,
+  "checks": [
+    "Anonymous guard is 401",
+    "Malformed cookie guard is 401",
+    "Duplicated cookie rejected",
+    "Identity without grant is 403 even with forged user_metadata",
+    "analytics authorizes before parsing filters",
+    "analytics denied response contains no dataset",
+    "CSV authorizes before parsing filters",
+    "CSV denied response contains no dataset",
+    "Permission without required analyst role is denied",
+    "Verified explicit grant authorizes",
+    "Authorized API returns baseline",
+    "Authorized export returns CSV",
+    "Revoked grant denies next request",
+    "Malformed provider permission response fails closed",
+    "Malformed provider permission response fails closed",
+    "Provider failure closes guard",
+    "Provider failure closes API",
+    "Disabled auth closes guard",
+    "Disabled auth closes CSV"
+  ]
+}

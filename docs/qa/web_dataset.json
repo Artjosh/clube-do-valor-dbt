@@ -1,0 +1,1826 @@
+{
+  "captured_at": "2026-10-22T20:38:37.941263+00:00",
+  "sha256": {
+    "clube_do_valor.duckdb": "09c612d5817b7ca7ad0cbb7efca40e8470db6fc823c92748c4a034dd9656d5a8",
+    "dbt_project.yml": "e2ef42b03cfa402b4ad428d44c133736bc4e9246943cf3316e1a998c142abae1",
+    "macros/clean_text.sql": "483a90f25f2058c91380820cc02b3919aea550413d94180a2687f58d02b14c06",
+    "macros/typed_transactions.sql": "2910ca18f818ebfcbfba667ba5985abdd32cc91290fa006a5ae4a3b2df920222",
+    "macros/valid_transaction.sql": "83ff60078f153a19f528c4ad0e68d3f165f2b6567d411f66e8b5af7d98f33e9d",
+    "models/intermediate/int_transactions.sql": "b3091bd1d0f9ef59a10622d70911f6aebcd10bf504eeed336c5ef1c8ed54ca11",
+    "models/marts/dim_clients.sql": "b76ed29032d80e5e1b97b734637e39a088be794ec575c8eb037f52ef69acff33",
+    "models/marts/fact_transactions.sql": "4e45f976484f2b53fb6e5981615d52724d42e08542fc3a2c78a341ea5066409b",
+    "models/marts/mart_client_portfolio.sql": "ef9d17f18ca4ca22fe5c84a9102e9c1a80d63487445e884fdde4648a9b37858f",
+    "models/schema.yml": "c29ebc4408a30a5fae8d94fca3949fbedacde21a10191e7902f26afe3859595a",
+    "models/staging/stg_clients.sql": "725513852d7625e792fcf65f2e56089e77727e35bb24b3fcbebd18f2f528a37c",
+    "models/staging/stg_transactions.sql": "7b092fd2e027eef8d9da17a25afc1b039762517b4f65cdfaf8fffa334e4394a8",
+    "profiles.yml": "7225da7be6471852adc42fcc732d7eecf2b5a3fdfadb6813da3dc643dcc94cef",
+    "requirements-lock.txt": "c6e1d91e39629b5e127357adbdf2b694c232ecb81539c8214e6ee08432399206",
+    "requirements.txt": "5110b8f8aafb5e5b27cb7d2f7c3efa4df7364116099b12ebfe4c863096e5e0a9",
+    "seeds/clients.csv": "841233442713977cc671da281cfb51fc2151419c53103bdc3199b339af33ba11",
+    "seeds/transactions.csv": "93456af8df4f44f772109ce3074daf209f86460bc2af3c0711ffa65c4ed27aab",
+    "tests/assert_no_negative_position.sql": "69d3d445e8b62f5eaac6776fda3394e9604ecd3f99c2f40c26702de4c5056369",
+    "tests/assert_portfolio_grain.sql": "50cd6dd747a791a902d9cc4672a959664e99a112ac081e9413669bbed94c123f",
+    "tests/assert_positive_transaction_inputs.sql": "045c4e762a6848a4d5ab2fd2c162d0511f13534f77daa18206e0ac14e23b2b24",
+    "tests/assert_transaction_arithmetic.sql": "4ce7acc5c5ad1a61017c95e95b0be9a7ba84f639abfb00c6e6e15728a27a3fad",
+    "tests/audit_duplicate_transaction_payload.sql": "308aa247accd2ff5bcc8d6317be01d7d862ff797ac78ab2281a9cd8c9f5d24f2",
+    "tests/audit_invalid_transactions.sql": "4d183937fdbc344a0d5177e75df422663f97443e6b55bf480b787c31c5e64cb0"
+  },
+  "read_only": true,
+  "fact_transactions": [
+    {
+      "transaction_id": "T009",
+      "client_id": "C8",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "100.0000",
+      "unit_price": "28.1000",
+      "transaction_date": "2024-01-25",
+      "transaction_amount": "2810.00000000",
+      "signed_quantity": "100.0000",
+      "signed_amount": "2810.00000000"
+    },
+    {
+      "transaction_id": "T018",
+      "client_id": "C8",
+      "asset_ticker": "VALE3",
+      "operation": "SELL",
+      "quantity": "30.0000",
+      "unit_price": "71.0000",
+      "transaction_date": "2024-02-18",
+      "transaction_amount": "2130.00000000",
+      "signed_quantity": "-30.0000",
+      "signed_amount": "-2130.00000000"
+    },
+    {
+      "transaction_id": "T029",
+      "client_id": "C8",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "600.0000",
+      "unit_price": "2.9500",
+      "transaction_date": "2024-03-15",
+      "transaction_amount": "1770.00000000",
+      "signed_quantity": "600.0000",
+      "signed_amount": "1770.00000000"
+    },
+    {
+      "transaction_id": "T040",
+      "client_id": "C8",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "300.0000",
+      "unit_price": "15.5000",
+      "transaction_date": "2024-04-04",
+      "transaction_amount": "4650.00000000",
+      "signed_quantity": "300.0000",
+      "signed_amount": "4650.00000000"
+    },
+    {
+      "transaction_id": "T050",
+      "client_id": "C8",
+      "asset_ticker": "WEGE3",
+      "operation": "BUY",
+      "quantity": "110.0000",
+      "unit_price": "39.2000",
+      "transaction_date": "2024-04-24",
+      "transaction_amount": "4312.00000000",
+      "signed_quantity": "110.0000",
+      "signed_amount": "4312.00000000"
+    },
+    {
+      "transaction_id": "T060",
+      "client_id": "C8",
+      "asset_ticker": "MGLU3",
+      "operation": "SELL",
+      "quantity": "150.0000",
+      "unit_price": "3.2000",
+      "transaction_date": "2024-05-20",
+      "transaction_amount": "480.00000000",
+      "signed_quantity": "-150.0000",
+      "signed_amount": "-480.00000000"
+    },
+    {
+      "transaction_id": "T070",
+      "client_id": "C8",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "200.0000",
+      "unit_price": "37.8000",
+      "transaction_date": "2024-06-11",
+      "transaction_amount": "7560.00000000",
+      "signed_quantity": "200.0000",
+      "signed_amount": "7560.00000000"
+    },
+    {
+      "transaction_id": "T080",
+      "client_id": "C8",
+      "asset_ticker": "PETR4",
+      "operation": "SELL",
+      "quantity": "110.0000",
+      "unit_price": "38.6000",
+      "transaction_date": "2024-07-01",
+      "transaction_amount": "4246.00000000",
+      "signed_quantity": "-110.0000",
+      "signed_amount": "-4246.00000000"
+    },
+    {
+      "transaction_id": "T020",
+      "client_id": "C10",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "800.0000",
+      "unit_price": "2.7500",
+      "transaction_date": "2024-02-22",
+      "transaction_amount": "2200.00000000",
+      "signed_quantity": "800.0000",
+      "signed_amount": "2200.00000000"
+    },
+    {
+      "transaction_id": "T031",
+      "client_id": "C10",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "250.0000",
+      "unit_price": "15.3000",
+      "transaction_date": "2024-03-19",
+      "transaction_amount": "3825.00000000",
+      "signed_quantity": "250.0000",
+      "signed_amount": "3825.00000000"
+    },
+    {
+      "transaction_id": "T042",
+      "client_id": "C10",
+      "asset_ticker": "MGLU3",
+      "operation": "SELL",
+      "quantity": "200.0000",
+      "unit_price": "3.2000",
+      "transaction_date": "2024-04-08",
+      "transaction_amount": "640.00000000",
+      "signed_quantity": "-200.0000",
+      "signed_amount": "-640.00000000"
+    },
+    {
+      "transaction_id": "T052",
+      "client_id": "C10",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "130.0000",
+      "unit_price": "36.1000",
+      "transaction_date": "2024-05-04",
+      "transaction_amount": "4693.00000000",
+      "signed_quantity": "130.0000",
+      "signed_amount": "4693.00000000"
+    },
+    {
+      "transaction_id": "T062",
+      "client_id": "C10",
+      "asset_ticker": "WEGE3",
+      "operation": "BUY",
+      "quantity": "80.0000",
+      "unit_price": "40.1000",
+      "transaction_date": "2024-05-24",
+      "transaction_amount": "3208.00000000",
+      "signed_quantity": "80.0000",
+      "signed_amount": "3208.00000000"
+    },
+    {
+      "transaction_id": "T072",
+      "client_id": "C10",
+      "asset_ticker": "BBDC4",
+      "operation": "SELL",
+      "quantity": "80.0000",
+      "unit_price": "16.5000",
+      "transaction_date": "2024-06-15",
+      "transaction_amount": "1320.00000000",
+      "signed_quantity": "-80.0000",
+      "signed_amount": "-1320.00000000"
+    },
+    {
+      "transaction_id": "T082",
+      "client_id": "C10",
+      "asset_ticker": "WEGE3",
+      "operation": "SELL",
+      "quantity": "40.0000",
+      "unit_price": "41.4000",
+      "transaction_date": "2024-07-05",
+      "transaction_amount": "1656.00000000",
+      "signed_quantity": "-40.0000",
+      "signed_amount": "-1656.00000000"
+    },
+    {
+      "transaction_id": "T010",
+      "client_id": "C9",
+      "asset_ticker": "WEGE3",
+      "operation": "BUY",
+      "quantity": "60.0000",
+      "unit_price": "35.4000",
+      "transaction_date": "2024-01-28",
+      "transaction_amount": "2124.00000000",
+      "signed_quantity": "60.0000",
+      "signed_amount": "2124.00000000"
+    },
+    {
+      "transaction_id": "T019",
+      "client_id": "C9",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "180.0000",
+      "unit_price": "34.1000",
+      "transaction_date": "2024-02-20",
+      "transaction_amount": "6138.00000000",
+      "signed_quantity": "180.0000",
+      "signed_amount": "6138.00000000"
+    },
+    {
+      "transaction_id": "T030",
+      "client_id": "C9",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "200.0000",
+      "unit_price": "29.5000",
+      "transaction_date": "2024-03-17",
+      "transaction_amount": "5900.00000000",
+      "signed_quantity": "200.0000",
+      "signed_amount": "5900.00000000"
+    },
+    {
+      "transaction_id": "T041",
+      "client_id": "C9",
+      "asset_ticker": "PETR4",
+      "operation": "SELL",
+      "quantity": "90.0000",
+      "unit_price": "36.2000",
+      "transaction_date": "2024-04-06",
+      "transaction_amount": "3258.00000000",
+      "signed_quantity": "-90.0000",
+      "signed_amount": "-3258.00000000"
+    },
+    {
+      "transaction_id": "T051",
+      "client_id": "C9",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "90.0000",
+      "unit_price": "74.8000",
+      "transaction_date": "2024-05-02",
+      "transaction_amount": "6732.00000000",
+      "signed_quantity": "90.0000",
+      "signed_amount": "6732.00000000"
+    },
+    {
+      "transaction_id": "T061",
+      "client_id": "C9",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "100.0000",
+      "unit_price": "37.0000",
+      "transaction_date": "2024-05-22",
+      "transaction_amount": "3700.00000000",
+      "signed_quantity": "100.0000",
+      "signed_amount": "3700.00000000"
+    },
+    {
+      "transaction_id": "T071",
+      "client_id": "C9",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "110.0000",
+      "unit_price": "31.2000",
+      "transaction_date": "2024-06-13",
+      "transaction_amount": "3432.00000000",
+      "signed_quantity": "110.0000",
+      "signed_amount": "3432.00000000"
+    },
+    {
+      "transaction_id": "T081",
+      "client_id": "C9",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "400.0000",
+      "unit_price": "3.5000",
+      "transaction_date": "2024-07-03",
+      "transaction_amount": "1400.00000000",
+      "signed_quantity": "400.0000",
+      "signed_amount": "1400.00000000"
+    },
+    {
+      "transaction_id": "T005",
+      "client_id": "C4",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "300.0000",
+      "unit_price": "14.2000",
+      "transaction_date": "2024-01-15",
+      "transaction_amount": "4260.00000000",
+      "signed_quantity": "300.0000",
+      "signed_amount": "4260.00000000"
+    },
+    {
+      "transaction_id": "T014",
+      "client_id": "C4",
+      "asset_ticker": "WEGE3",
+      "operation": "BUY",
+      "quantity": "120.0000",
+      "unit_price": "36.0000",
+      "transaction_date": "2024-02-10",
+      "transaction_amount": "4320.00000000",
+      "signed_quantity": "120.0000",
+      "signed_amount": "4320.00000000"
+    },
+    {
+      "transaction_id": "T025",
+      "client_id": "C4",
+      "asset_ticker": "BBDC4",
+      "operation": "SELL",
+      "quantity": "100.0000",
+      "unit_price": "15.1000",
+      "transaction_date": "2024-03-07",
+      "transaction_amount": "1510.00000000",
+      "signed_quantity": "-100.0000",
+      "signed_amount": "-1510.00000000"
+    },
+    {
+      "transaction_id": "T035",
+      "client_id": "C4",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "120.0000",
+      "unit_price": "28.5000",
+      "transaction_date": "2024-03-27",
+      "transaction_amount": "3420.00000000",
+      "signed_quantity": "120.0000",
+      "signed_amount": "3420.00000000"
+    },
+    {
+      "transaction_id": "T036",
+      "client_id": "C4",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "120.0000",
+      "unit_price": "28.5000",
+      "transaction_date": "2024-03-27",
+      "transaction_amount": "3420.00000000",
+      "signed_quantity": "120.0000",
+      "signed_amount": "3420.00000000"
+    },
+    {
+      "transaction_id": "T046",
+      "client_id": "C4",
+      "asset_ticker": "VALE3",
+      "operation": "SELL",
+      "quantity": "60.0000",
+      "unit_price": "74.0000",
+      "transaction_date": "2024-04-16",
+      "transaction_amount": "4440.00000000",
+      "signed_quantity": "-60.0000",
+      "signed_amount": "-4440.00000000"
+    },
+    {
+      "transaction_id": "T056",
+      "client_id": "C4",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "170.0000",
+      "unit_price": "36.5000",
+      "transaction_date": "2024-05-12",
+      "transaction_amount": "6205.00000000",
+      "signed_quantity": "170.0000",
+      "signed_amount": "6205.00000000"
+    },
+    {
+      "transaction_id": "T066",
+      "client_id": "C4",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "190.0000",
+      "unit_price": "16.3000",
+      "transaction_date": "2024-06-03",
+      "transaction_amount": "3097.00000000",
+      "signed_quantity": "190.0000",
+      "signed_amount": "3097.00000000"
+    },
+    {
+      "transaction_id": "T076",
+      "client_id": "C4",
+      "asset_ticker": "WEGE3",
+      "operation": "BUY",
+      "quantity": "70.0000",
+      "unit_price": "41.0000",
+      "transaction_date": "2024-06-23",
+      "transaction_amount": "2870.00000000",
+      "signed_quantity": "70.0000",
+      "signed_amount": "2870.00000000"
+    },
+    {
+      "transaction_id": "T008",
+      "client_id": "C7",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "250.0000",
+      "unit_price": "32.9000",
+      "transaction_date": "2024-01-22",
+      "transaction_amount": "8225.00000000",
+      "signed_quantity": "250.0000",
+      "signed_amount": "8225.00000000"
+    },
+    {
+      "transaction_id": "T017",
+      "client_id": "C7",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "400.0000",
+      "unit_price": "14.5000",
+      "transaction_date": "2024-02-16",
+      "transaction_amount": "5800.00000000",
+      "signed_quantity": "400.0000",
+      "signed_amount": "5800.00000000"
+    },
+    {
+      "transaction_id": "T028",
+      "client_id": "C7",
+      "asset_ticker": "PETR4",
+      "operation": "SELL",
+      "quantity": "80.0000",
+      "unit_price": "35.8000",
+      "transaction_date": "2024-03-13",
+      "transaction_amount": "2864.00000000",
+      "signed_quantity": "-80.0000",
+      "signed_amount": "-2864.00000000"
+    },
+    {
+      "transaction_id": "T039",
+      "client_id": "C7",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "70.0000",
+      "unit_price": "73.4000",
+      "transaction_date": "2024-04-02",
+      "transaction_amount": "5138.00000000",
+      "signed_quantity": "70.0000",
+      "signed_amount": "5138.00000000"
+    },
+    {
+      "transaction_id": "T049",
+      "client_id": "C7",
+      "asset_ticker": "ITUB4",
+      "operation": "SELL",
+      "quantity": "80.0000",
+      "unit_price": "30.1000",
+      "transaction_date": "2024-04-22",
+      "transaction_amount": "2408.00000000",
+      "signed_quantity": "-80.0000",
+      "signed_amount": "-2408.00000000"
+    },
+    {
+      "transaction_id": "T059",
+      "client_id": "C7",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "220.0000",
+      "unit_price": "16.1000",
+      "transaction_date": "2024-05-18",
+      "transaction_amount": "3542.00000000",
+      "signed_quantity": "220.0000",
+      "signed_amount": "3542.00000000"
+    },
+    {
+      "transaction_id": "T069",
+      "client_id": "C7",
+      "asset_ticker": "WEGE3",
+      "operation": "SELL",
+      "quantity": "60.0000",
+      "unit_price": "40.5000",
+      "transaction_date": "2024-06-09",
+      "transaction_amount": "2430.00000000",
+      "signed_quantity": "-60.0000",
+      "signed_amount": "-2430.00000000"
+    },
+    {
+      "transaction_id": "T079",
+      "client_id": "C7",
+      "asset_ticker": "VALE3",
+      "operation": "SELL",
+      "quantity": "50.0000",
+      "unit_price": "77.0000",
+      "transaction_date": "2024-06-29",
+      "transaction_amount": "3850.00000000",
+      "signed_quantity": "-50.0000",
+      "signed_amount": "-3850.00000000"
+    },
+    {
+      "transaction_id": "T003",
+      "client_id": "C2",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "200.0000",
+      "unit_price": "33.1000",
+      "transaction_date": "2024-01-10",
+      "transaction_amount": "6620.00000000",
+      "signed_quantity": "200.0000",
+      "signed_amount": "6620.00000000"
+    },
+    {
+      "transaction_id": "T012",
+      "client_id": "C2",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "100.0000",
+      "unit_price": "70.2000",
+      "transaction_date": "2024-02-05",
+      "transaction_amount": "7020.00000000",
+      "signed_quantity": "100.0000",
+      "signed_amount": "7020.00000000"
+    },
+    {
+      "transaction_id": "T023",
+      "client_id": "C2",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "80.0000",
+      "unit_price": "34.5000",
+      "transaction_date": "2024-03-03",
+      "transaction_amount": "2760.00000000",
+      "signed_quantity": "80.0000",
+      "signed_amount": "2760.00000000"
+    },
+    {
+      "transaction_id": "T033",
+      "client_id": "C2",
+      "asset_ticker": "VALE3",
+      "operation": "SELL",
+      "quantity": "200.0000",
+      "unit_price": "69.0000",
+      "transaction_date": "2024-03-23",
+      "transaction_amount": "13800.00000000",
+      "signed_quantity": "-200.0000",
+      "signed_amount": "-13800.00000000"
+    },
+    {
+      "transaction_id": "T044",
+      "client_id": "C2",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "160.0000",
+      "unit_price": "29.8000",
+      "transaction_date": "2024-04-12",
+      "transaction_amount": "4768.00000000",
+      "signed_quantity": "160.0000",
+      "signed_amount": "4768.00000000"
+    },
+    {
+      "transaction_id": "T054",
+      "client_id": "C2",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "700.0000",
+      "unit_price": "3.1500",
+      "transaction_date": "2024-05-08",
+      "transaction_amount": "2205.00000000",
+      "signed_quantity": "700.0000",
+      "signed_amount": "2205.00000000"
+    },
+    {
+      "transaction_id": "T064",
+      "client_id": "C2",
+      "asset_ticker": "ITUB4",
+      "operation": "SELL",
+      "quantity": "70.0000",
+      "unit_price": "30.8000",
+      "transaction_date": "2024-05-28",
+      "transaction_amount": "2156.00000000",
+      "signed_quantity": "-70.0000",
+      "signed_amount": "-2156.00000000"
+    },
+    {
+      "transaction_id": "T074",
+      "client_id": "C2",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "140.0000",
+      "unit_price": "38.2000",
+      "transaction_date": "2024-06-19",
+      "transaction_amount": "5348.00000000",
+      "signed_quantity": "140.0000",
+      "signed_amount": "5348.00000000"
+    },
+    {
+      "transaction_id": "T084",
+      "client_id": "C2",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "200.0000",
+      "unit_price": "16.9000",
+      "transaction_date": "2024-07-09",
+      "transaction_amount": "3380.00000000",
+      "signed_quantity": "200.0000",
+      "signed_amount": "3380.00000000"
+    },
+    {
+      "transaction_id": "T001",
+      "client_id": "C1",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "100.0000",
+      "unit_price": "32.5000",
+      "transaction_date": "2024-01-05",
+      "transaction_amount": "3250.00000000",
+      "signed_quantity": "100.0000",
+      "signed_amount": "3250.00000000"
+    },
+    {
+      "transaction_id": "T002",
+      "client_id": "C1",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "50.0000",
+      "unit_price": "68.0000",
+      "transaction_date": "2024-01-08",
+      "transaction_amount": "3400.00000000",
+      "signed_quantity": "50.0000",
+      "signed_amount": "3400.00000000"
+    },
+    {
+      "transaction_id": "T011",
+      "client_id": "C1",
+      "asset_ticker": "PETR4",
+      "operation": "SELL",
+      "quantity": "40.0000",
+      "unit_price": "35.0000",
+      "transaction_date": "2024-02-02",
+      "transaction_amount": "1400.00000000",
+      "signed_quantity": "-40.0000",
+      "signed_amount": "-1400.00000000"
+    },
+    {
+      "transaction_id": "T022",
+      "client_id": "C1",
+      "asset_ticker": "VALE3",
+      "operation": "SELL",
+      "quantity": "20.0000",
+      "unit_price": "72.0000",
+      "transaction_date": "2024-03-01",
+      "transaction_amount": "1440.00000000",
+      "signed_quantity": "-20.0000",
+      "signed_amount": "-1440.00000000"
+    },
+    {
+      "transaction_id": "T032",
+      "client_id": "C1",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "60.0000",
+      "unit_price": "34.5000",
+      "transaction_date": "2024-03-21",
+      "transaction_amount": "2070.00000000",
+      "signed_quantity": "60.0000",
+      "signed_amount": "2070.00000000"
+    },
+    {
+      "transaction_id": "T043",
+      "client_id": "C1",
+      "asset_ticker": "WEGE3",
+      "operation": "BUY",
+      "quantity": "50.0000",
+      "unit_price": "38.5000",
+      "transaction_date": "2024-04-10",
+      "transaction_amount": "1925.00000000",
+      "signed_quantity": "50.0000",
+      "signed_amount": "1925.00000000"
+    },
+    {
+      "transaction_id": "T053",
+      "client_id": "C1",
+      "asset_ticker": "BBDC4",
+      "operation": "SELL",
+      "quantity": "50.0000",
+      "unit_price": "16.0000",
+      "transaction_date": "2024-05-06",
+      "transaction_amount": "800.00000000",
+      "signed_quantity": "-50.0000",
+      "signed_amount": "-800.00000000"
+    },
+    {
+      "transaction_id": "T063",
+      "client_id": "C1",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "60.0000",
+      "unit_price": "75.5000",
+      "transaction_date": "2024-05-26",
+      "transaction_amount": "4530.00000000",
+      "signed_quantity": "60.0000",
+      "signed_amount": "4530.00000000"
+    },
+    {
+      "transaction_id": "T073",
+      "client_id": "C1",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "300.0000",
+      "unit_price": "3.4000",
+      "transaction_date": "2024-06-17",
+      "transaction_amount": "1020.00000000",
+      "signed_quantity": "300.0000",
+      "signed_amount": "1020.00000000"
+    },
+    {
+      "transaction_id": "T083",
+      "client_id": "C1",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "130.0000",
+      "unit_price": "31.8000",
+      "transaction_date": "2024-07-07",
+      "transaction_amount": "4134.00000000",
+      "signed_quantity": "130.0000",
+      "signed_amount": "4134.00000000"
+    },
+    {
+      "transaction_id": "T004",
+      "client_id": "C3",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "150.0000",
+      "unit_price": "27.8000",
+      "transaction_date": "2024-01-12",
+      "transaction_amount": "4170.00000000",
+      "signed_quantity": "150.0000",
+      "signed_amount": "4170.00000000"
+    },
+    {
+      "transaction_id": "T006",
+      "client_id": "C5",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "1000.0000",
+      "unit_price": "2.6000",
+      "transaction_date": "2024-01-18",
+      "transaction_amount": "2600.00000000",
+      "signed_quantity": "1000.0000",
+      "signed_amount": "2600.00000000"
+    },
+    {
+      "transaction_id": "T007",
+      "client_id": "C6",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "80.0000",
+      "unit_price": "67.5000",
+      "transaction_date": "2024-01-20",
+      "transaction_amount": "5400.00000000",
+      "signed_quantity": "80.0000",
+      "signed_amount": "5400.00000000"
+    },
+    {
+      "transaction_id": "T013",
+      "client_id": "C3",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "500.0000",
+      "unit_price": "2.8000",
+      "transaction_date": "2024-02-07",
+      "transaction_amount": "1400.00000000",
+      "signed_quantity": "500.0000",
+      "signed_amount": "1400.00000000"
+    },
+    {
+      "transaction_id": "T015",
+      "client_id": "C5",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "200.0000",
+      "unit_price": "33.5000",
+      "transaction_date": "2024-02-12",
+      "transaction_amount": "6700.00000000",
+      "signed_quantity": "200.0000",
+      "signed_amount": "6700.00000000"
+    },
+    {
+      "transaction_id": "T016",
+      "client_id": "C6",
+      "asset_ticker": "ITUB4",
+      "operation": "SELL",
+      "quantity": "50.0000",
+      "unit_price": "28.9000",
+      "transaction_date": "2024-02-14",
+      "transaction_amount": "1445.00000000",
+      "signed_quantity": "-50.0000",
+      "signed_amount": "-1445.00000000"
+    },
+    {
+      "transaction_id": "T024",
+      "client_id": "C3",
+      "asset_ticker": "ITUB4",
+      "operation": "SELL",
+      "quantity": "60.0000",
+      "unit_price": "29.2000",
+      "transaction_date": "2024-03-05",
+      "transaction_amount": "1752.00000000",
+      "signed_quantity": "-60.0000",
+      "signed_amount": "-1752.00000000"
+    },
+    {
+      "transaction_id": "T026",
+      "client_id": "C5",
+      "asset_ticker": "WEGE3",
+      "operation": "BUY",
+      "quantity": "90.0000",
+      "unit_price": "37.2000",
+      "transaction_date": "2024-03-09",
+      "transaction_amount": "3348.00000000",
+      "signed_quantity": "90.0000",
+      "signed_amount": "3348.00000000"
+    },
+    {
+      "transaction_id": "T027",
+      "client_id": "C6",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "110.0000",
+      "unit_price": "72.5000",
+      "transaction_date": "2024-03-11",
+      "transaction_amount": "7975.00000000",
+      "signed_quantity": "110.0000",
+      "signed_amount": "7975.00000000"
+    },
+    {
+      "transaction_id": "T034",
+      "client_id": "C3",
+      "asset_ticker": "MGLU3",
+      "operation": "SELL",
+      "quantity": "50.0000",
+      "unit_price": "3.1000",
+      "transaction_date": "2024-03-25",
+      "transaction_amount": "155.00000000",
+      "signed_quantity": "-50.0000",
+      "signed_amount": "-155.00000000"
+    },
+    {
+      "transaction_id": "T038",
+      "client_id": "C6",
+      "asset_ticker": "WEGE3",
+      "operation": "SELL",
+      "quantity": "40.0000",
+      "unit_price": "38.1000",
+      "transaction_date": "2024-03-31",
+      "transaction_amount": "1524.00000000",
+      "signed_quantity": "-40.0000",
+      "signed_amount": "-1524.00000000"
+    },
+    {
+      "transaction_id": "T045",
+      "client_id": "C3",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "180.0000",
+      "unit_price": "15.7000",
+      "transaction_date": "2024-04-14",
+      "transaction_amount": "2826.00000000",
+      "signed_quantity": "180.0000",
+      "signed_amount": "2826.00000000"
+    },
+    {
+      "transaction_id": "T047",
+      "client_id": "C5",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "220.0000",
+      "unit_price": "35.5000",
+      "transaction_date": "2024-04-18",
+      "transaction_amount": "7810.00000000",
+      "signed_quantity": "220.0000",
+      "signed_amount": "7810.00000000"
+    },
+    {
+      "transaction_id": "T048",
+      "client_id": "C6",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "400.0000",
+      "unit_price": "3.0500",
+      "transaction_date": "2024-04-20",
+      "transaction_amount": "1220.00000000",
+      "signed_quantity": "400.0000",
+      "signed_amount": "1220.00000000"
+    },
+    {
+      "transaction_id": "T055",
+      "client_id": "C3",
+      "asset_ticker": "WEGE3",
+      "operation": "SELL",
+      "quantity": "30.0000",
+      "unit_price": "39.8000",
+      "transaction_date": "2024-05-10",
+      "transaction_amount": "1194.00000000",
+      "signed_quantity": "-30.0000",
+      "signed_amount": "-1194.00000000"
+    },
+    {
+      "transaction_id": "T057",
+      "client_id": "C5",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "140.0000",
+      "unit_price": "30.4000",
+      "transaction_date": "2024-05-14",
+      "transaction_amount": "4256.00000000",
+      "signed_quantity": "140.0000",
+      "signed_amount": "4256.00000000"
+    },
+    {
+      "transaction_id": "T058",
+      "client_id": "C6",
+      "asset_ticker": "VALE3",
+      "operation": "SELL",
+      "quantity": "40.0000",
+      "unit_price": "75.2000",
+      "transaction_date": "2024-05-16",
+      "transaction_amount": "3008.00000000",
+      "signed_quantity": "-40.0000",
+      "signed_amount": "-3008.00000000"
+    },
+    {
+      "transaction_id": "T065",
+      "client_id": "C3",
+      "asset_ticker": "PETR4",
+      "operation": "SELL",
+      "quantity": "100.0000",
+      "unit_price": "37.4000",
+      "transaction_date": "2024-05-30",
+      "transaction_amount": "3740.00000000",
+      "signed_quantity": "-100.0000",
+      "signed_amount": "-3740.00000000"
+    },
+    {
+      "transaction_id": "T067",
+      "client_id": "C5",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "150.0000",
+      "unit_price": "76.0000",
+      "transaction_date": "2024-06-05",
+      "transaction_amount": "11400.00000000",
+      "signed_quantity": "150.0000",
+      "signed_amount": "11400.00000000"
+    },
+    {
+      "transaction_id": "T068",
+      "client_id": "C6",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "500.0000",
+      "unit_price": "3.3000",
+      "transaction_date": "2024-06-07",
+      "transaction_amount": "1650.00000000",
+      "signed_quantity": "500.0000",
+      "signed_amount": "1650.00000000"
+    },
+    {
+      "transaction_id": "T075",
+      "client_id": "C3",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "100.0000",
+      "unit_price": "76.5000",
+      "transaction_date": "2024-06-21",
+      "transaction_amount": "7650.00000000",
+      "signed_quantity": "100.0000",
+      "signed_amount": "7650.00000000"
+    },
+    {
+      "transaction_id": "T077",
+      "client_id": "C5",
+      "asset_ticker": "ITUB4",
+      "operation": "SELL",
+      "quantity": "90.0000",
+      "unit_price": "31.5000",
+      "transaction_date": "2024-06-25",
+      "transaction_amount": "2835.00000000",
+      "signed_quantity": "-90.0000",
+      "signed_amount": "-2835.00000000"
+    },
+    {
+      "transaction_id": "T078",
+      "client_id": "C6",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "260.0000",
+      "unit_price": "16.7000",
+      "transaction_date": "2024-06-27",
+      "transaction_amount": "4342.00000000",
+      "signed_quantity": "260.0000",
+      "signed_amount": "4342.00000000"
+    },
+    {
+      "transaction_id": "T090",
+      "client_id": "C8",
+      "asset_ticker": "BBDC4",
+      "operation": "SELL",
+      "quantity": "120.0000",
+      "unit_price": "17.1000",
+      "transaction_date": "2024-07-21",
+      "transaction_amount": "2052.00000000",
+      "signed_quantity": "-120.0000",
+      "signed_amount": "-2052.00000000"
+    },
+    {
+      "transaction_id": "T092",
+      "client_id": "C10",
+      "asset_ticker": "PETR4",
+      "operation": "SELL",
+      "quantity": "60.0000",
+      "unit_price": "39.5000",
+      "transaction_date": "2024-07-25",
+      "transaction_amount": "2370.00000000",
+      "signed_quantity": "-60.0000",
+      "signed_amount": "-2370.00000000"
+    },
+    {
+      "transaction_id": "T091",
+      "client_id": "C9",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "70.0000",
+      "unit_price": "78.0000",
+      "transaction_date": "2024-07-23",
+      "transaction_amount": "5460.00000000",
+      "signed_quantity": "70.0000",
+      "signed_amount": "5460.00000000"
+    },
+    {
+      "transaction_id": "T086",
+      "client_id": "C4",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "90.0000",
+      "unit_price": "77.5000",
+      "transaction_date": "2024-07-13",
+      "transaction_amount": "6975.00000000",
+      "signed_quantity": "90.0000",
+      "signed_amount": "6975.00000000"
+    },
+    {
+      "transaction_id": "T098",
+      "client_id": "C4",
+      "asset_ticker": "MGLU3",
+      "operation": "BUY",
+      "quantity": "350.0000",
+      "unit_price": "3.6000",
+      "transaction_date": "2024-08-06",
+      "transaction_amount": "1260.00000000",
+      "signed_quantity": "350.0000",
+      "signed_amount": "1260.00000000"
+    },
+    {
+      "transaction_id": "T089",
+      "client_id": "C7",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "150.0000",
+      "unit_price": "32.1000",
+      "transaction_date": "2024-07-19",
+      "transaction_amount": "4815.00000000",
+      "signed_quantity": "150.0000",
+      "signed_amount": "4815.00000000"
+    },
+    {
+      "transaction_id": "T100",
+      "client_id": "C7",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "230.0000",
+      "unit_price": "17.3000",
+      "transaction_date": "2024-08-10",
+      "transaction_amount": "3979.00000000",
+      "signed_quantity": "230.0000",
+      "signed_amount": "3979.00000000"
+    },
+    {
+      "transaction_id": "T096",
+      "client_id": "C2",
+      "asset_ticker": "VALE3",
+      "operation": "BUY",
+      "quantity": "120.0000",
+      "unit_price": "78.5000",
+      "transaction_date": "2024-08-02",
+      "transaction_amount": "9420.00000000",
+      "signed_quantity": "120.0000",
+      "signed_amount": "9420.00000000"
+    },
+    {
+      "transaction_id": "T095",
+      "client_id": "C1",
+      "asset_ticker": "WEGE3",
+      "operation": "SELL",
+      "quantity": "20.0000",
+      "unit_price": "42.3000",
+      "transaction_date": "2024-07-31",
+      "transaction_amount": "846.00000000",
+      "signed_quantity": "-20.0000",
+      "signed_amount": "-846.00000000"
+    },
+    {
+      "transaction_id": "T085",
+      "client_id": "C3",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "160.0000",
+      "unit_price": "39.0000",
+      "transaction_date": "2024-07-11",
+      "transaction_amount": "6240.00000000",
+      "signed_quantity": "160.0000",
+      "signed_amount": "6240.00000000"
+    },
+    {
+      "transaction_id": "T087",
+      "client_id": "C5",
+      "asset_ticker": "MGLU3",
+      "operation": "SELL",
+      "quantity": "300.0000",
+      "unit_price": "3.5500",
+      "transaction_date": "2024-07-15",
+      "transaction_amount": "1065.00000000",
+      "signed_quantity": "-300.0000",
+      "signed_amount": "-1065.00000000"
+    },
+    {
+      "transaction_id": "T088",
+      "client_id": "C6",
+      "asset_ticker": "WEGE3",
+      "operation": "BUY",
+      "quantity": "80.0000",
+      "unit_price": "42.0000",
+      "transaction_date": "2024-07-17",
+      "transaction_amount": "3360.00000000",
+      "signed_quantity": "80.0000",
+      "signed_amount": "3360.00000000"
+    },
+    {
+      "transaction_id": "T093",
+      "client_id": "C5",
+      "asset_ticker": "BBDC4",
+      "operation": "BUY",
+      "quantity": "200.0000",
+      "unit_price": "14.9000",
+      "transaction_date": "2024-07-27",
+      "transaction_amount": "2980.00000000",
+      "signed_quantity": "200.0000",
+      "signed_amount": "2980.00000000"
+    },
+    {
+      "transaction_id": "T094",
+      "client_id": "C5",
+      "asset_ticker": "BBDC4",
+      "operation": "SELL",
+      "quantity": "600.0000",
+      "unit_price": "15.2000",
+      "transaction_date": "2024-07-29",
+      "transaction_amount": "9120.00000000",
+      "signed_quantity": "-600.0000",
+      "signed_amount": "-9120.00000000"
+    },
+    {
+      "transaction_id": "T097",
+      "client_id": "C3",
+      "asset_ticker": "ITUB4",
+      "operation": "BUY",
+      "quantity": "180.0000",
+      "unit_price": "32.4000",
+      "transaction_date": "2024-08-04",
+      "transaction_amount": "5832.00000000",
+      "signed_quantity": "180.0000",
+      "signed_amount": "5832.00000000"
+    },
+    {
+      "transaction_id": "T099",
+      "client_id": "C6",
+      "asset_ticker": "PETR4",
+      "operation": "BUY",
+      "quantity": "190.0000",
+      "unit_price": "40.0000",
+      "transaction_date": "2024-08-08",
+      "transaction_amount": "7600.00000000",
+      "signed_quantity": "190.0000",
+      "signed_amount": "7600.00000000"
+    }
+  ],
+  "dim_clients": [
+    {
+      "client_id": "C20",
+      "client_name": "Thiago Pereira",
+      "city": "Joao Pessoa",
+      "state": "PB",
+      "created_at": "2023-12-01"
+    },
+    {
+      "client_id": "C3",
+      "client_name": "Carla Mendes",
+      "city": "Curitiba",
+      "state": "PR",
+      "created_at": "2023-03-05"
+    },
+    {
+      "client_id": "C5",
+      "client_name": "Elena Costa",
+      "city": "Porto Alegre",
+      "state": "RS",
+      "created_at": "2023-04-11"
+    },
+    {
+      "client_id": "C6",
+      "client_name": "Felipe Nunes",
+      "city": "Brasilia",
+      "state": "DF",
+      "created_at": "2023-04-30"
+    },
+    {
+      "client_id": "C15",
+      "client_name": "Olivia Carvalho",
+      "city": "Vitoria",
+      "state": "ES",
+      "created_at": "2023-09-24"
+    },
+    {
+      "client_id": "C25",
+      "client_name": "Yasmin Costa",
+      "city": "Porto Velho",
+      "state": "RO",
+      "created_at": "2024-02-04"
+    },
+    {
+      "client_id": "C4",
+      "client_name": "Diego Rocha",
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "created_at": "2023-03-22"
+    },
+    {
+      "client_id": "C1",
+      "client_name": "Ana Souza",
+      "city": "Sao Paulo",
+      "state": "SP",
+      "created_at": "2023-01-10"
+    },
+    {
+      "client_id": "C19",
+      "client_name": "Sandra Oliveira",
+      "city": "Sao Luis",
+      "state": "MA",
+      "created_at": "2023-11-18"
+    },
+    {
+      "client_id": "C21",
+      "client_name": "Ursula Nascimento",
+      "city": "Maceio",
+      "state": "AL",
+      "created_at": "2023-12-15"
+    },
+    {
+      "client_id": "C14",
+      "client_name": "Nicolas Barbosa",
+      "city": "Belem",
+      "state": "PA",
+      "created_at": "2023-09-10"
+    },
+    {
+      "client_id": "C7",
+      "client_name": "Gabriela Alves",
+      "city": "Salvador",
+      "state": "BA",
+      "created_at": "2023-05-17"
+    },
+    {
+      "client_id": "C12",
+      "client_name": "Lucas Dias",
+      "city": "Goiania",
+      "state": "GO",
+      "created_at": "2023-08-13"
+    },
+    {
+      "client_id": "C2",
+      "client_name": "Bruno Lima",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "created_at": "2023-02-14"
+    },
+    {
+      "client_id": "C22",
+      "client_name": "Victor Campos",
+      "city": "Teresina",
+      "state": "PI",
+      "created_at": "2023-12-28"
+    },
+    {
+      "client_id": "C16",
+      "client_name": "Pedro Araujo",
+      "city": "Campinas",
+      "state": "SP",
+      "created_at": "2023-10-07"
+    },
+    {
+      "client_id": "C24",
+      "client_name": "Xavier Rocha",
+      "city": "Cuiaba",
+      "state": "MT",
+      "created_at": "2024-01-22"
+    },
+    {
+      "client_id": "C11",
+      "client_name": "Karen Ribeiro",
+      "city": "Florianopolis",
+      "state": "SC",
+      "created_at": "2023-07-25"
+    },
+    {
+      "client_id": "C13",
+      "client_name": "Mariana Teixeira",
+      "city": "Natal",
+      "state": "RN",
+      "created_at": "2023-08-28"
+    },
+    {
+      "client_id": "C17",
+      "client_name": "Quintina Moura",
+      "city": "Santos",
+      "state": "SP",
+      "created_at": "2023-10-20"
+    },
+    {
+      "client_id": "C10",
+      "client_name": "Joao Martins",
+      "city": "Manaus",
+      "state": "AM",
+      "created_at": "2023-07-08"
+    },
+    {
+      "client_id": "C9",
+      "client_name": "Isabela Ferreira",
+      "city": "Recife",
+      "state": "PE",
+      "created_at": "2023-06-19"
+    },
+    {
+      "client_id": "C8",
+      "client_name": "Henrique Pinto",
+      "city": "Fortaleza",
+      "state": "CE",
+      "created_at": "2023-06-02"
+    },
+    {
+      "client_id": "C18",
+      "client_name": "Rafael Gomes",
+      "city": "Ribeirao Preto",
+      "state": "SP",
+      "created_at": "2023-11-03"
+    },
+    {
+      "client_id": "C23",
+      "client_name": "Wanessa Lima",
+      "city": "Campo Grande",
+      "state": "MS",
+      "created_at": "2024-01-10"
+    }
+  ],
+  "mart_client_portfolio": [
+    {
+      "client_id": "C9",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "400.0000",
+      "net_financial_amount": "1400.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-07-03"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "-60.0000",
+      "net_financial_amount": "-2430.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-06-09"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "700.0000",
+      "net_financial_amount": "2205.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-05-08"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "900.0000",
+      "net_financial_amount": "2870.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-06-07"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "450.0000",
+      "net_financial_amount": "1290.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-05-20"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "VALE3",
+      "net_quantity": "30.0000",
+      "net_financial_amount": "2535.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-13"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "700.0000",
+      "net_financial_amount": "1535.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-15"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "VALE3",
+      "net_quantity": "90.0000",
+      "net_financial_amount": "6490.00000000",
+      "transaction_count": 3,
+      "last_transaction_date": "2024-05-26"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "180.0000",
+      "net_financial_amount": "2826.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-04-14"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "190.0000",
+      "net_financial_amount": "7190.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-06-23"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "PETR4",
+      "net_quantity": "120.0000",
+      "net_financial_amount": "3920.00000000",
+      "transaction_count": 3,
+      "last_transaction_date": "2024-03-21"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "130.0000",
+      "net_financial_amount": "4134.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-07-07"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "450.0000",
+      "net_financial_amount": "1245.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-03-25"
+    },
+    {
+      "client_id": "C9",
+      "asset_ticker": "VALE3",
+      "net_quantity": "160.0000",
+      "net_financial_amount": "12192.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-23"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "VALE3",
+      "net_quantity": "20.0000",
+      "net_financial_amount": "2640.00000000",
+      "transaction_count": 3,
+      "last_transaction_date": "2024-08-02"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "VALE3",
+      "net_quantity": "150.0000",
+      "net_financial_amount": "10367.00000000",
+      "transaction_count": 3,
+      "last_transaction_date": "2024-05-16"
+    },
+    {
+      "client_id": "C10",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "600.0000",
+      "net_financial_amount": "1560.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-04-08"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "850.0000",
+      "net_financial_amount": "13321.00000000",
+      "transaction_count": 3,
+      "last_transaction_date": "2024-08-10"
+    },
+    {
+      "client_id": "C9",
+      "asset_ticker": "PETR4",
+      "net_quantity": "190.0000",
+      "net_financial_amount": "6580.00000000",
+      "transaction_count": 3,
+      "last_transaction_date": "2024-05-22"
+    },
+    {
+      "client_id": "C9",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "310.0000",
+      "net_financial_amount": "9332.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-06-13"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "PETR4",
+      "net_quantity": "420.0000",
+      "net_financial_amount": "14728.00000000",
+      "transaction_count": 3,
+      "last_transaction_date": "2024-06-19"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "90.0000",
+      "net_financial_amount": "2612.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-05-28"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "-50.0000",
+      "net_financial_amount": "-1445.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-02-14"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "PETR4",
+      "net_quantity": "190.0000",
+      "net_financial_amount": "7600.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-08-08"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "300.0000",
+      "net_financial_amount": "1020.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-06-17"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "270.0000",
+      "net_financial_amount": "8250.00000000",
+      "transaction_count": 3,
+      "last_transaction_date": "2024-08-04"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "PETR4",
+      "net_quantity": "60.0000",
+      "net_financial_amount": "2500.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-11"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "PETR4",
+      "net_quantity": "170.0000",
+      "net_financial_amount": "5361.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-03-13"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "70.0000",
+      "net_financial_amount": "2407.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-19"
+    },
+    {
+      "client_id": "C10",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "170.0000",
+      "net_financial_amount": "2505.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-06-15"
+    },
+    {
+      "client_id": "C9",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "60.0000",
+      "net_financial_amount": "2124.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-01-28"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "40.0000",
+      "net_financial_amount": "1836.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-17"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "110.0000",
+      "net_financial_amount": "4312.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-04-24"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "-50.0000",
+      "net_financial_amount": "-800.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-05-06"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "90.0000",
+      "net_financial_amount": "3348.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-03-09"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "VALE3",
+      "net_quantity": "100.0000",
+      "net_financial_amount": "7650.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-06-21"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "100.0000",
+      "net_financial_amount": "2810.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-01-25"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "PETR4",
+      "net_quantity": "90.0000",
+      "net_financial_amount": "3314.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-01"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "390.0000",
+      "net_financial_amount": "5847.00000000",
+      "transaction_count": 3,
+      "last_transaction_date": "2024-06-03"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "PETR4",
+      "net_quantity": "420.0000",
+      "net_financial_amount": "14510.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-04-18"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "50.0000",
+      "net_financial_amount": "1421.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-06-25"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "VALE3",
+      "net_quantity": "-30.0000",
+      "net_financial_amount": "-2130.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-02-18"
+    },
+    {
+      "client_id": "C3",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "-30.0000",
+      "net_financial_amount": "-1194.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-05-10"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "VALE3",
+      "net_quantity": "150.0000",
+      "net_financial_amount": "11400.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-06-05"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "MGLU3",
+      "net_quantity": "350.0000",
+      "net_financial_amount": "1260.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-08-06"
+    },
+    {
+      "client_id": "C8",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "180.0000",
+      "net_financial_amount": "2598.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-21"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "ITUB4",
+      "net_quantity": "240.0000",
+      "net_financial_amount": "6840.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-03-27"
+    },
+    {
+      "client_id": "C4",
+      "asset_ticker": "PETR4",
+      "net_quantity": "170.0000",
+      "net_financial_amount": "6205.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-05-12"
+    },
+    {
+      "client_id": "C1",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "30.0000",
+      "net_financial_amount": "1079.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-31"
+    },
+    {
+      "client_id": "C5",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "-400.0000",
+      "net_financial_amount": "-6140.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-29"
+    },
+    {
+      "client_id": "C10",
+      "asset_ticker": "PETR4",
+      "net_quantity": "70.0000",
+      "net_financial_amount": "2323.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-25"
+    },
+    {
+      "client_id": "C7",
+      "asset_ticker": "VALE3",
+      "net_quantity": "20.0000",
+      "net_financial_amount": "1288.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-06-29"
+    },
+    {
+      "client_id": "C10",
+      "asset_ticker": "WEGE3",
+      "net_quantity": "40.0000",
+      "net_financial_amount": "1552.00000000",
+      "transaction_count": 2,
+      "last_transaction_date": "2024-07-05"
+    },
+    {
+      "client_id": "C2",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "200.0000",
+      "net_financial_amount": "3380.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-07-09"
+    },
+    {
+      "client_id": "C6",
+      "asset_ticker": "BBDC4",
+      "net_quantity": "260.0000",
+      "net_financial_amount": "4342.00000000",
+      "transaction_count": 1,
+      "last_transaction_date": "2024-06-27"
+    }
+  ]
+}

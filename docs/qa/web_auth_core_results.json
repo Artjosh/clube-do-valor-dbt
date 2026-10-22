@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "checks": [
+    "complete synthetic config accepted",
+    "missing AUTH_ORIGIN fails closed",
+    "missing SUPABASE_URL fails closed",
+    "missing SUPABASE_ANON_KEY fails closed",
+    "missing SUPABASE_SERVICE_ROLE_KEY fails closed",
+    "missing AUTH_COOKIE_KEY fails closed",
+    "disabled auth fails closed",
+    "HTTP production rejected",
+    "origin path rejected",
+    "provider credentials in URL rejected",
+    "malformed seal key rejected",
+    "same-origin mutation accepted",
+    "CSRF mutation rejected {}",
+    "CSRF mutation rejected {\"Origin\":\"https://attacker.invalid\"}",
+    "CSRF mutation rejected {\"Origin\":\"https://example.test\",\"Sec-Fetch-Site\":\"cross-site\"}",
+    "poll requires same-origin metadata",
+    "duplicate cookies rejected",
+    "secure HttpOnly host cookie",
+    "sealed pending state roundtrip",
+    "tampered confirmation rejected",
+    "cross-origin sealed state rejected",
+    "missing confirmation rejected",
+    "expired confirmation rejected",
+    "oversized body rejected without declared length",
+    "array body rejected",
+    "provider errors sanitized",
+    "rate retry header"
+  ],
+  "scope": "Synthetic local core only; no real email, provider, PostgreSQL concurrency or remote replay tested"
+}

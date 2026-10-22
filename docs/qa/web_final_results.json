@@ -1,0 +1,141 @@
+{
+  "at": "2026-10-22T21:00:27.950Z",
+  "url": "http://127.0.0.1:3000",
+  "checks": [
+    {
+      "name": "/ returns 200",
+      "passed": true
+    },
+    {
+      "name": "/ anti-framing headers",
+      "passed": true
+    },
+    {
+      "name": "/ referrer suppressed",
+      "passed": true
+    },
+    {
+      "name": "/ MIME sniffing blocked",
+      "passed": true
+    },
+    {
+      "name": "/login returns 200",
+      "passed": true
+    },
+    {
+      "name": "/login anti-framing headers",
+      "passed": true
+    },
+    {
+      "name": "/login referrer suppressed",
+      "passed": true
+    },
+    {
+      "name": "/login MIME sniffing blocked",
+      "passed": true
+    },
+    {
+      "name": "/confirm returns 200",
+      "passed": true
+    },
+    {
+      "name": "/confirm anti-framing headers",
+      "passed": true
+    },
+    {
+      "name": "/confirm referrer suppressed",
+      "passed": true
+    },
+    {
+      "name": "/confirm MIME sniffing blocked",
+      "passed": true
+    },
+    {
+      "name": "/api/auth/session returns 200",
+      "passed": true
+    },
+    {
+      "name": "/api/auth/session anti-framing headers",
+      "passed": true
+    },
+    {
+      "name": "/api/auth/session referrer suppressed",
+      "passed": true
+    },
+    {
+      "name": "/api/auth/session MIME sniffing blocked",
+      "passed": true
+    },
+    {
+      "name": "Final session configured:false authenticated:false",
+      "passed": true
+    },
+    {
+      "name": "desktop/login no overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop real disabled UI has no sending form",
+      "passed": true
+    },
+    {
+      "name": "desktop/confirm no overflow",
+      "passed": true
+    },
+    {
+      "name": "desktop no valid confirmation cannot approve",
+      "passed": true
+    },
+    {
+      "name": "mobile/login no overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile real disabled UI has no sending form",
+      "passed": true
+    },
+    {
+      "name": "mobile/confirm no overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile no valid confirmation cannot approve",
+      "passed": true
+    }
+  ],
+  "headers": [
+    {
+      "path": "/",
+      "status": 200,
+      "x-frame-options": "DENY",
+      "content-security-policy": "frame-ancestors 'none'; base-uri 'self'; object-src 'none'",
+      "referrer-policy": "no-referrer",
+      "x-content-type-options": "nosniff"
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "x-frame-options": "DENY",
+      "content-security-policy": "frame-ancestors 'none'; base-uri 'self'; object-src 'none'",
+      "referrer-policy": "no-referrer",
+      "x-content-type-options": "nosniff"
+    },
+    {
+      "path": "/confirm",
+      "status": 200,
+      "x-frame-options": "DENY",
+      "content-security-policy": "frame-ancestors 'none'; base-uri 'self'; object-src 'none'",
+      "referrer-policy": "no-referrer",
+      "x-content-type-options": "nosniff"
+    },
+    {
+      "path": "/api/auth/session",
+      "status": 200,
+      "x-frame-options": "DENY",
+      "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
+      "referrer-policy": "no-referrer",
+      "x-content-type-options": "nosniff"
+    }
+  ],
+  "errors": []
+}

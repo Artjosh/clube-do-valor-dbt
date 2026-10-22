@@ -1,4 +1,10 @@
-# Clube do Valor — dbt + DuckDB
+# Clube do Valor — Observatório de dados
+
+Dashboard **Vinext** com níveis **Copper, Silver e Gold**, APIs de leitura e autenticação entre dispositivos preparada em **Supabase/PostgreSQL**, sobre o pipeline dbt/DuckDB original. Os níveis são profundidades de análise, sem cobrança. Veja [como executar o site](web/README.md), [arquitetura](docs/web-architecture.md) e [autenticação e limitações de ativação](docs/web-auth.md).
+
+[Abrir o dashboard](https://clube-do-valor-intelligence.artjosh.chatgpt.site). Entrada por e-mail/OTP, sem senha ou cadastro separado. Uma conta verificada nasce sem acesso; a contrassenha de convite concede a role `analyst`, exigida no servidor para páginas, APIs e CSV. A configuração do Brevo está [preparada neste guia](docs/brevo-activation.md); o login e os dados permanecem indisponíveis até conectar SMTP e validar a jornada real. [Evidências históricas da análise e interface](docs/qa/web_validacao.md).
+
+[Estado da publicação e continuidade](docs/web-publication.md) · [Validação atual de acesso privado](docs/qa/web_access_review.md).
 
 Pipeline local do teste técnico: dois CSVs originais, seis modelos em três camadas e testes que expõem os problemas intencionais sem apagar fatos suspeitos. Não exige conta, servidor, credenciais nem serviços pagos. Python **3.12** é a versão validada; dependências diretas estão fixadas em `requirements.txt` e o ambiente completo em `requirements-lock.txt`.
 
@@ -140,4 +146,4 @@ Execução validada em Windows/Python 3.12.10: `seed` 2/2, `run` 6/6, `test` **7
 
 ## Escopo arquitetural
 
-Frontend, Supabase e autenticação foram avaliados como extensões opcionais e não são necessários aos critérios do teste dbt. A entrega concentra transformação, qualidade, documentação e reprodução local em DuckDB. Caso uma extensão web seja solicitada posteriormente, a preferência do usuário é Vinext com rotas server-side e autenticação entre PC e celular por polling com callback seguro. Essa extensão não está implementada nem integra a validação atual.
+Após a entrega v1.0.0, a extensão web foi autorizada e implementada em `web/`: Vinext com rotas server-side, dashboard Copper/Silver/Gold e login entre PC e celular por polling e aprovação explícita. O DuckDB permanece analítico e somente leitura para o site; um PostgreSQL Supabase dedicado contém apenas identidade, desafios e sessões. Os testes do dashboard têm evidências separadas em `docs/qa/web*`. O login publicado fica desativado até configurar SMTP próprio: o Supabase Free recusou os templates customizados com o provedor de e-mail padrão. O pipeline dbt continua executável de forma independente, sem conta ou servidor.

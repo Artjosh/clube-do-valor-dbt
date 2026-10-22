@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "name": "root metrics",
+      "pass": true
+    },
+    {
+      "name": "pagination",
+      "pass": true
+    },
+    {
+      "name": "native detail",
+      "pass": true
+    },
+    {
+      "name": "escape detail",
+      "pass": true
+    },
+    {
+      "name": "filter URL",
+      "pass": true
+    },
+    {
+      "name": "filter rows",
+      "pass": true
+    },
+    {
+      "name": "export filtered",
+      "pass": true
+    },
+    {
+      "name": "back restores all",
+      "pass": true
+    },
+    {
+      "name": "six negative positions",
+      "pass": true
+    },
+    {
+      "name": "empty state",
+      "pass": true
+    },
+    {
+      "name": "login state",
+      "pass": true
+    },
+    {
+      "name": "invalid confirmation",
+      "pass": true
+    },
+    {
+      "name": "mobile overflow /",
+      "pass": true
+    },
+    {
+      "name": "mobile menu focus",
+      "pass": true
+    },
+    {
+      "name": "mobile escape",
+      "pass": true
+    },
+    {
+      "name": "mobile overflow /?tier=gold",
+      "pass": true
+    },
+    {
+      "name": "mobile overflow /login",
+      "pass": true
+    },
+    {
+      "name": "mobile overflow /confirm",
+      "pass": true
+    },
+    {
+      "name": "numeric sorting reverses rows",
+      "pass": true
+    },
+    {
+      "name": "unconfigured UI (intercepted session only)",
+      "pass": true
+    },
+    {
+      "name": "isolated mocked start/poll, stops after approval",
+      "pass": true
+    },
+    {
+      "name": "isolated mocked confirmation requires code and consent",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "notes": [
+    "Table checks scoped to their data panel; chart accessibility tables and hidden test detail tables excluded.",
+    "Auth happy paths use isolated request interception only; no provider call, email delivery or real authentication claimed."
+  ]
+}

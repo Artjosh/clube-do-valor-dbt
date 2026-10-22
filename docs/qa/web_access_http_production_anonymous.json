@@ -1,0 +1,1109 @@
+{
+  "executed_at": "2026-10-22T21:25:32.683522+00:00",
+  "url": "http://127.0.0.1:3001",
+  "mode": "configured",
+  "checks": [
+    {
+      "name": "anonymous denies data /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "anonymous no payload /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "anonymous private cache policy /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "anonymous denies data /api/analytics?client=C1",
+      "passed": true
+    },
+    {
+      "name": "anonymous no payload /api/analytics?client=C1",
+      "passed": true
+    },
+    {
+      "name": "anonymous private cache policy /api/analytics?client=C1",
+      "passed": true
+    },
+    {
+      "name": "anonymous denies data /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "anonymous no payload /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "anonymous private cache policy /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "anonymous denies data /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "anonymous no payload /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "anonymous private cache policy /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "anonymous denies data /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "anonymous no payload /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "anonymous private cache policy /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset copper html",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response copper html",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset copper rsc",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response copper rsc",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset copper prefetch",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response copper prefetch",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset copper rsc-path",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response copper rsc-path",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset silver html",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response silver html",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset silver rsc",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response silver rsc",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset silver prefetch",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response silver prefetch",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset silver rsc-path",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response silver rsc-path",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset gold html",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response gold html",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset gold rsc",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response gold rsc",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset gold prefetch",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response gold prefetch",
+      "passed": true
+    },
+    {
+      "name": "anonymous SSR/RSC no dataset gold rsc-path",
+      "passed": true
+    },
+    {
+      "name": "anonymous safe page response gold rsc-path",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie denies data /api/analytics",
+      "passed": false
+    },
+    {
+      "name": "forged-cookie no payload /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie private cache policy /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie denies data /api/analytics?client=C1",
+      "passed": false
+    },
+    {
+      "name": "forged-cookie no payload /api/analytics?client=C1",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie private cache policy /api/analytics?client=C1",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie denies data /api/export?kind=transactions",
+      "passed": false
+    },
+    {
+      "name": "forged-cookie no payload /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie private cache policy /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie denies data /api/export?kind=clients",
+      "passed": false
+    },
+    {
+      "name": "forged-cookie no payload /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie private cache policy /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie denies data /api/export?kind=portfolios",
+      "passed": false
+    },
+    {
+      "name": "forged-cookie no payload /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie private cache policy /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset copper html",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response copper html",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset copper rsc",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response copper rsc",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset copper prefetch",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response copper prefetch",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset copper rsc-path",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response copper rsc-path",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset silver html",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response silver html",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset silver rsc",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response silver rsc",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset silver prefetch",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response silver prefetch",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset silver rsc-path",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response silver rsc-path",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset gold html",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response gold html",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset gold rsc",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response gold rsc",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset gold prefetch",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response gold prefetch",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie SSR/RSC no dataset gold rsc-path",
+      "passed": true
+    },
+    {
+      "name": "forged-cookie safe page response gold rsc-path",
+      "passed": true
+    },
+    {
+      "name": "Snapshot cannot be fetched directly /data/analytics.json",
+      "passed": true
+    },
+    {
+      "name": "Snapshot cannot be fetched directly /analytics.json",
+      "passed": true
+    },
+    {
+      "name": "Snapshot cannot be fetched directly /web/data/analytics.json",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /.vite/manifest.json",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/00c4e61f-3639-48e6-921b-37ab61ceb8ab/_buildManifest.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/00c4e61f-3639-48e6-921b-37ab61ceb8ab/_ssgManifest.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/Icon-D0zGVybZ.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/access-denied-CiViQKRm.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/app-route-prefetch-policy-CrYHrJyz.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/auth-client-CSFMn-LW.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/check-BPdV_0Ch.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/dashboard-C0VmwlvR.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/device-auth-01ylg-0H.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/framework-D_rUT4EX.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/index-BWo8i75u.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/layout-segment-context-jbhBmb_4.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/log-out-6IVszlKZ.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/private-login-CQC42-Of.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/rolldown-runtime-C60lm6uB.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/shield-check-0DSWluEQ.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/streamed-icons-tr6xnzDJ.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /_next/static/chunks/triangle-alert-DIL9hUqI.js",
+      "passed": true
+    },
+    {
+      "name": "Public asset has no dataset markers /vinext-client-entry-manifest.json",
+      "passed": true
+    }
+  ],
+  "responses": [
+    {
+      "path": "/api/analytics",
+      "status": 401,
+      "bytes": 35,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/api/analytics?client=C1",
+      "status": 401,
+      "bytes": 35,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/api/export?kind=transactions",
+      "status": 401,
+      "bytes": 35,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/api/export?kind=clients",
+      "status": 401,
+      "bytes": 35,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/api/export?kind=portfolios",
+      "status": 401,
+      "bytes": 35,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=copper",
+      "status": 200,
+      "bytes": 13458,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "private, no-store",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=copper&_rsc=qa-access",
+      "status": 200,
+      "bytes": 50,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "private, no-store",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=copper&_rsc=qa-access",
+      "status": 200,
+      "bytes": 50,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "private, no-store",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/.rsc?tier=copper",
+      "status": 200,
+      "bytes": 50,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": null,
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=silver",
+      "status": 200,
+      "bytes": 13458,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "private, no-store",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=silver&_rsc=qa-access",
+      "status": 200,
+      "bytes": 50,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "private, no-store",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=silver&_rsc=qa-access",
+      "status": 200,
+      "bytes": 50,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "private, no-store",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/.rsc?tier=silver",
+      "status": 200,
+      "bytes": 50,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": null,
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=gold",
+      "status": 200,
+      "bytes": 13458,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "private, no-store",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=gold&_rsc=qa-access",
+      "status": 200,
+      "bytes": 50,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "private, no-store",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=gold&_rsc=qa-access",
+      "status": 200,
+      "bytes": 50,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "private, no-store",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/.rsc?tier=gold",
+      "status": 200,
+      "bytes": 50,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": null,
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/api/analytics",
+      "status": 503,
+      "bytes": 28,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/api/analytics?client=C1",
+      "status": 503,
+      "bytes": 28,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/api/export?kind=transactions",
+      "status": 503,
+      "bytes": 28,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/api/export?kind=clients",
+      "status": 503,
+      "bytes": 28,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/api/export?kind=portfolios",
+      "status": 503,
+      "bytes": 28,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, private",
+        "Vary": "Cookie, RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=copper",
+      "status": 200,
+      "bytes": 12280,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=copper&_rsc=qa-access",
+      "status": 200,
+      "bytes": 5865,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=copper&_rsc=qa-access",
+      "status": 200,
+      "bytes": 5865,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/.rsc?tier=copper",
+      "status": 200,
+      "bytes": 5865,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=silver",
+      "status": 200,
+      "bytes": 12280,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=silver&_rsc=qa-access",
+      "status": 200,
+      "bytes": 5865,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=silver&_rsc=qa-access",
+      "status": 200,
+      "bytes": 5865,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/.rsc?tier=silver",
+      "status": 200,
+      "bytes": 5865,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=gold",
+      "status": 200,
+      "bytes": 12278,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=gold&_rsc=qa-access",
+      "status": 200,
+      "bytes": 5865,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/?tier=gold&_rsc=qa-access",
+      "status": 200,
+      "bytes": 5865,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/.rsc?tier=gold",
+      "status": 200,
+      "bytes": 5865,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/x-component",
+        "Cache-Control": "no-store, must-revalidate",
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/data/analytics.json",
+      "status": 404,
+      "bytes": 5686,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": null,
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/analytics.json",
+      "status": 404,
+      "bytes": 5671,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": null,
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/web/data/analytics.json",
+      "status": 404,
+      "bytes": 5698,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": null,
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/.vite/manifest.json",
+      "status": 404,
+      "bytes": 5686,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": null,
+        "Vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Next-Url, X-Vinext-Interception-Context, X-Vinext-Mounted-Slots, X-Vinext-Rsc-Render-Mode",
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/00c4e61f-3639-48e6-921b-37ab61ceb8ab/_buildManifest.js",
+      "status": 200,
+      "bytes": 159,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/00c4e61f-3639-48e6-921b-37ab61ceb8ab/_ssgManifest.js",
+      "status": 200,
+      "bytes": 76,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/Icon-D0zGVybZ.js",
+      "status": 200,
+      "bytes": 1082,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/access-denied-CiViQKRm.js",
+      "status": 200,
+      "bytes": 1485,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/app-route-prefetch-policy-CrYHrJyz.js",
+      "status": 200,
+      "bytes": 937,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/auth-client-CSFMn-LW.js",
+      "status": 200,
+      "bytes": 4561,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/check-BPdV_0Ch.js",
+      "status": 200,
+      "bytes": 120,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/dashboard-C0VmwlvR.js",
+      "status": 200,
+      "bytes": 35624,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/device-auth-01ylg-0H.js",
+      "status": 200,
+      "bytes": 3544,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/framework-D_rUT4EX.js",
+      "status": 200,
+      "bytes": 190152,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/index-BWo8i75u.js",
+      "status": 200,
+      "bytes": 201436,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/layout-segment-context-jbhBmb_4.js",
+      "status": 200,
+      "bytes": 494,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/log-out-6IVszlKZ.js",
+      "status": 200,
+      "bytes": 226,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/private-login-CQC42-Of.js",
+      "status": 200,
+      "bytes": 9280,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/rolldown-runtime-C60lm6uB.js",
+      "status": 200,
+      "bytes": 694,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/shield-check-0DSWluEQ.js",
+      "status": 200,
+      "bytes": 820,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/streamed-icons-tr6xnzDJ.js",
+      "status": 200,
+      "bytes": 772,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/_next/static/chunks/triangle-alert-DIL9hUqI.js",
+      "status": 200,
+      "bytes": 373,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "public, max-age=31536000, immutable",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    },
+    {
+      "path": "/vinext-client-entry-manifest.json",
+      "status": 200,
+      "bytes": 65,
+      "dataset_markers": [],
+      "headers": {
+        "Content-Type": "application/json",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Vary": null,
+        "X-CDV-Data-Access": null
+      }
+    }
+  ],
+  "skipped": [
+    "No-grant real session: no isolated test cookie supplied; assess backend live evidence separately",
+    "Authorized session: no isolated test cookie supplied; assess backend live evidence separately"
+  ],
+  "asset_count": 20,
+  "failed": [
+    "forged-cookie denies data /api/analytics",
+    "forged-cookie denies data /api/analytics?client=C1",
+    "forged-cookie denies data /api/export?kind=transactions",
+    "forged-cookie denies data /api/export?kind=clients",
+    "forged-cookie denies data /api/export?kind=portfolios"
+  ]
+}

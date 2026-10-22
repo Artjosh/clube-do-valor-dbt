@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="pt-BR"><body>
+  <h1>Confirme o acesso ao Clube do Valor</h1>
+  <p>Para entrar neste computador, digite o código de e-mail: <strong>{{ .Token }}</strong>.</p>
+  <p>Entrar confirma sua identidade, mas não concede acesso ao dashboard sem o convite autorizado.</p>
+  <p>Você solicitou acesso no computador. Abra o link abaixo no celular e digite o código de oito dígitos exibido naquele computador.</p>
+  <p><a href="{{ .RedirectTo }}&amp;token_hash={{ .TokenHash }}&amp;type=email">Revisar solicitação</a></p>
+  <p>Abrir o link não aprova o acesso. A confirmação exige uma ação explícita e o código do computador; a solicitação expira em cinco minutos.</p>
+  <p>Se você não iniciou a solicitação, ignore esta mensagem. Não informe o código a terceiros.</p>
+</body></html>

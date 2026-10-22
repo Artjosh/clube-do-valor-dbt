@@ -1,0 +1,483 @@
+{
+  "at": "2026-10-22T21:39:52.035Z",
+  "base": "https://clube-do-valor-intelligence.artjosh.chatgpt.site",
+  "checks": [
+    {
+      "name": "Public entry reaches app without platform login",
+      "passed": true
+    },
+    {
+      "name": "Disabled auth has no sending form",
+      "passed": true
+    },
+    {
+      "name": "Configured-off API 503 /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "API no-store /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "API no dataset /api/analytics",
+      "passed": true
+    },
+    {
+      "name": "Configured-off API 503 /api/analytics?client=C1",
+      "passed": true
+    },
+    {
+      "name": "API no-store /api/analytics?client=C1",
+      "passed": true
+    },
+    {
+      "name": "API no dataset /api/analytics?client=C1",
+      "passed": true
+    },
+    {
+      "name": "Configured-off API 503 /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "API no-store /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "API no dataset /api/export?kind=transactions",
+      "passed": true
+    },
+    {
+      "name": "Configured-off API 503 /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "API no-store /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "API no dataset /api/export?kind=clients",
+      "passed": true
+    },
+    {
+      "name": "Configured-off API 503 /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "API no-store /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "API no dataset /api/export?kind=portfolios",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC copper html no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC copper html no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC copper rsc-header no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC copper rsc-header no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC copper rsc-path no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC copper rsc-path no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC copper prefetch no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC copper prefetch no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC silver html no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC silver html no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC silver rsc-header no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC silver rsc-header no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC silver rsc-path no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC silver rsc-path no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC silver prefetch no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC silver prefetch no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC gold html no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC gold html no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC gold rsc-header no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC gold rsc-header no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC gold rsc-path no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC gold rsc-path no-store",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC gold prefetch no data",
+      "passed": true
+    },
+    {
+      "name": "SSR/RSC gold prefetch no-store",
+      "passed": true
+    },
+    {
+      "name": "Direct snapshot denied /data/analytics.json",
+      "passed": true
+    },
+    {
+      "name": "Direct snapshot denied /analytics.json",
+      "passed": true
+    },
+    {
+      "name": "Direct snapshot denied /web/data/analytics.json",
+      "passed": true
+    },
+    {
+      "name": "Public chunk no data /_next/static/chunks/index-Dlh0mo6S.js",
+      "passed": true
+    },
+    {
+      "name": "Public chunk no data /_next/static/chunks/rolldown-runtime-C60lm6uB.js",
+      "passed": true
+    },
+    {
+      "name": "Public chunk no data /_next/static/chunks/framework-D_rUT4EX.js",
+      "passed": true
+    },
+    {
+      "name": "Public chunk no data /_next/static/chunks/private-login-xSNPv_Eo.js",
+      "passed": true
+    },
+    {
+      "name": "Public chunk no data /_next/static/chunks/layout-segment-context-DhnENIe3.js",
+      "passed": true
+    },
+    {
+      "name": "Public chunk no data /_next/static/chunks/shield-check-0DSWluEQ.js",
+      "passed": true
+    },
+    {
+      "name": "Public chunk no data /_next/static/chunks/Icon-D0zGVybZ.js",
+      "passed": true
+    },
+    {
+      "name": "Public chunk no data /_next/static/chunks/triangle-alert-DIL9hUqI.js",
+      "passed": true
+    },
+    {
+      "name": "Public chunk no data /_next/static/chunks/auth-client-B99UzAAk.js",
+      "passed": true
+    }
+  ],
+  "responses": [
+    {
+      "path": "/api/analytics",
+      "status": 503,
+      "type": "application/json; charset=utf-8",
+      "cache": "no-store, private",
+      "bytes": 31,
+      "error": "auth_not_configured",
+      "markers": []
+    },
+    {
+      "path": "/api/analytics?client=C1",
+      "status": 503,
+      "type": "application/json; charset=utf-8",
+      "cache": "no-store, private",
+      "bytes": 31,
+      "error": "auth_not_configured",
+      "markers": []
+    },
+    {
+      "path": "/api/export?kind=transactions",
+      "status": 503,
+      "type": "application/json; charset=utf-8",
+      "cache": "no-store, private",
+      "bytes": 31,
+      "error": "auth_not_configured",
+      "markers": []
+    },
+    {
+      "path": "/api/export?kind=clients",
+      "status": 503,
+      "type": "application/json; charset=utf-8",
+      "cache": "no-store, private",
+      "bytes": 31,
+      "error": "auth_not_configured",
+      "markers": []
+    },
+    {
+      "path": "/api/export?kind=portfolios",
+      "status": 503,
+      "type": "application/json; charset=utf-8",
+      "cache": "no-store, private",
+      "bytes": 31,
+      "error": "auth_not_configured",
+      "markers": []
+    },
+    {
+      "path": "/?tier=copper",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-store, must-revalidate",
+      "bytes": 12236,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/?tier=copper",
+      "status": 200,
+      "type": "text/x-component",
+      "cache": "no-store, must-revalidate",
+      "bytes": 5843,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/.rsc?tier=copper",
+      "status": 200,
+      "type": "text/x-component",
+      "cache": "no-store, must-revalidate",
+      "bytes": 5843,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/?tier=copper",
+      "status": 200,
+      "type": "text/x-component",
+      "cache": "no-store, must-revalidate",
+      "bytes": 5843,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/?tier=silver",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-store, must-revalidate",
+      "bytes": 12236,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/?tier=silver",
+      "status": 200,
+      "type": "text/x-component",
+      "cache": "no-store, must-revalidate",
+      "bytes": 5843,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/.rsc?tier=silver",
+      "status": 200,
+      "type": "text/x-component",
+      "cache": "no-store, must-revalidate",
+      "bytes": 5843,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/?tier=silver",
+      "status": 200,
+      "type": "text/x-component",
+      "cache": "no-store, must-revalidate",
+      "bytes": 5843,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/?tier=gold",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-store, must-revalidate",
+      "bytes": 12234,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/?tier=gold",
+      "status": 200,
+      "type": "text/x-component",
+      "cache": "no-store, must-revalidate",
+      "bytes": 5843,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/.rsc?tier=gold",
+      "status": 200,
+      "type": "text/x-component",
+      "cache": "no-store, must-revalidate",
+      "bytes": 5843,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/?tier=gold",
+      "status": 200,
+      "type": "text/x-component",
+      "cache": "no-store, must-revalidate",
+      "bytes": 5843,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/data/analytics.json",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "cache": "private, no-store",
+      "bytes": 5676,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/analytics.json",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "cache": "private, no-store",
+      "bytes": 5661,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/web/data/analytics.json",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "cache": "private, no-store",
+      "bytes": 5688,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/_next/static/chunks/index-Dlh0mo6S.js",
+      "status": 200,
+      "type": "text/javascript",
+      "cache": "public, max-age=0, must-revalidate",
+      "bytes": 201426,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/_next/static/chunks/rolldown-runtime-C60lm6uB.js",
+      "status": 200,
+      "type": "text/javascript",
+      "cache": "public, max-age=0, must-revalidate",
+      "bytes": 694,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/_next/static/chunks/framework-D_rUT4EX.js",
+      "status": 200,
+      "type": "text/javascript",
+      "cache": "public, max-age=0, must-revalidate",
+      "bytes": 190152,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/_next/static/chunks/private-login-xSNPv_Eo.js",
+      "status": 200,
+      "type": "text/javascript",
+      "cache": "public, max-age=0, must-revalidate",
+      "bytes": 9192,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/_next/static/chunks/layout-segment-context-DhnENIe3.js",
+      "status": 200,
+      "type": "text/javascript",
+      "cache": "public, max-age=0, must-revalidate",
+      "bytes": 494,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/_next/static/chunks/shield-check-0DSWluEQ.js",
+      "status": 200,
+      "type": "text/javascript",
+      "cache": "public, max-age=0, must-revalidate",
+      "bytes": 820,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/_next/static/chunks/Icon-D0zGVybZ.js",
+      "status": 200,
+      "type": "text/javascript",
+      "cache": "public, max-age=0, must-revalidate",
+      "bytes": 1082,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/_next/static/chunks/triangle-alert-DIL9hUqI.js",
+      "status": 200,
+      "type": "text/javascript",
+      "cache": "public, max-age=0, must-revalidate",
+      "bytes": 373,
+      "error": null,
+      "markers": []
+    },
+    {
+      "path": "/_next/static/chunks/auth-client-B99UzAAk.js",
+      "status": 200,
+      "type": "text/javascript",
+      "cache": "public, max-age=0, must-revalidate",
+      "bytes": 4503,
+      "error": null,
+      "markers": []
+    }
+  ],
+  "errors": [],
+  "assetCount": 9
+}

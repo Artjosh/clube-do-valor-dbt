@@ -1,0 +1,281 @@
+{
+  "checks": [
+    {
+      "passed": true,
+      "name": "Anonymous session",
+      "detail": 200
+    },
+    {
+      "passed": true,
+      "name": "Disabled auth declared honestly",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "Health declares provider not probed",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/start origin=same fails closed",
+      "detail": 503
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/start origin=same never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/start origin=same noncacheable",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/start origin=same nosniff",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/start origin=same no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/poll origin=same fails closed",
+      "detail": 503
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/poll origin=same never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/poll origin=same noncacheable",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/poll origin=same nosniff",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/poll origin=same no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/confirmation origin=same fails closed",
+      "detail": 503
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/confirmation origin=same never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/confirmation origin=same noncacheable",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/confirmation origin=same nosniff",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/confirmation origin=same no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/approve origin=same fails closed",
+      "detail": 503
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/approve origin=same never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/approve origin=same noncacheable",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/approve origin=same nosniff",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/approve origin=same no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/logout origin=same fails closed",
+      "detail": 503
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/logout origin=same never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/logout origin=same noncacheable",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/logout origin=same nosniff",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/logout origin=same no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/confirm origin=same fails closed",
+      "detail": 503
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/confirm origin=same never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/confirm origin=same noncacheable",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/confirm origin=same nosniff",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/confirm origin=same no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/start origin=foreign fails closed",
+      "detail": 403
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/start origin=foreign never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/start origin=foreign no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/poll origin=foreign fails closed",
+      "detail": 403
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/poll origin=foreign never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/poll origin=foreign no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/confirmation origin=foreign fails closed",
+      "detail": 403
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/confirmation origin=foreign never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/confirmation origin=foreign no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/approve origin=foreign fails closed",
+      "detail": 403
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/approve origin=foreign never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/device/approve origin=foreign no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/logout origin=foreign fails closed",
+      "detail": 403
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/logout origin=foreign never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/logout origin=foreign no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/confirm origin=foreign fails closed",
+      "detail": 403
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/confirm origin=foreign never mints session",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "/api/auth/confirm origin=foreign no foreign cross-origin grants",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "Forged cookie cannot authenticate",
+      "detail": null
+    },
+    {
+      "passed": true,
+      "name": "GET cannot mutate /api/auth/device/start",
+      "detail": 405
+    },
+    {
+      "passed": true,
+      "name": "GET cannot mutate /api/auth/device/approve",
+      "detail": 405
+    },
+    {
+      "passed": true,
+      "name": "GET cannot mutate /api/auth/logout",
+      "detail": 405
+    }
+  ],
+  "failures": [],
+  "scope": "auth disabled; no email/provider calls; synthetic cookies only"
+}

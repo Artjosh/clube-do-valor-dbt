@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-22T21:24:31.584084+00:00",
+  "base": "http://127.0.0.1:3000",
+  "checks": [
+    {
+      "path": "/data/analytics.json",
+      "status": 404,
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/data/analytics.json?raw",
+      "status": 404,
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/data/analytics.json?import",
+      "status": 404,
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/@fs/C:/Users/josh/Desktop/ClubeDoValor/web/data/analytics.json",
+      "status": 404,
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/@fs/C:/Users/josh/Desktop/ClubeDoValor/web/data/analytics.json?raw",
+      "status": 404,
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/.dev.vars",
+      "status": 403,
+      "bytes": 436,
+      "passed": true
+    },
+    {
+      "path": "/.dev.vars?raw",
+      "status": 403,
+      "bytes": 436,
+      "passed": true
+    },
+    {
+      "path": "/lib/auth/core.ts?raw",
+      "status": 404,
+      "bytes": 0,
+      "passed": true
+    },
+    {
+      "path": "/supabase/migrations/202610220002_private_analytics.sql?raw",
+      "status": 403,
+      "bytes": 481,
+      "passed": true
+    }
+  ]
+}

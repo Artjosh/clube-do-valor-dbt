@@ -1,0 +1,120 @@
+{
+  "at": "2026-10-22T21:36:44.166Z",
+  "origin": "https://clube-do-valor-intelligence.artjosh.chatgpt.site",
+  "audience": "owner-private at verification",
+  "credential": "owner token in memory only",
+  "checks": [
+    {
+      "path": "/login",
+      "check": "no dataset",
+      "passed": true
+    },
+    {
+      "path": "/login",
+      "check": "expected guarded status",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/login",
+      "check": "no-store",
+      "passed": true
+    },
+    {
+      "path": "/",
+      "check": "no dataset",
+      "passed": true
+    },
+    {
+      "path": "/",
+      "check": "expected guarded status",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/",
+      "check": "no-store",
+      "passed": true
+    },
+    {
+      "path": "/.rsc?tier=gold",
+      "check": "no dataset",
+      "passed": true
+    },
+    {
+      "path": "/.rsc?tier=gold",
+      "check": "expected guarded status",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "path": "/.rsc?tier=gold",
+      "check": "no-store",
+      "passed": true
+    },
+    {
+      "path": "/api/analytics",
+      "check": "no dataset",
+      "passed": true
+    },
+    {
+      "path": "/api/analytics",
+      "check": "expected guarded status",
+      "status": 503,
+      "passed": true
+    },
+    {
+      "path": "/api/analytics",
+      "check": "no-store",
+      "passed": true
+    },
+    {
+      "path": "/api/export?kind=transactions",
+      "check": "no dataset",
+      "passed": true
+    },
+    {
+      "path": "/api/export?kind=transactions",
+      "check": "expected guarded status",
+      "status": 503,
+      "passed": true
+    },
+    {
+      "path": "/api/export?kind=transactions",
+      "check": "no-store",
+      "passed": true
+    },
+    {
+      "path": "/api/auth/session",
+      "check": "no dataset",
+      "passed": true
+    },
+    {
+      "path": "/api/auth/session",
+      "check": "expected guarded status",
+      "status": 503,
+      "passed": true
+    },
+    {
+      "path": "/api/auth/session",
+      "check": "no-store",
+      "passed": true
+    },
+    {
+      "path": "/api/auth/session",
+      "check": "disabled auth fails closed",
+      "passed": true
+    },
+    {
+      "path": "/data/analytics.json",
+      "check": "no dataset",
+      "passed": true
+    },
+    {
+      "path": "/data/analytics.json",
+      "check": "expected guarded status",
+      "status": 404,
+      "passed": true
+    }
+  ]
+}

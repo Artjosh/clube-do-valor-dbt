@@ -1,0 +1,1913 @@
+{
+  "base_url": "http://127.0.0.1:3000",
+  "checks": [
+    {
+      "label": "baseline analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "baseline exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "baseline summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 98,
+        "actual": 98
+      }
+    },
+    {
+      "label": "baseline summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 10,
+        "actual": 10
+      }
+    },
+    {
+      "label": "baseline summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "baseline summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 6,
+        "actual": 6
+      }
+    },
+    {
+      "label": "baseline summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 67,
+        "actual": 67
+      }
+    },
+    {
+      "label": "baseline summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 31,
+        "actual": 31
+      }
+    },
+    {
+      "label": "baseline summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "297849.00000000",
+        "actual": 297849
+      }
+    },
+    {
+      "label": "baseline summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "81934.00000000",
+        "actual": 81934
+      }
+    },
+    {
+      "label": "baseline summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "215915.00000000",
+        "actual": 215915
+      }
+    },
+    {
+      "label": "baseline summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "379783.00000000",
+        "actual": 379783
+      }
+    },
+    {
+      "label": "baseline summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 55,
+        "actual": 55
+      }
+    },
+    {
+      "label": "baseline summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 6,
+        "actual": 6
+      }
+    },
+    {
+      "label": "baseline all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "baseline CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "baseline CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "baseline CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "baseline CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "baseline CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "baseline CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "baseline CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "baseline CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "baseline CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1 analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C1 exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1 summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 11,
+        "actual": 11
+      }
+    },
+    {
+      "label": "client=C1 summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C1 summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "client=C1 summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 6,
+        "actual": 6
+      }
+    },
+    {
+      "label": "client=C1 summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 7,
+        "actual": 7
+      }
+    },
+    {
+      "label": "client=C1 summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 4,
+        "actual": 4
+      }
+    },
+    {
+      "label": "client=C1 summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "20329.00000000",
+        "actual": 20329
+      }
+    },
+    {
+      "label": "client=C1 summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "4486.00000000",
+        "actual": 4486
+      }
+    },
+    {
+      "label": "client=C1 summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "15843.00000000",
+        "actual": 15843
+      }
+    },
+    {
+      "label": "client=C1 summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "24815.00000000",
+        "actual": 24815
+      }
+    },
+    {
+      "label": "client=C1 summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 6,
+        "actual": 6
+      }
+    },
+    {
+      "label": "client=C1 summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C1 all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1 CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C1 CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1 CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1 CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C1 CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1 CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1 CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C1 CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1 CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C11 analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C11 exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C11 summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "client=C11 summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C11 all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C11 CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C11 CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C11 CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C11 CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C11 CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C11 CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C11 CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C11 CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C11 CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "asset=BBDC4 analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "asset=BBDC4 exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "asset=BBDC4 summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 16,
+        "actual": 16
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 9,
+        "actual": 9
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 11,
+        "actual": 11
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 5,
+        "actual": 5
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "42681.00000000",
+        "actual": 42681
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "14802.00000000",
+        "actual": 14802
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "27879.00000000",
+        "actual": 27879
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "57483.00000000",
+        "actual": 57483
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 9,
+        "actual": 9
+      }
+    },
+    {
+      "label": "asset=BBDC4 summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 2,
+        "actual": 2
+      }
+    },
+    {
+      "label": "asset=BBDC4 all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "asset=BBDC4 CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "asset=BBDC4 CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "asset=BBDC4 CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "asset=BBDC4 CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "asset=BBDC4 CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "asset=BBDC4 CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "asset=BBDC4 CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "asset=BBDC4 CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "asset=BBDC4 CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "operation=SELL analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "operation=SELL exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "operation=SELL summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 31,
+        "actual": 31
+      }
+    },
+    {
+      "label": "operation=SELL summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 10,
+        "actual": 10
+      }
+    },
+    {
+      "label": "operation=SELL summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "operation=SELL summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 6,
+        "actual": 6
+      }
+    },
+    {
+      "label": "operation=SELL summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "operation=SELL summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 31,
+        "actual": 31
+      }
+    },
+    {
+      "label": "operation=SELL summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "operation=SELL summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "81934.00000000",
+        "actual": 81934
+      }
+    },
+    {
+      "label": "operation=SELL summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "-81934.00000000",
+        "actual": -81934
+      }
+    },
+    {
+      "label": "operation=SELL summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "81934.00000000",
+        "actual": 81934
+      }
+    },
+    {
+      "label": "operation=SELL summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 31,
+        "actual": 31
+      }
+    },
+    {
+      "label": "operation=SELL summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 31,
+        "actual": 31
+      }
+    },
+    {
+      "label": "operation=SELL all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "operation=SELL CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "operation=SELL CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "operation=SELL CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "operation=SELL CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "operation=SELL CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "operation=SELL CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "operation=SELL CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "operation=SELL CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "operation=SELL CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 2,
+        "actual": 2
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 2,
+        "actual": 2
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "6840.00000000",
+        "actual": 6840
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "6840.00000000",
+        "actual": 6840
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "6840.00000000",
+        "actual": 6840
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2024-03-27&to=2024-03-27 CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C5&asset=BBDC4 analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C5&asset=BBDC4 exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 2,
+        "actual": 2
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "2980.00000000",
+        "actual": 2980
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "9120.00000000",
+        "actual": 9120
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "-6140.00000000",
+        "actual": -6140
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "12100.00000000",
+        "actual": 12100
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C5&asset=BBDC4 all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C5&asset=BBDC4 CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C5&asset=BBDC4 CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C5&asset=BBDC4 CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C5&asset=BBDC4 CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C5&asset=BBDC4 CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C5&asset=BBDC4 CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C5&asset=BBDC4 CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C5&asset=BBDC4 CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C5&asset=BBDC4 CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2025-01-01 analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "from=2025-01-01 exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2025-01-01 summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "from=2025-01-01 all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2025-01-01 CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "from=2025-01-01 CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2025-01-01 CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2025-01-01 CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "from=2025-01-01 CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2025-01-01 CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2025-01-01 CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "from=2025-01-01 CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "from=2025-01-01 CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "3250.00000000",
+        "actual": 3250
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "3250.00000000",
+        "actual": 3250
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "3250.00000000",
+        "actual": 3250
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "client=C1&operation=BUY&from=2024-01-05&to=2024-01-05 CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%C3%81na analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=%C3%81na exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%C3%81na summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 19,
+        "actual": 19
+      }
+    },
+    {
+      "label": "q=%C3%81na summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 2,
+        "actual": 2
+      }
+    },
+    {
+      "label": "q=%C3%81na summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "q=%C3%81na summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 6,
+        "actual": 6
+      }
+    },
+    {
+      "label": "q=%C3%81na summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 11,
+        "actual": 11
+      }
+    },
+    {
+      "label": "q=%C3%81na summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 8,
+        "actual": 8
+      }
+    },
+    {
+      "label": "q=%C3%81na summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "34255.00000000",
+        "actual": 34255
+      }
+    },
+    {
+      "label": "q=%C3%81na summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "10472.00000000",
+        "actual": 10472
+      }
+    },
+    {
+      "label": "q=%C3%81na summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "23783.00000000",
+        "actual": 23783
+      }
+    },
+    {
+      "label": "q=%C3%81na summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "44727.00000000",
+        "actual": 44727
+      }
+    },
+    {
+      "label": "q=%C3%81na summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 10,
+        "actual": 10
+      }
+    },
+    {
+      "label": "q=%C3%81na summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "q=%C3%81na all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%C3%81na CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=%C3%81na CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%C3%81na CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%C3%81na CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=%C3%81na CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%C3%81na CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%C3%81na CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=%C3%81na CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%C3%81na CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=T035 analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=T035 exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=T035 summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "q=T035 summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "q=T035 summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "q=T035 summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "q=T035 summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "q=T035 summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=T035 summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "3420.00000000",
+        "actual": 3420
+      }
+    },
+    {
+      "label": "q=T035 summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=T035 summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "3420.00000000",
+        "actual": 3420
+      }
+    },
+    {
+      "label": "q=T035 summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "3420.00000000",
+        "actual": 3420
+      }
+    },
+    {
+      "label": "q=T035 summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 1,
+        "actual": 1
+      }
+    },
+    {
+      "label": "q=T035 summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=T035 all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=T035 CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=T035 CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=T035 CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=T035 CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=T035 CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=T035 CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=T035 CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=T035 CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=T035 CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E analytics HTTP",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E exact transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary transactionCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary activeClients",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary registeredClients",
+      "passed": true,
+      "detail": {
+        "expected": 25,
+        "actual": 25
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary assetCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary buyCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary sellCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary buyAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary sellAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary netAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary grossAmount",
+      "passed": true,
+      "detail": {
+        "expected": "0",
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary portfolioCount",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E summary negativePositions",
+      "passed": true,
+      "detail": {
+        "expected": 0,
+        "actual": 0
+      }
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E all portfolio fields and grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E CSV transactions",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E CSV transaction IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E CSV exact decimals and all fact fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E CSV portfolios",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E CSV row count portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E CSV all aggregate fields portfolios",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E CSV clients",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E CSV row count clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "q=%3Cscript%3Ealert%281%29%3C%2Fscript%3E CSV all aggregate fields clients",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "label": "Invalid filter rejected: operation=HACK",
+      "passed": true,
+      "detail": 400
+    },
+    {
+      "label": "Invalid filter rejected: from=2024-02-30",
+      "passed": true,
+      "detail": 400
+    },
+    {
+      "label": "Invalid filter rejected: from=2024-08-01&to=2024-01-01",
+      "passed": true,
+      "detail": 400
+    },
+    {
+      "label": "Invalid filter rejected: client=%27%20OR%201=1--",
+      "passed": true,
+      "detail": 400
+    },
+    {
+      "label": "Unknown export kind rejected",
+      "passed": true,
+      "detail": 400
+    },
+    {
+      "label": "Read-only endpoint method /api/analytics",
+      "passed": true,
+      "detail": 405
+    },
+    {
+      "label": "Read-only endpoint method /api/export",
+      "passed": true,
+      "detail": 405
+    }
+  ],
+  "failures": []
+}

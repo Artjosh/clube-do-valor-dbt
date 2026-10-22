@@ -1,0 +1,116 @@
+{
+  "at": "2026-10-22T21:16:18.082Z",
+  "origin": "http://127.0.0.1:3000",
+  "checks": [
+    {
+      "name": "SSR anonymous/config-disabled response contains no analytics rows or snapshot fields",
+      "pass": true
+    },
+    {
+      "name": "Login SSR contains no snapshot values",
+      "pass": true
+    },
+    {
+      "name": "Login has no create-account button or personal password field",
+      "pass": true
+    },
+    {
+      "name": "OTP length follows six-digit server response",
+      "pass": true
+    },
+    {
+      "name": "Normal first login routes to access-denied",
+      "pass": true
+    },
+    {
+      "name": "Normal start does not claim invite",
+      "pass": true
+    },
+    {
+      "name": "OTP verification sends challenge and code only",
+      "pass": true
+    },
+    {
+      "name": "Invite asks no email before claim",
+      "pass": true
+    },
+    {
+      "name": "Email appears only after accepted invite",
+      "pass": true
+    },
+    {
+      "name": "OTP length follows eight-digit server response",
+      "pass": true
+    },
+    {
+      "name": "PC comparison code distinguished from email OTP",
+      "pass": true
+    },
+    {
+      "name": "Mobile challenge has no document overflow",
+      "pass": true
+    },
+    {
+      "name": "Verified invite routes to dashboard",
+      "pass": true
+    },
+    {
+      "name": "Invite start explicitly binds claim",
+      "pass": true
+    },
+    {
+      "name": "Rejected invite never exposes email or starts challenge",
+      "pass": true
+    },
+    {
+      "name": "Disabled configuration offers no demo or email form",
+      "pass": true
+    },
+    {
+      "name": "Disabled configuration performs no mutation",
+      "pass": true
+    },
+    {
+      "name": "Mobile disabled login has no overflow",
+      "pass": true
+    },
+    {
+      "name": "Phone approval polling routes according to server grant",
+      "pass": true
+    },
+    {
+      "name": "Polling stops after approval",
+      "pass": true
+    },
+    {
+      "name": "Expiry disables OTP submission",
+      "pass": true
+    },
+    {
+      "name": "Expiry prevents polling",
+      "pass": true
+    },
+    {
+      "name": "Phone confirmation does not reveal PC code",
+      "pass": true
+    },
+    {
+      "name": "Phone approval requires explicit consent",
+      "pass": true
+    },
+    {
+      "name": "Phone sends user-entered comparison code",
+      "pass": true
+    },
+    {
+      "name": "Phone confirmation has no overflow",
+      "pass": true
+    },
+    {
+      "name": "No browser runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "scope": "Browser auth APIs intercepted; no actual email or real permission granted. SSR anonymous checks use actual local server."
+}

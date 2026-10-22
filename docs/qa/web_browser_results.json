@@ -1,0 +1,1477 @@
+{
+  "browser": "Edg/155.0.4283.62",
+  "url": "http://127.0.0.1:3000",
+  "pages": [
+    {
+      "label": "desktop_copper",
+      "url": "/",
+      "title": "Clube do Valor | Observatório de dados",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "heading": "A clareza vem dos dados.",
+      "text": "Pular para o conteúdo\ncv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS\nDATA WORKSPACE\n01\n\nPROFUNDIDADE ANALÍTICA\n\nVisão executiva\nCopper\nExploração de dados\nSilver\nQualidade & linhagem\nGold\nDa origem à confiança\nFonte\ndbt\nAnálise\n\nDados preservados.\nDecisões rastreáveis.\n\nConhecer a linhagem\nAmbiente de demonstração\nDataset técnico · acesso público\nWorkspace\nCopper\nDemonstração pública\nEntrar com segurança\nINTELIGÊNCIA PARA ENTENDER, NÃO PARA PRESUMIR\nA clareza vem dos dados.\n\nUma leitura clara dos movimentos e dos saldos.\n\nExportar CSV\nCo\nCopper / Visão executiva\nTrês perspectivas do mesmo dataset. Sem planos ou cobranças.\n05/01/2024 — 10/08/2024\nPESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO\nCLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira\nATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3\nDE\nATÉ\nAplicar\n98 transações no recorte\nSaldo financeiro líquido\nR$ 215.915,00\nCompras menos vendas · no recorte\nVolume movimentado\nR$ 379.783,00\n67 compras · 31 vendas\nTransações válidas\n98\n6 ativos negociados\nClientes com atividade\n10\n25 clientes no cadastro completo\nO movimento do período\nFluxo financeiro\nAcumulado\nPor dia\nCompras menos vendas\nR$ 215.915,00\n0\n54 mil\n108 mil\n162 mil\n216 mil\n05/01/2024\n04/05/2024\n10/08/2024\n\nSaldo das operações no recorte. Não mede patrimônio, lucro ou rentabilidade.\n\nConsultar valores do gráfico\nOnde estão os movimentos\nVolume por ativo\nBRL\nVALE3\nR$ 109.768,00\nPETR4\nR$ 102.797,00\nITUB4\nR$ 57.553,00\nBBDC4\nR$ 57.483,00\nWEGE3\nR$ 33.117,00\nMGLU3\nR$ 19.065,00\n\nCompras + vendas em valor absoluto. Selecione um ativo para investigar.\n\n6 posições com quantidade negativa\n\nAs anomalias permanecem visíveis. Entenda a origem antes de interpretar o saldo.\n\nInvestigar qualidade\nCliente × ativo\nCarteira no recorte\nExplorar detalhes\nCarteira por cliente e ativo. Selecione o cabeçalho para ordenar.\nCliente\n\t\nAtivo\n\t\nQuantidade líquida\n\t\nSaldo financeiro\n\t\nOperações\n\t\nDetalhes\n\nAna Souza\tBBDC4\t-50\t-R$ 800,00\t1\tVer ↗\nAna Souza\tITUB4\t130\tR$ 4.134,00\t1\tVer ↗\nAna Souza\tMGLU3\t300\tR$ 1.020,00\t1\tVer ↗\nAna Souza\tPETR4\t120\tR$ 3.920,00\t3\tVer ↗\nAna Souza\tVALE3\t90\tR$ 6.490,00\t3\tVer ↗\nAna Souza\tWEGE3\t30\tR$ 1.079,00\t2\tVer ↗\nBruno Lima\tBBDC4\t200\tR$ 3.380,00\t1\tVer ↗\nBruno Lima\tITUB4\t90\tR$ 2.612,00\t2\tVer ↗\n1–8 de 55 registros\nPágina 1 de 7\nDataset técnico de corretora fictícia. Sem cotações em tempo real.\n\nSaldo financeiro das operações não representa patrimônio, lucro ou rentabilidade.\n\nSnapshot: 22/10/2026",
+      "links": [
+        {
+          "text": "Pular para o conteúdo",
+          "href": "#main-content"
+        },
+        {
+          "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS",
+          "href": "/"
+        },
+        {
+          "text": "Visão executiva\nCopper",
+          "href": "/?tier=copper"
+        },
+        {
+          "text": "Exploração de dados\nSilver",
+          "href": "/?tier=silver"
+        },
+        {
+          "text": "Qualidade & linhagem\nGold",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Conhecer a linhagem",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Entrar com segurança",
+          "href": "/login"
+        },
+        {
+          "text": "Exportar CSV",
+          "href": "/api/export?kind=portfolios"
+        },
+        {
+          "text": "Investigar qualidade",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Explorar detalhes",
+          "href": "/?tier=silver"
+        }
+      ],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": null,
+          "name": "q",
+          "label": "PESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO"
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "CLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os clientes"
+            },
+            {
+              "value": "C1",
+              "text": "Ana Souza"
+            },
+            {
+              "value": "C10",
+              "text": "Joao Martins"
+            },
+            {
+              "value": "C11",
+              "text": "Karen Ribeiro"
+            },
+            {
+              "value": "C12",
+              "text": "Lucas Dias"
+            },
+            {
+              "value": "C13",
+              "text": "Mariana Teixeira"
+            },
+            {
+              "value": "C14",
+              "text": "Nicolas Barbosa"
+            },
+            {
+              "value": "C15",
+              "text": "Olivia Carvalho"
+            },
+            {
+              "value": "C16",
+              "text": "Pedro Araujo"
+            },
+            {
+              "value": "C17",
+              "text": "Quintina Moura"
+            },
+            {
+              "value": "C18",
+              "text": "Rafael Gomes"
+            },
+            {
+              "value": "C19",
+              "text": "Sandra Oliveira"
+            },
+            {
+              "value": "C2",
+              "text": "Bruno Lima"
+            },
+            {
+              "value": "C20",
+              "text": "Thiago Pereira"
+            },
+            {
+              "value": "C21",
+              "text": "Ursula Nascimento"
+            },
+            {
+              "value": "C22",
+              "text": "Victor Campos"
+            },
+            {
+              "value": "C23",
+              "text": "Wanessa Lima"
+            },
+            {
+              "value": "C24",
+              "text": "Xavier Rocha"
+            },
+            {
+              "value": "C25",
+              "text": "Yasmin Costa"
+            },
+            {
+              "value": "C3",
+              "text": "Carla Mendes"
+            },
+            {
+              "value": "C4",
+              "text": "Diego Rocha"
+            },
+            {
+              "value": "C5",
+              "text": "Elena Costa"
+            },
+            {
+              "value": "C6",
+              "text": "Felipe Nunes"
+            },
+            {
+              "value": "C7",
+              "text": "Gabriela Alves"
+            },
+            {
+              "value": "C8",
+              "text": "Henrique Pinto"
+            },
+            {
+              "value": "C9",
+              "text": "Isabela Ferreira"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "ATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os ativos"
+            },
+            {
+              "value": "BBDC4",
+              "text": "BBDC4"
+            },
+            {
+              "value": "ITUB4",
+              "text": "ITUB4"
+            },
+            {
+              "value": "MGLU3",
+              "text": "MGLU3"
+            },
+            {
+              "value": "PETR4",
+              "text": "PETR4"
+            },
+            {
+              "value": "VALE3",
+              "text": "VALE3"
+            },
+            {
+              "value": "WEGE3",
+              "text": "WEGE3"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "DE"
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "ATÉ"
+        }
+      ]
+    },
+    {
+      "label": "desktop_silver",
+      "url": "/?tier=silver&view=transactions",
+      "title": "Clube do Valor | Observatório de dados",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "heading": "Exploração de dados",
+      "text": "Pular para o conteúdo\ncv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS\nDATA WORKSPACE\n01\n\nPROFUNDIDADE ANALÍTICA\n\nVisão executiva\nCopper\nExploração de dados\nSilver\nQualidade & linhagem\nGold\nDa origem à confiança\nFonte\ndbt\nAnálise\n\nDados preservados.\nDecisões rastreáveis.\n\nConhecer a linhagem\nAmbiente de demonstração\nDataset técnico · acesso público\nWorkspace\nSilver\nDemonstração pública\nEntrar com segurança\nINTELIGÊNCIA PARA ENTENDER, NÃO PARA PRESUMIR\nExploração de dados\n\nDo panorama ao registro. Encontre o que explica cada número.\n\nExportar CSV\nSi\nSilver / Exploração de dados\nTrês perspectivas do mesmo dataset. Sem planos ou cobranças.\n05/01/2024 — 10/08/2024\nPESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO\nCLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira\nATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3\nDE\nATÉ\nAplicar\n98 transações no recorte\n98 transações\n55 pares cliente/ativo\n6 quantidades negativas\n\nExplore os registros; selecione “Ver” para abrir o detalhe.\n\nCarteiras\nTransações\nClientes\nOperação\nTodas\nCompra\nVenda\nTransações. Selecione o cabeçalho para ordenar.\nID\n\t\nCliente\n\t\nAtivo\n\t\nOperação\n\t\nQuantidade\n\t\nValor\n\t\nData\n\t\nDetalhes\n\nT001\tAna Souza\tPETR4\tCompra\t100\tR$ 3.250,00\t05/01/2024\tVer ↗\nT002\tAna Souza\tVALE3\tCompra\t50\tR$ 3.400,00\t08/01/2024\tVer ↗\nT003\tBruno Lima\tPETR4\tCompra\t200\tR$ 6.620,00\t10/01/2024\tVer ↗\nT004\tCarla Mendes\tITUB4\tCompra\t150\tR$ 4.170,00\t12/01/2024\tVer ↗\nT005\tDiego Rocha\tBBDC4\tCompra\t300\tR$ 4.260,00\t15/01/2024\tVer ↗\nT006\tElena Costa\tMGLU3\tCompra\t1.000\tR$ 2.600,00\t18/01/2024\tVer ↗\nT007\tFelipe Nunes\tVALE3\tCompra\t80\tR$ 5.400,00\t20/01/2024\tVer ↗\nT008\tGabriela Alves\tPETR4\tCompra\t250\tR$ 8.225,00\t22/01/2024\tVer ↗\n1–8 de 98 registros\nPágina 1 de 13\nO movimento do período\nFluxo financeiro\nAcumulado\nPor dia\nCompras menos vendas\nR$ 215.915,00\n0\n54 mil\n108 mil\n162 mil\n216 mil\n05/01/2024\n04/05/2024\n10/08/2024\n\nSaldo das operações no recorte. Não mede patrimônio, lucro ou rentabilidade.\n\nConsultar valores do gráfico\nOnde estão os movimentos\nVolume por ativo\nBRL\nVALE3\nR$ 109.768,00\nPETR4\nR$ 102.797,00\nITUB4\nR$ 57.553,00\nBBDC4\nR$ 57.483,00\nWEGE3\nR$ 33.117,00\nMGLU3\nR$ 19.065,00\n\nCompras + vendas em valor absoluto. Selecione um ativo para investigar.\n\nDataset técnico de corretora fictícia. Sem cotações em tempo real.\n\nSaldo financeiro das operações não representa patrimônio, lucro ou rentabilidade.\n\nSnapshot: 22/10/2026",
+      "links": [
+        {
+          "text": "Pular para o conteúdo",
+          "href": "#main-content"
+        },
+        {
+          "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS",
+          "href": "/"
+        },
+        {
+          "text": "Visão executiva\nCopper",
+          "href": "/?tier=copper"
+        },
+        {
+          "text": "Exploração de dados\nSilver",
+          "href": "/?tier=silver"
+        },
+        {
+          "text": "Qualidade & linhagem\nGold",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Conhecer a linhagem",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Entrar com segurança",
+          "href": "/login"
+        },
+        {
+          "text": "Exportar CSV",
+          "href": "/api/export?kind=transactions"
+        }
+      ],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": null,
+          "name": "q",
+          "label": "PESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO"
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "CLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os clientes"
+            },
+            {
+              "value": "C1",
+              "text": "Ana Souza"
+            },
+            {
+              "value": "C10",
+              "text": "Joao Martins"
+            },
+            {
+              "value": "C11",
+              "text": "Karen Ribeiro"
+            },
+            {
+              "value": "C12",
+              "text": "Lucas Dias"
+            },
+            {
+              "value": "C13",
+              "text": "Mariana Teixeira"
+            },
+            {
+              "value": "C14",
+              "text": "Nicolas Barbosa"
+            },
+            {
+              "value": "C15",
+              "text": "Olivia Carvalho"
+            },
+            {
+              "value": "C16",
+              "text": "Pedro Araujo"
+            },
+            {
+              "value": "C17",
+              "text": "Quintina Moura"
+            },
+            {
+              "value": "C18",
+              "text": "Rafael Gomes"
+            },
+            {
+              "value": "C19",
+              "text": "Sandra Oliveira"
+            },
+            {
+              "value": "C2",
+              "text": "Bruno Lima"
+            },
+            {
+              "value": "C20",
+              "text": "Thiago Pereira"
+            },
+            {
+              "value": "C21",
+              "text": "Ursula Nascimento"
+            },
+            {
+              "value": "C22",
+              "text": "Victor Campos"
+            },
+            {
+              "value": "C23",
+              "text": "Wanessa Lima"
+            },
+            {
+              "value": "C24",
+              "text": "Xavier Rocha"
+            },
+            {
+              "value": "C25",
+              "text": "Yasmin Costa"
+            },
+            {
+              "value": "C3",
+              "text": "Carla Mendes"
+            },
+            {
+              "value": "C4",
+              "text": "Diego Rocha"
+            },
+            {
+              "value": "C5",
+              "text": "Elena Costa"
+            },
+            {
+              "value": "C6",
+              "text": "Felipe Nunes"
+            },
+            {
+              "value": "C7",
+              "text": "Gabriela Alves"
+            },
+            {
+              "value": "C8",
+              "text": "Henrique Pinto"
+            },
+            {
+              "value": "C9",
+              "text": "Isabela Ferreira"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "ATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os ativos"
+            },
+            {
+              "value": "BBDC4",
+              "text": "BBDC4"
+            },
+            {
+              "value": "ITUB4",
+              "text": "ITUB4"
+            },
+            {
+              "value": "MGLU3",
+              "text": "MGLU3"
+            },
+            {
+              "value": "PETR4",
+              "text": "PETR4"
+            },
+            {
+              "value": "VALE3",
+              "text": "VALE3"
+            },
+            {
+              "value": "WEGE3",
+              "text": "WEGE3"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "DE"
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "ATÉ"
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "Operação\nTodas\nCompra\nVenda",
+          "options": [
+            {
+              "value": "",
+              "text": "Todas"
+            },
+            {
+              "value": "BUY",
+              "text": "Compra"
+            },
+            {
+              "value": "SELL",
+              "text": "Venda"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "desktop_gold",
+      "url": "/?tier=gold",
+      "title": "Clube do Valor | Observatório de dados",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "heading": "Qualidade & linhagem",
+      "text": "Pular para o conteúdo\ncv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS\nDATA WORKSPACE\n01\n\nPROFUNDIDADE ANALÍTICA\n\nVisão executiva\nCopper\nExploração de dados\nSilver\nQualidade & linhagem\nGold\nDa origem à confiança\nFonte\ndbt\nAnálise\n\nDados preservados.\nDecisões rastreáveis.\n\nConhecer a linhagem\nAmbiente de demonstração\nDataset técnico · acesso público\nWorkspace\nGold\nDemonstração pública\nEntrar com segurança\nINTELIGÊNCIA PARA ENTENDER, NÃO PARA PRESUMIR\nQualidade & linhagem\n\nConfiança exige contexto, evidência e rastreabilidade.\n\nExportar CSV\nGo\nGold / Qualidade & linhagem\nTrês perspectivas do mesmo dataset. Sem planos ou cobranças.\n05/01/2024 — 10/08/2024\nPESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO\nCLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira\nATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3\nDE\nATÉ\nAplicar\n98 transações no recorte\nEVIDÊNCIA HISTÓRICA DBT\n71 PASS / 6 WARN\n\n77 testes na validação registrada. Aviso não significa ausência de problema.\n\nMODO ESTRITO\nAvisos viram falhas\ndbt --warn-error test --profiles-dir .\n\nOs defeitos conhecidos devem bloquear esta execução. Não é monitoramento ao vivo.\n\nNenhuma linha escondida\nPosições negativas 6\nSegue os filtros\n\nQuantidade líquida abaixo de zero. Pode refletir histórico incompleto ou venda descoberta; este dataset não permite concluir fraude ou risco real.\n\nPosições com quantidade negativa. Selecione o cabeçalho para ordenar.\nCliente\n\t\nAtivo\n\t\nQuantidade líquida\n\t\nSaldo financeiro\n\t\nOperações\n\t\nDetalhes\n\nAna Souza\tBBDC4\t-50\t-R$ 800,00\t1\tVer ↗\nCarla Mendes\tWEGE3\t-30\t-R$ 1.194,00\t1\tVer ↗\nElena Costa\tBBDC4\t-400\t-R$ 6.140,00\t2\tVer ↗\nFelipe Nunes\tITUB4\t-50\t-R$ 1.445,00\t1\tVer ↗\nGabriela Alves\tWEGE3\t-60\t-R$ 2.430,00\t1\tVer ↗\nHenrique Pinto\tVALE3\t-30\t-R$ 2.130,00\t1\tVer ↗\n1–6 de 6 registros\nPágina 1 de 1\nDataset completo · sem filtros\nAchados da fonte\n2\nTransações rejeitadas no staging\n\nT021 · Cliente ausente\n\nT037 · Quantidade não positiva\n\n2\nIDs com conteúdo coincidente\n\nT035 · T036 — preservados, pois IDs distintos não provam duplicidade de evento.\n\n27→25\nCadastro canônico\n\nCompletude e desempate determinístico evitam multiplicação no join. Os CSVs originais ficam preservados.\n\nDa evidência à decisão\nLinhagem dos dados\n01\nSeeds originais\n\ntransactions.csv · clients.csv\n\n100 transações · 27 cadastros\n02\nStaging\n\nTipagem, validação e cadastro canônico\n\nstg_transactions · stg_clients\n03\nIntermediate\n\nJoin e sinal de compra/venda\n\nint_transactions\n04\nMarts\n\nFato incremental, dimensão e carteira\n\nfact_transactions · dim_clients · mart_client_portfolio\nReproduzível por desenho\nTestes & proveniência\n\nFato incremental por transaction_id, com janela de 30 dias relativa à maior transaction_date carregada. Alterações fora da janela, exclusões e invalidações exigem full-refresh.\n\nAlertas detalhados (6)\nArquivos de origem e hashes SHA-256\nRepositório e README\nEntrega técnica v1.0.0\nDataset técnico de corretora fictícia. Sem cotações em tempo real.\n\nSaldo financeiro das operações não representa patrimônio, lucro ou rentabilidade.\n\nSnapshot: 22/10/2026",
+      "links": [
+        {
+          "text": "Pular para o conteúdo",
+          "href": "#main-content"
+        },
+        {
+          "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS",
+          "href": "/"
+        },
+        {
+          "text": "Visão executiva\nCopper",
+          "href": "/?tier=copper"
+        },
+        {
+          "text": "Exploração de dados\nSilver",
+          "href": "/?tier=silver"
+        },
+        {
+          "text": "Qualidade & linhagem\nGold",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Conhecer a linhagem",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Entrar com segurança",
+          "href": "/login"
+        },
+        {
+          "text": "Exportar CSV",
+          "href": "/api/export?kind=portfolios"
+        },
+        {
+          "text": "Repositório e README",
+          "href": "https://github.com/Artjosh/clube-do-valor-dbt"
+        },
+        {
+          "text": "Entrega técnica v1.0.0",
+          "href": "https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.0.0"
+        }
+      ],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": null,
+          "name": "q",
+          "label": "PESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO"
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "CLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os clientes"
+            },
+            {
+              "value": "C1",
+              "text": "Ana Souza"
+            },
+            {
+              "value": "C10",
+              "text": "Joao Martins"
+            },
+            {
+              "value": "C11",
+              "text": "Karen Ribeiro"
+            },
+            {
+              "value": "C12",
+              "text": "Lucas Dias"
+            },
+            {
+              "value": "C13",
+              "text": "Mariana Teixeira"
+            },
+            {
+              "value": "C14",
+              "text": "Nicolas Barbosa"
+            },
+            {
+              "value": "C15",
+              "text": "Olivia Carvalho"
+            },
+            {
+              "value": "C16",
+              "text": "Pedro Araujo"
+            },
+            {
+              "value": "C17",
+              "text": "Quintina Moura"
+            },
+            {
+              "value": "C18",
+              "text": "Rafael Gomes"
+            },
+            {
+              "value": "C19",
+              "text": "Sandra Oliveira"
+            },
+            {
+              "value": "C2",
+              "text": "Bruno Lima"
+            },
+            {
+              "value": "C20",
+              "text": "Thiago Pereira"
+            },
+            {
+              "value": "C21",
+              "text": "Ursula Nascimento"
+            },
+            {
+              "value": "C22",
+              "text": "Victor Campos"
+            },
+            {
+              "value": "C23",
+              "text": "Wanessa Lima"
+            },
+            {
+              "value": "C24",
+              "text": "Xavier Rocha"
+            },
+            {
+              "value": "C25",
+              "text": "Yasmin Costa"
+            },
+            {
+              "value": "C3",
+              "text": "Carla Mendes"
+            },
+            {
+              "value": "C4",
+              "text": "Diego Rocha"
+            },
+            {
+              "value": "C5",
+              "text": "Elena Costa"
+            },
+            {
+              "value": "C6",
+              "text": "Felipe Nunes"
+            },
+            {
+              "value": "C7",
+              "text": "Gabriela Alves"
+            },
+            {
+              "value": "C8",
+              "text": "Henrique Pinto"
+            },
+            {
+              "value": "C9",
+              "text": "Isabela Ferreira"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "ATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os ativos"
+            },
+            {
+              "value": "BBDC4",
+              "text": "BBDC4"
+            },
+            {
+              "value": "ITUB4",
+              "text": "ITUB4"
+            },
+            {
+              "value": "MGLU3",
+              "text": "MGLU3"
+            },
+            {
+              "value": "PETR4",
+              "text": "PETR4"
+            },
+            {
+              "value": "VALE3",
+              "text": "VALE3"
+            },
+            {
+              "value": "WEGE3",
+              "text": "WEGE3"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "DE"
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "ATÉ"
+        }
+      ]
+    },
+    {
+      "label": "mobile_copper",
+      "url": "/",
+      "title": "Clube do Valor | Observatório de dados",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": "A clareza vem dos dados.",
+      "text": "Pular para o conteúdo\nWorkspace\nCopper\nEntrar com segurança\nINTELIGÊNCIA PARA ENTENDER, NÃO PARA PRESUMIR\nA clareza vem dos dados.\n\nUma leitura clara dos movimentos e dos saldos.\n\nExportar CSV\nCo\nCopper / Visão executiva\nTrês perspectivas do mesmo dataset. Sem planos ou cobranças.\nPESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO\nCLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira\nATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3\nDE\nATÉ\nAplicar\n98 transações no recorte\nSaldo financeiro líquido\nR$ 215.915,00\nCompras menos vendas · no recorte\nVolume movimentado\nR$ 379.783,00\n67 compras · 31 vendas\nTransações válidas\n98\n6 ativos negociados\nClientes com atividade\n10\n25 clientes no cadastro completo\nO movimento do período\nFluxo financeiro\nAcumulado\nPor dia\nCompras menos vendas\nR$ 215.915,00\n0\n54 mil\n108 mil\n162 mil\n216 mil\n05/01/2024\n04/05/2024\n10/08/2024\n\nSaldo das operações no recorte. Não mede patrimônio, lucro ou rentabilidade.\n\nConsultar valores do gráfico\nOnde estão os movimentos\nVolume por ativo\nBRL\nVALE3\nR$ 109.768,00\nPETR4\nR$ 102.797,00\nITUB4\nR$ 57.553,00\nBBDC4\nR$ 57.483,00\nWEGE3\nR$ 33.117,00\nMGLU3\nR$ 19.065,00\n\nCompras + vendas em valor absoluto. Selecione um ativo para investigar.\n\n6 posições com quantidade negativa\n\nAs anomalias permanecem visíveis. Entenda a origem antes de interpretar o saldo.\n\nInvestigar qualidade\nCliente × ativo\nCarteira no recorte\nExplorar detalhes\nCarteira por cliente e ativo. Selecione o cabeçalho para ordenar.\nCliente\n\t\nAtivo\n\t\nQuantidade líquida\n\t\nSaldo financeiro\n\t\nOperações\n\t\nDetalhes\n\nAna Souza\tBBDC4\t-50\t-R$ 800,00\t1\tVer ↗\nAna Souza\tITUB4\t130\tR$ 4.134,00\t1\tVer ↗\nAna Souza\tMGLU3\t300\tR$ 1.020,00\t1\tVer ↗\nAna Souza\tPETR4\t120\tR$ 3.920,00\t3\tVer ↗\nAna Souza\tVALE3\t90\tR$ 6.490,00\t3\tVer ↗\nAna Souza\tWEGE3\t30\tR$ 1.079,00\t2\tVer ↗\nBruno Lima\tBBDC4\t200\tR$ 3.380,00\t1\tVer ↗\nBruno Lima\tITUB4\t90\tR$ 2.612,00\t2\tVer ↗\n1–8 de 55 registros\nPágina 1 de 7\nDataset técnico de corretora fictícia. Sem cotações em tempo real.\n\nSaldo financeiro das operações não representa patrimônio, lucro ou rentabilidade.\n\nSnapshot: 22/10/2026",
+      "links": [
+        {
+          "text": "Pular para o conteúdo",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/?tier=copper"
+        },
+        {
+          "text": "",
+          "href": "/?tier=silver"
+        },
+        {
+          "text": "",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Entrar com segurança",
+          "href": "/login"
+        },
+        {
+          "text": "Exportar CSV",
+          "href": "/api/export?kind=portfolios"
+        },
+        {
+          "text": "Investigar qualidade",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Explorar detalhes",
+          "href": "/?tier=silver"
+        }
+      ],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": null,
+          "name": "q",
+          "label": "PESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO"
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "CLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os clientes"
+            },
+            {
+              "value": "C1",
+              "text": "Ana Souza"
+            },
+            {
+              "value": "C10",
+              "text": "Joao Martins"
+            },
+            {
+              "value": "C11",
+              "text": "Karen Ribeiro"
+            },
+            {
+              "value": "C12",
+              "text": "Lucas Dias"
+            },
+            {
+              "value": "C13",
+              "text": "Mariana Teixeira"
+            },
+            {
+              "value": "C14",
+              "text": "Nicolas Barbosa"
+            },
+            {
+              "value": "C15",
+              "text": "Olivia Carvalho"
+            },
+            {
+              "value": "C16",
+              "text": "Pedro Araujo"
+            },
+            {
+              "value": "C17",
+              "text": "Quintina Moura"
+            },
+            {
+              "value": "C18",
+              "text": "Rafael Gomes"
+            },
+            {
+              "value": "C19",
+              "text": "Sandra Oliveira"
+            },
+            {
+              "value": "C2",
+              "text": "Bruno Lima"
+            },
+            {
+              "value": "C20",
+              "text": "Thiago Pereira"
+            },
+            {
+              "value": "C21",
+              "text": "Ursula Nascimento"
+            },
+            {
+              "value": "C22",
+              "text": "Victor Campos"
+            },
+            {
+              "value": "C23",
+              "text": "Wanessa Lima"
+            },
+            {
+              "value": "C24",
+              "text": "Xavier Rocha"
+            },
+            {
+              "value": "C25",
+              "text": "Yasmin Costa"
+            },
+            {
+              "value": "C3",
+              "text": "Carla Mendes"
+            },
+            {
+              "value": "C4",
+              "text": "Diego Rocha"
+            },
+            {
+              "value": "C5",
+              "text": "Elena Costa"
+            },
+            {
+              "value": "C6",
+              "text": "Felipe Nunes"
+            },
+            {
+              "value": "C7",
+              "text": "Gabriela Alves"
+            },
+            {
+              "value": "C8",
+              "text": "Henrique Pinto"
+            },
+            {
+              "value": "C9",
+              "text": "Isabela Ferreira"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "ATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os ativos"
+            },
+            {
+              "value": "BBDC4",
+              "text": "BBDC4"
+            },
+            {
+              "value": "ITUB4",
+              "text": "ITUB4"
+            },
+            {
+              "value": "MGLU3",
+              "text": "MGLU3"
+            },
+            {
+              "value": "PETR4",
+              "text": "PETR4"
+            },
+            {
+              "value": "VALE3",
+              "text": "VALE3"
+            },
+            {
+              "value": "WEGE3",
+              "text": "WEGE3"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "DE"
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "ATÉ"
+        }
+      ]
+    },
+    {
+      "label": "mobile_silver",
+      "url": "/?tier=silver&view=portfolios",
+      "title": "Clube do Valor | Observatório de dados",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": "Exploração de dados",
+      "text": "Pular para o conteúdo\nWorkspace\nSilver\nEntrar com segurança\nINTELIGÊNCIA PARA ENTENDER, NÃO PARA PRESUMIR\nExploração de dados\n\nDo panorama ao registro. Encontre o que explica cada número.\n\nExportar CSV\nSi\nSilver / Exploração de dados\nTrês perspectivas do mesmo dataset. Sem planos ou cobranças.\nPESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO\nCLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira\nATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3\nDE\nATÉ\nAplicar\n98 transações no recorte\n98 transações\n55 pares cliente/ativo\n6 quantidades negativas\n\nExplore os registros; selecione “Ver” para abrir o detalhe.\n\nCarteiras\nTransações\nClientes\nCarteiras. Selecione o cabeçalho para ordenar.\nCliente\n\t\nAtivo\n\t\nQuantidade líquida\n\t\nSaldo financeiro\n\t\nOperações\n\t\nDetalhes\n\nAna Souza\tBBDC4\t-50\t-R$ 800,00\t1\tVer ↗\nAna Souza\tITUB4\t130\tR$ 4.134,00\t1\tVer ↗\nAna Souza\tMGLU3\t300\tR$ 1.020,00\t1\tVer ↗\nAna Souza\tPETR4\t120\tR$ 3.920,00\t3\tVer ↗\nAna Souza\tVALE3\t90\tR$ 6.490,00\t3\tVer ↗\nAna Souza\tWEGE3\t30\tR$ 1.079,00\t2\tVer ↗\nBruno Lima\tBBDC4\t200\tR$ 3.380,00\t1\tVer ↗\nBruno Lima\tITUB4\t90\tR$ 2.612,00\t2\tVer ↗\n1–8 de 55 registros\nPágina 1 de 7\nO movimento do período\nFluxo financeiro\nAcumulado\nPor dia\nCompras menos vendas\nR$ 215.915,00\n0\n54 mil\n108 mil\n162 mil\n216 mil\n05/01/2024\n04/05/2024\n10/08/2024\n\nSaldo das operações no recorte. Não mede patrimônio, lucro ou rentabilidade.\n\nConsultar valores do gráfico\nOnde estão os movimentos\nVolume por ativo\nBRL\nVALE3\nR$ 109.768,00\nPETR4\nR$ 102.797,00\nITUB4\nR$ 57.553,00\nBBDC4\nR$ 57.483,00\nWEGE3\nR$ 33.117,00\nMGLU3\nR$ 19.065,00\n\nCompras + vendas em valor absoluto. Selecione um ativo para investigar.\n\nDataset técnico de corretora fictícia. Sem cotações em tempo real.\n\nSaldo financeiro das operações não representa patrimônio, lucro ou rentabilidade.\n\nSnapshot: 22/10/2026",
+      "links": [
+        {
+          "text": "Pular para o conteúdo",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/?tier=copper"
+        },
+        {
+          "text": "",
+          "href": "/?tier=silver"
+        },
+        {
+          "text": "",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Entrar com segurança",
+          "href": "/login"
+        },
+        {
+          "text": "Exportar CSV",
+          "href": "/api/export?kind=portfolios"
+        }
+      ],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": null,
+          "name": "q",
+          "label": "PESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO"
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "CLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os clientes"
+            },
+            {
+              "value": "C1",
+              "text": "Ana Souza"
+            },
+            {
+              "value": "C10",
+              "text": "Joao Martins"
+            },
+            {
+              "value": "C11",
+              "text": "Karen Ribeiro"
+            },
+            {
+              "value": "C12",
+              "text": "Lucas Dias"
+            },
+            {
+              "value": "C13",
+              "text": "Mariana Teixeira"
+            },
+            {
+              "value": "C14",
+              "text": "Nicolas Barbosa"
+            },
+            {
+              "value": "C15",
+              "text": "Olivia Carvalho"
+            },
+            {
+              "value": "C16",
+              "text": "Pedro Araujo"
+            },
+            {
+              "value": "C17",
+              "text": "Quintina Moura"
+            },
+            {
+              "value": "C18",
+              "text": "Rafael Gomes"
+            },
+            {
+              "value": "C19",
+              "text": "Sandra Oliveira"
+            },
+            {
+              "value": "C2",
+              "text": "Bruno Lima"
+            },
+            {
+              "value": "C20",
+              "text": "Thiago Pereira"
+            },
+            {
+              "value": "C21",
+              "text": "Ursula Nascimento"
+            },
+            {
+              "value": "C22",
+              "text": "Victor Campos"
+            },
+            {
+              "value": "C23",
+              "text": "Wanessa Lima"
+            },
+            {
+              "value": "C24",
+              "text": "Xavier Rocha"
+            },
+            {
+              "value": "C25",
+              "text": "Yasmin Costa"
+            },
+            {
+              "value": "C3",
+              "text": "Carla Mendes"
+            },
+            {
+              "value": "C4",
+              "text": "Diego Rocha"
+            },
+            {
+              "value": "C5",
+              "text": "Elena Costa"
+            },
+            {
+              "value": "C6",
+              "text": "Felipe Nunes"
+            },
+            {
+              "value": "C7",
+              "text": "Gabriela Alves"
+            },
+            {
+              "value": "C8",
+              "text": "Henrique Pinto"
+            },
+            {
+              "value": "C9",
+              "text": "Isabela Ferreira"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "ATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os ativos"
+            },
+            {
+              "value": "BBDC4",
+              "text": "BBDC4"
+            },
+            {
+              "value": "ITUB4",
+              "text": "ITUB4"
+            },
+            {
+              "value": "MGLU3",
+              "text": "MGLU3"
+            },
+            {
+              "value": "PETR4",
+              "text": "PETR4"
+            },
+            {
+              "value": "VALE3",
+              "text": "VALE3"
+            },
+            {
+              "value": "WEGE3",
+              "text": "WEGE3"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "DE"
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "ATÉ"
+        }
+      ]
+    },
+    {
+      "label": "mobile_gold",
+      "url": "/?tier=gold",
+      "title": "Clube do Valor | Observatório de dados",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": "Qualidade & linhagem",
+      "text": "Pular para o conteúdo\nWorkspace\nGold\nEntrar com segurança\nINTELIGÊNCIA PARA ENTENDER, NÃO PARA PRESUMIR\nQualidade & linhagem\n\nConfiança exige contexto, evidência e rastreabilidade.\n\nExportar CSV\nGo\nGold / Qualidade & linhagem\nTrês perspectivas do mesmo dataset. Sem planos ou cobranças.\nPESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO\nCLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira\nATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3\nDE\nATÉ\nAplicar\n98 transações no recorte\nEVIDÊNCIA HISTÓRICA DBT\n71 PASS / 6 WARN\n\n77 testes na validação registrada. Aviso não significa ausência de problema.\n\nMODO ESTRITO\nAvisos viram falhas\ndbt --warn-error test --profiles-dir .\n\nOs defeitos conhecidos devem bloquear esta execução. Não é monitoramento ao vivo.\n\nNenhuma linha escondida\nPosições negativas 6\nSegue os filtros\n\nQuantidade líquida abaixo de zero. Pode refletir histórico incompleto ou venda descoberta; este dataset não permite concluir fraude ou risco real.\n\nPosições com quantidade negativa. Selecione o cabeçalho para ordenar.\nCliente\n\t\nAtivo\n\t\nQuantidade líquida\n\t\nSaldo financeiro\n\t\nOperações\n\t\nDetalhes\n\nAna Souza\tBBDC4\t-50\t-R$ 800,00\t1\tVer ↗\nCarla Mendes\tWEGE3\t-30\t-R$ 1.194,00\t1\tVer ↗\nElena Costa\tBBDC4\t-400\t-R$ 6.140,00\t2\tVer ↗\nFelipe Nunes\tITUB4\t-50\t-R$ 1.445,00\t1\tVer ↗\nGabriela Alves\tWEGE3\t-60\t-R$ 2.430,00\t1\tVer ↗\nHenrique Pinto\tVALE3\t-30\t-R$ 2.130,00\t1\tVer ↗\n1–6 de 6 registros\nPágina 1 de 1\nDataset completo · sem filtros\nAchados da fonte\n2\nTransações rejeitadas no staging\n\nT021 · Cliente ausente\n\nT037 · Quantidade não positiva\n\n2\nIDs com conteúdo coincidente\n\nT035 · T036 — preservados, pois IDs distintos não provam duplicidade de evento.\n\n27→25\nCadastro canônico\n\nCompletude e desempate determinístico evitam multiplicação no join. Os CSVs originais ficam preservados.\n\nDa evidência à decisão\nLinhagem dos dados\n01\nSeeds originais\n\ntransactions.csv · clients.csv\n\n100 transações · 27 cadastros\n02\nStaging\n\nTipagem, validação e cadastro canônico\n\nstg_transactions · stg_clients\n03\nIntermediate\n\nJoin e sinal de compra/venda\n\nint_transactions\n04\nMarts\n\nFato incremental, dimensão e carteira\n\nfact_transactions · dim_clients · mart_client_portfolio\nReproduzível por desenho\nTestes & proveniência\n\nFato incremental por transaction_id, com janela de 30 dias relativa à maior transaction_date carregada. Alterações fora da janela, exclusões e invalidações exigem full-refresh.\n\nAlertas detalhados (6)\nArquivos de origem e hashes SHA-256\nRepositório e README\nEntrega técnica v1.0.0\nDataset técnico de corretora fictícia. Sem cotações em tempo real.\n\nSaldo financeiro das operações não representa patrimônio, lucro ou rentabilidade.\n\nSnapshot: 22/10/2026",
+      "links": [
+        {
+          "text": "Pular para o conteúdo",
+          "href": "#main-content"
+        },
+        {
+          "text": "",
+          "href": "/"
+        },
+        {
+          "text": "",
+          "href": "/?tier=copper"
+        },
+        {
+          "text": "",
+          "href": "/?tier=silver"
+        },
+        {
+          "text": "",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "",
+          "href": "/?tier=gold"
+        },
+        {
+          "text": "Entrar com segurança",
+          "href": "/login"
+        },
+        {
+          "text": "Exportar CSV",
+          "href": "/api/export?kind=portfolios"
+        },
+        {
+          "text": "Repositório e README",
+          "href": "https://github.com/Artjosh/clube-do-valor-dbt"
+        },
+        {
+          "text": "Entrega técnica v1.0.0",
+          "href": "https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.0.0"
+        }
+      ],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": null,
+          "name": "q",
+          "label": "PESQUISAR CLIENTE, ATIVO OU TRANSAÇÃO"
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "CLIENTE\nTodos os clientes\nAna Souza\nJoao Martins\nKaren Ribeiro\nLucas Dias\nMariana Teixeira\nNicolas Barbosa\nOlivia Carvalho\nPedro Araujo\nQuintina Moura\nRafael Gomes\nSandra Oliveira\nBruno Lima\nThiago Pereira\nUrsula Nascimento\nVictor Campos\nWanessa Lima\nXavier Rocha\nYasmin Costa\nCarla Mendes\nDiego Rocha\nElena Costa\nFelipe Nunes\nGabriela Alves\nHenrique Pinto\nIsabela Ferreira",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os clientes"
+            },
+            {
+              "value": "C1",
+              "text": "Ana Souza"
+            },
+            {
+              "value": "C10",
+              "text": "Joao Martins"
+            },
+            {
+              "value": "C11",
+              "text": "Karen Ribeiro"
+            },
+            {
+              "value": "C12",
+              "text": "Lucas Dias"
+            },
+            {
+              "value": "C13",
+              "text": "Mariana Teixeira"
+            },
+            {
+              "value": "C14",
+              "text": "Nicolas Barbosa"
+            },
+            {
+              "value": "C15",
+              "text": "Olivia Carvalho"
+            },
+            {
+              "value": "C16",
+              "text": "Pedro Araujo"
+            },
+            {
+              "value": "C17",
+              "text": "Quintina Moura"
+            },
+            {
+              "value": "C18",
+              "text": "Rafael Gomes"
+            },
+            {
+              "value": "C19",
+              "text": "Sandra Oliveira"
+            },
+            {
+              "value": "C2",
+              "text": "Bruno Lima"
+            },
+            {
+              "value": "C20",
+              "text": "Thiago Pereira"
+            },
+            {
+              "value": "C21",
+              "text": "Ursula Nascimento"
+            },
+            {
+              "value": "C22",
+              "text": "Victor Campos"
+            },
+            {
+              "value": "C23",
+              "text": "Wanessa Lima"
+            },
+            {
+              "value": "C24",
+              "text": "Xavier Rocha"
+            },
+            {
+              "value": "C25",
+              "text": "Yasmin Costa"
+            },
+            {
+              "value": "C3",
+              "text": "Carla Mendes"
+            },
+            {
+              "value": "C4",
+              "text": "Diego Rocha"
+            },
+            {
+              "value": "C5",
+              "text": "Elena Costa"
+            },
+            {
+              "value": "C6",
+              "text": "Felipe Nunes"
+            },
+            {
+              "value": "C7",
+              "text": "Gabriela Alves"
+            },
+            {
+              "value": "C8",
+              "text": "Henrique Pinto"
+            },
+            {
+              "value": "C9",
+              "text": "Isabela Ferreira"
+            }
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "type": null,
+          "name": null,
+          "label": "ATIVO\nTodos os ativos\nBBDC4\nITUB4\nMGLU3\nPETR4\nVALE3\nWEGE3",
+          "options": [
+            {
+              "value": "",
+              "text": "Todos os ativos"
+            },
+            {
+              "value": "BBDC4",
+              "text": "BBDC4"
+            },
+            {
+              "value": "ITUB4",
+              "text": "ITUB4"
+            },
+            {
+              "value": "MGLU3",
+              "text": "MGLU3"
+            },
+            {
+              "value": "PETR4",
+              "text": "PETR4"
+            },
+            {
+              "value": "VALE3",
+              "text": "VALE3"
+            },
+            {
+              "value": "WEGE3",
+              "text": "WEGE3"
+            }
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "DE"
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": null,
+          "label": "ATÉ"
+        }
+      ]
+    },
+    {
+      "label": "mobile_login",
+      "url": "/login",
+      "title": "Clube do Valor | Observatório de dados",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": "Os dados são claros.O acesso também.",
+      "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS\nVoltar à demonstração\nVERIFICAÇÃO ENTRE DISPOSITIVOS\nEntre com segurança\n\nUse seu e-mail para iniciar. O computador só recebe acesso depois da confirmação explícita no celular.\n\nSeu e-mail\nEnviar link para meu e-mail\n\nMantenha esta aba aberta enquanto confirma no celular.\n\nO link sozinho não aprova o computador. A digitação do código e sua confirmação são obrigatórias.\n\nO dataset é público e fictício. Entrar não libera planos pagos nem altera os dados.",
+      "links": [
+        {
+          "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS",
+          "href": "/"
+        },
+        {
+          "text": "Voltar à demonstração",
+          "href": "/"
+        }
+      ],
+      "inputs": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "name": null
+        }
+      ]
+    },
+    {
+      "label": "mobile_confirm",
+      "url": "/confirm",
+      "title": "Clube do Valor | Observatório de dados",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": "Os dados são claros.O acesso também.",
+      "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS\nVoltar à demonstração\nCONFIRMAÇÃO NO CELULAR\nReconhece este acesso?\n\nConfirme apenas se você iniciou a solicitação no seu computador. O código deve ser lido naquela tela, nunca enviado por outra pessoa.\n\nA confirmação expirou. Abra um novo link enviado ao seu e-mail.\nNão há confirmação válida nesta aba\n\nAbra o link do e-mail recebido. Se ele expirou ou já foi utilizado, inicie uma nova solicitação no computador.\n\nVoltar ao acesso\n\nSe você não reconhece esta solicitação, não digite o código e feche esta página.\n\nO dataset é público e fictício. Entrar não libera planos pagos nem altera os dados.",
+      "links": [
+        {
+          "text": "cv\n↗\nclube do valor\nOBSERVATÓRIO DE DADOS",
+          "href": "/"
+        },
+        {
+          "text": "Voltar à demonstração",
+          "href": "/"
+        },
+        {
+          "text": "Voltar ao acesso",
+          "href": "/login"
+        }
+      ],
+      "inputs": []
+    }
+  ],
+  "errors": [],
+  "checks": [
+    {
+      "name": "desktop_copper no document horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Copper baseline metrics",
+      "passed": true
+    },
+    {
+      "name": "desktop_silver no document horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Silver 98 records",
+      "passed": true
+    },
+    {
+      "name": "Pagination next works",
+      "passed": true
+    },
+    {
+      "name": "Sort toggles descending",
+      "passed": true
+    },
+    {
+      "name": "Detail dialog opens",
+      "passed": true
+    },
+    {
+      "name": "Escape closes detail",
+      "passed": true
+    },
+    {
+      "name": "Applied filters update URL and rows",
+      "passed": true
+    },
+    {
+      "name": "CSV link preserves filter and current view",
+      "passed": true
+    },
+    {
+      "name": "Browser back restores filters",
+      "passed": true
+    },
+    {
+      "name": "Inactive client remains visible",
+      "passed": true
+    },
+    {
+      "name": "Empty dataset state",
+      "passed": true
+    },
+    {
+      "name": "desktop_gold no document horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Gold history and global-scope disclaimer",
+      "passed": true
+    },
+    {
+      "name": "No paid tier semantics",
+      "passed": true
+    },
+    {
+      "name": "mobile_copper no document horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "Mobile menu opens",
+      "passed": true
+    },
+    {
+      "name": "Mobile tier navigation closes drawer",
+      "passed": true
+    },
+    {
+      "name": "mobile_silver no document horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_gold no document horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_login no document horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile_confirm no document horizontal overflow",
+      "passed": true
+    }
+  ]
+}
