@@ -70,4 +70,4 @@ Hashes dos 23 arquivos protegidos (incluindo banco original) coincidem com o bas
 
 ## Integração pelo coordenador
 
-Os dois MP4s foram enviados ao rascunho da release v1.1.0; tamanhos e SHA-256 retornados pelo GitHub coincidem com a verificação independente. A publicação é coordenada com o commit final da entrega. OTP6 e HTML responsivo foram publicados na versão 5 do Site, revisão de ambiente 5, conforme [proveniência e validação atual](../web-publication.md). Essa atualização não altera os resultados históricos do core ou a autoria dos testes acima.
+A release v1.1.0 foi publicada sobre o commit ed64f82ca0832d1caca443b93a95b46ab5ead1a5. Os dois downloads públicos retornaram HTTP 200 e SHA-256 idênticos aos arquivos aprovados, conforme [verificação de publicação](release-v1.1.0.json). OTP6 e HTML responsivo foram publicados na versão 5 do Site, revisão de ambiente 5, conforme [proveniência e validação atual](../web-publication.md). Essa atualização não altera os resultados históricos do core ou a autoria dos testes acima.

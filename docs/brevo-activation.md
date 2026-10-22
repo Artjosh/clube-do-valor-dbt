@@ -2,7 +2,7 @@
 
 O Brevo foi conectado em 22/10/2026 com a credencial SMTP existente, recuperada dos projetos locais expressamente autorizados. STARTTLS e autenticação SMTP retornaram 235; o remetente está ativo. Configuração SMTP, origem, redirects, validade do OTP e os dois templates foram aplicados ao Supabase dedicado via CLI; a comparação posterior não encontrou diferenças declaradas. Nenhum projeto de origem foi alterado e nenhuma chave nova foi criada. Veja a [proveniência sanitizada](brevo-discovery.md).
 
-O login está habilitado na hospedagem (`AUTH_ENABLED=true`, revisão de ambiente 5); a configuração local continua desabilitada para evitar envios acidentais. **O usuário confirmou o recebimento do primeiro OTP real em 22/10/2026. A jornada completa PC/celular ainda está em validação.** O primeiro login normal cria conta sem acesso. A contrassenha seguida de e-mail verificado é o único fluxo público que concede a role `analyst`.
+O login está habilitado na hospedagem (`AUTH_ENABLED=true`, revisão de ambiente 5); a configuração local continua desabilitada para evitar envios acidentais. **O usuário confirmou o recebimento do primeiro OTP real em 22/10/2026. A jornada completa PC/celular ainda está em validação; veja o [registro dos envios reais](qa/email-live.md).** O primeiro login normal cria conta sem acesso. A contrassenha seguida de e-mail verificado é o único fluxo público que concede a role `analyst`.
 
 ## Configuração SMTP aplicada
 

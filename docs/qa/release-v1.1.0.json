@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-22T23:01:15.662Z",
+  "release": "v1.1.0",
+  "commit": "ed64f82ca0832d1caca443b93a95b46ab5ead1a5",
+  "files": [
+    {
+      "name": "apresentacao-cdv-v2-narrada.mp4",
+      "url": "https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-narrada.mp4",
+      "status": 200,
+      "bytes": 11622435,
+      "sha256": "06115a2d2ada28866998047de23461e19138c2484ce60c95b9e7414a47a7271d",
+      "pass": true
+    },
+    {
+      "name": "apresentacao-cdv-v2-sem-audio.mp4",
+      "url": "https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-sem-audio.mp4",
+      "status": 200,
+      "bytes": 6371871,
+      "sha256": "f256b71c66cd9e16e296343096f5de53a994f20f6a73fa3cd9ea7b080f71db58",
+      "pass": true
+    }
+  ]
+}
