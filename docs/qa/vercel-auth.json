@@ -1,0 +1,603 @@
+{
+  "executedAt": "2026-10-23T21:53:57.441Z",
+  "target": "https://clube-do-valor.vercel.app",
+  "projectRef": "igucxanapndewkbtarfn",
+  "deployment": "dpl_CQU7f2AbjUi6h5sQUC3SvS6oxqzB",
+  "mode": "vercel-http-no-email",
+  "checks": [
+    "Vercel reports configured authentication",
+    "anonymous: HTTP session distinguishes authentication and authorization",
+    "anonymous: /api/analytics status 401",
+    "anonymous: API response is no-store",
+    "anonymous: API varies by cookie",
+    "anonymous: denied API contains no dataset markers",
+    "anonymous: /api/export?kind=transactions status 401",
+    "anonymous: API response is no-store",
+    "anonymous: API varies by cookie",
+    "anonymous: denied API contains no dataset markers",
+    "anonymous: /api/export?kind=clients status 401",
+    "anonymous: API response is no-store",
+    "anonymous: API varies by cookie",
+    "anonymous: denied API contains no dataset markers",
+    "anonymous: /api/export?kind=portfolios status 401",
+    "anonymous: API response is no-store",
+    "anonymous: API varies by cookie",
+    "anonymous: denied API contains no dataset markers",
+    "anonymous: /api/analytics?from=invalid status 401",
+    "anonymous: API response is no-store",
+    "anonymous: API varies by cookie",
+    "anonymous: denied API contains no dataset markers",
+    "anonymous: /api/export?kind=invalid status 401",
+    "anonymous: API response is no-store",
+    "anonymous: API varies by cookie",
+    "anonymous: denied API contains no dataset markers",
+    "anonymous: HTML/RSC response is no-store",
+    "anonymous: HTML/RSC contains no dataset markers",
+    "anonymous: HTML/RSC follows access guard",
+    "anonymous: HTML/RSC response is no-store",
+    "anonymous: HTML/RSC contains no dataset markers",
+    "anonymous: HTML/RSC follows access guard",
+    "anonymous: HTML/RSC response is no-store",
+    "anonymous: Next prefetch returns only an empty Flight shell",
+    "Dedicated challenge fixture created without email",
+    "Real provider OTP contains exactly six digits",
+    "Callback redirects to clean same-origin confirmation URL",
+    "Callback does not issue session or echo token",
+    "Callback suppresses referrer",
+    "confirm cookie has secure host-only attributes",
+    "Vercel rejects eight-digit email OTP",
+    "OTP6 still valid after callback GET; client role ignored",
+    "session cookie has secure host-only attributes",
+    "no-role: HTTP session distinguishes authentication and authorization",
+    "no-role: /api/analytics status 403",
+    "no-role: API response is no-store",
+    "no-role: API varies by cookie",
+    "no-role: denied API contains no dataset markers",
+    "no-role: /api/export?kind=transactions status 403",
+    "no-role: API response is no-store",
+    "no-role: API varies by cookie",
+    "no-role: denied API contains no dataset markers",
+    "no-role: /api/export?kind=clients status 403",
+    "no-role: API response is no-store",
+    "no-role: API varies by cookie",
+    "no-role: denied API contains no dataset markers",
+    "no-role: /api/export?kind=portfolios status 403",
+    "no-role: API response is no-store",
+    "no-role: API varies by cookie",
+    "no-role: denied API contains no dataset markers",
+    "no-role: /api/analytics?from=invalid status 403",
+    "no-role: API response is no-store",
+    "no-role: API varies by cookie",
+    "no-role: denied API contains no dataset markers",
+    "no-role: /api/export?kind=invalid status 403",
+    "no-role: API response is no-store",
+    "no-role: API varies by cookie",
+    "no-role: denied API contains no dataset markers",
+    "no-role: HTML/RSC response is no-store",
+    "no-role: HTML/RSC contains no dataset markers",
+    "no-role: HTML/RSC follows access guard",
+    "no-role: HTML/RSC response is no-store",
+    "no-role: HTML/RSC contains no dataset markers",
+    "no-role: HTML/RSC follows access guard",
+    "no-role: HTML/RSC response is no-store",
+    "no-role: Next prefetch returns only an empty Flight shell",
+    "HTTP QA invitation claim accepted",
+    "invite cookie has secure host-only attributes",
+    "Dedicated challenge fixture created without email",
+    "Real provider OTP contains exactly six digits",
+    "PC polling starts pending",
+    "Callback redirects to clean same-origin confirmation URL",
+    "Callback does not issue session or echo token",
+    "Callback suppresses referrer",
+    "confirm cookie has secure host-only attributes",
+    "Callback redirects to clean same-origin confirmation URL",
+    "Callback does not issue session or echo token",
+    "Callback suppresses referrer",
+    "confirm cookie has secure host-only attributes",
+    "Phone receives masked email and no visual code",
+    "Phone callback creates no authenticated session",
+    "Phone cannot poll using confirmation cookie as PC binding",
+    "Cross-origin approval is denied",
+    "Incorrect visual code rejected before token consumption",
+    "Phone approves valid token after scanner GETs without receiving PC session",
+    "Original PC polling issues authorized analyst session",
+    "session cookie has secure host-only attributes",
+    "Polling retry recovers identical session",
+    "analyst: HTTP session distinguishes authentication and authorization",
+    "analyst: /api/analytics status 200",
+    "analyst: API response is no-store",
+    "analyst: API varies by cookie",
+    "analyst: authorized payload present",
+    "analyst: /api/export?kind=transactions status 200",
+    "analyst: API response is no-store",
+    "analyst: API varies by cookie",
+    "analyst: authorized payload present",
+    "analyst: /api/export?kind=clients status 200",
+    "analyst: API response is no-store",
+    "analyst: API varies by cookie",
+    "analyst: authorized payload present",
+    "analyst: /api/export?kind=portfolios status 200",
+    "analyst: API response is no-store",
+    "analyst: API varies by cookie",
+    "analyst: authorized payload present",
+    "analyst: /api/analytics?from=invalid status 400",
+    "analyst: API response is no-store",
+    "analyst: API varies by cookie",
+    "analyst: denied API contains no dataset markers",
+    "analyst: /api/export?kind=invalid status 400",
+    "analyst: API response is no-store",
+    "analyst: API varies by cookie",
+    "analyst: denied API contains no dataset markers",
+    "analyst: HTML/RSC response is no-store",
+    "analyst: HTML/RSC authorized data present",
+    "analyst: HTML/RSC response is no-store",
+    "analyst: HTML/RSC authorized data present",
+    "analyst: HTML/RSC response is no-store",
+    "analyst: Next prefetch returns only an empty Flight shell",
+    "anonymous: remains denied after analyst cache warmup",
+    "no-role: remains denied after analyst cache warmup",
+    "Polling retries create exactly one database session",
+    "analyst: HTTP logout succeeds",
+    "analyst: logout clears all four cookies",
+    "analyst: replay of revoked session rejected",
+    "analyst: polling after logout cannot resurrect session",
+    "no-role: HTTP logout succeeds",
+    "no-role: logout clears all four cookies",
+    "no-role: replay of revoked session rejected",
+    "no-role: polling after logout cannot resurrect session",
+    "Cleanup SQL confirms zero owned fixture records"
+  ],
+  "responses": [
+    {
+      "route": "/api/health",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 72
+    },
+    {
+      "route": "/api/auth/session",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 124
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 35
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 35
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 35
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 35
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 35
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 35
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 307,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 5775
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 3745
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 211
+    },
+    {
+      "route": "/api/auth/confirm",
+      "method": "GET",
+      "status": 303,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 4
+    },
+    {
+      "route": "/api/auth/device/verify",
+      "method": "POST",
+      "status": 400,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 30
+    },
+    {
+      "route": "/api/auth/device/verify",
+      "method": "POST",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 70
+    },
+    {
+      "route": "/api/auth/session",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 205
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 37
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 37
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 37
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 37
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 37
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 37
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 307,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 5783
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 3753
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 211
+    },
+    {
+      "route": "/api/auth/invite/claim",
+      "method": "POST",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 64
+    },
+    {
+      "route": "/api/auth/device/poll",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 20
+    },
+    {
+      "route": "/api/auth/confirm",
+      "method": "GET",
+      "status": 303,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 4
+    },
+    {
+      "route": "/api/auth/confirm",
+      "method": "GET",
+      "status": 303,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 4
+    },
+    {
+      "route": "/api/auth/device/confirmation",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 176
+    },
+    {
+      "route": "/api/auth/session",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 124
+    },
+    {
+      "route": "/api/auth/device/poll",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 26
+    },
+    {
+      "route": "/api/auth/device/approve",
+      "method": "POST",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 26
+    },
+    {
+      "route": "/api/auth/device/approve",
+      "method": "POST",
+      "status": 410,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 45
+    },
+    {
+      "route": "/api/auth/device/approve",
+      "method": "POST",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 17
+    },
+    {
+      "route": "/api/auth/device/poll",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 89
+    },
+    {
+      "route": "/api/auth/device/poll",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 89
+    },
+    {
+      "route": "/api/auth/session",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 188
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 60591
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-store",
+      "vary": "Cookie",
+      "bytes": 11818
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-store",
+      "vary": "Cookie",
+      "bytes": 1922
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-store",
+      "vary": "Cookie",
+      "bytes": 4128
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 400,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 27
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 400,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 31
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 122272
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 63648
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 211
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 35
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 37
+    },
+    {
+      "route": "/api/auth/logout",
+      "method": "POST",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 23
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 35
+    },
+    {
+      "route": "/api/auth/device/poll",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 20
+    },
+    {
+      "route": "/api/auth/logout",
+      "method": "POST",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 23
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 35
+    },
+    {
+      "route": "/api/auth/device/poll",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 20
+    }
+  ],
+  "emailSent": false,
+  "hostedDeviceStartCalls": 0,
+  "generatedLinks": 2,
+  "cleanup": true,
+  "limitations": [
+    "HTTP clients simulate PC and phone; physical devices and SMTP delivery are outside this run.",
+    "Challenge creation uses dedicated RPC fixtures to avoid SMTP."
+  ],
+  "otpLength": 6,
+  "result": "passed",
+  "cleanupRemaining": {
+    "challenges": 0,
+    "claims": 0,
+    "entitlements": 0,
+    "invites": 0,
+    "roles": 0,
+    "sessions": 0,
+    "users": 0
+  }
+}
