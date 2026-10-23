@@ -3,8 +3,8 @@ project_id = "clube-do-valor-intelligence"
 
 [auth]
 enabled = true
-site_url = "https://clube-do-valor-intelligence.artjosh.chatgpt.site"
-additional_redirect_urls = ["https://clube-do-valor-intelligence.artjosh.chatgpt.site/api/auth/confirm**", "http://localhost:3000/api/auth/confirm**", "http://127.0.0.1:3000/api/auth/confirm**"]
+site_url = "https://clube-do-valor.vercel.app"
+additional_redirect_urls = ["https://clube-do-valor.vercel.app/api/auth/confirm**", "https://clube-do-valor-intelligence.artjosh.chatgpt.site/api/auth/confirm**", "http://localhost:3000/api/auth/confirm**", "http://127.0.0.1:3000/api/auth/confirm**"]
 enable_signup = true
 
 [auth.email]
