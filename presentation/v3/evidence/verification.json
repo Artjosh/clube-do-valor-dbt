@@ -1,0 +1,95 @@
+{
+  "at": "2026-10-23T00:00:32.703Z",
+  "files": [
+    {
+      "file": "renders/apresentacao-cdv-v3-narrada.mp4",
+      "sha256": "5dd65ba01c511d4541f2fb6c800a491f75f849c6935ee5a229f1f9f88fc73e24",
+      "bytes": 11104683,
+      "duration": 243,
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": "30/1",
+        "frames": "7290"
+      },
+      "audio": [
+        {
+          "codec": "aac",
+          "sampleRate": "48000",
+          "channels": 2
+        }
+      ],
+      "decodeExit": 0,
+      "videoPacketHash": "SHA256=fb16dc3ffe62e80f450bcc1da228bd63b0c899c6e2770e3f2cabf4636b8dba90"
+    },
+    {
+      "file": "renders/apresentacao-cdv-v3-sem-audio.mp4",
+      "sha256": "9d7026a06d5e1843d87555dc9eb325203816d3143d88fc4f34387f0fb3bd99ef",
+      "bytes": 5582294,
+      "duration": 243,
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": "30/1",
+        "frames": "7290"
+      },
+      "audio": [],
+      "decodeExit": 0,
+      "videoPacketHash": "SHA256=fb16dc3ffe62e80f450bcc1da228bd63b0c899c6e2770e3f2cabf4636b8dba90"
+    }
+  ],
+  "v2Preserved": true,
+  "videoPacketsIdentical": true,
+  "decoded": [
+    {
+      "time": 9,
+      "file": "evidence/decoded/frame-00-9s.png"
+    },
+    {
+      "time": 31,
+      "file": "evidence/decoded/frame-01-31s.png"
+    },
+    {
+      "time": 54,
+      "file": "evidence/decoded/frame-02-54s.png"
+    },
+    {
+      "time": 77,
+      "file": "evidence/decoded/frame-03-77s.png"
+    },
+    {
+      "time": 102,
+      "file": "evidence/decoded/frame-04-102s.png"
+    },
+    {
+      "time": 126,
+      "file": "evidence/decoded/frame-05-126s.png"
+    },
+    {
+      "time": 148,
+      "file": "evidence/decoded/frame-06-148s.png"
+    },
+    {
+      "time": 174,
+      "file": "evidence/decoded/frame-07-174s.png"
+    },
+    {
+      "time": 201,
+      "file": "evidence/decoded/frame-08-201s.png"
+    },
+    {
+      "time": 228,
+      "file": "evidence/decoded/frame-09-228s.png"
+    }
+  ],
+  "noCaptionComposition": true,
+  "stepsNumbered": true,
+  "unaffectedAudioPreserved": true,
+  "audioMeasurement": {
+    "integratedLUFS": -21.7,
+    "truePeakDbfs": -1.5,
+    "measuredNotHumanAudition": true
+  }
+}

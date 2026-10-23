@@ -1,0 +1,1 @@
+A carteira soma compras menos vendas em quantidade e valor financeiro. Valores usam tipos decimais, evitando cálculos aproximados no núcleo. Esse resultado não representa patrimônio, lucro ou valor de mercado: faltam cotações atuais, taxas e saldo inicial. Clientes sem negociação permanecem na dimensão, sem gerar posições artificiais. As seis posições negativas ficam visíveis.

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "abertura",
+    "label": "01 / ENTREGA TÉCNICA",
+    "title": "Da fonte à análise confiável.",
+    "kind": "intro",
+    "lines": [
+      "dbt + DuckDB",
+      "Dados preservados, decisões explícitas",
+      "Vinext como extensão analítica"
+    ],
+    "note": "Teste de Engenharia de Dados · Clube do Valor",
+    "voice": "Esta apresentação explica a solução do teste de engenharia de dados do Clube do Valor. O núcleo é um projeto dbt com DuckDB, executável localmente a partir do README. A extensão web transforma os resultados em análise navegável. O foco é preservar a fonte, explicitar decisões e mostrar os limites dos dados."
+  },
+  {
+    "id": "origem",
+    "label": "02 / FONTE E DECISÕES",
+    "title": "Corrigir a leitura. Preservar a origem.",
+    "kind": "source",
+    "lines": [
+      "100 transações e 27 cadastros nas seeds",
+      "98 transações válidas e 25 clientes canônicos",
+      "T035 e T036: IDs distintos, fatos preservados"
+    ],
+    "note": "HTML original e CSVs incluídos · auditoria reproduzível",
+    "voice": "Os arquivos originais foram preservados: cem transações e vinte e sete cadastros. O staging produz noventa e oito transações válidas e vinte e cinco clientes canônicos. Registros rejeitados continuam auditáveis na fonte. A escolha de cadastro prioriza completude, com desempate determinístico. Transações de conteúdo igual, mas identificadores distintos, não são apagadas sem confirmação de negócio."
+  },
+  {
+    "id": "camadas",
+    "label": "03 / ESTRUTURA DO PROJETO",
+    "title": "Três camadas, uma responsabilidade por etapa.",
+    "kind": "layers",
+    "lines": [
+      "Staging: tipos, filtros e cadastro canônico",
+      "Intermediate: join e sinais BUY / SELL",
+      "Marts: dimensão, fato e carteira cliente × ativo"
+    ],
+    "note": "models/ · macros/ · tests/ · seeds/ · documentação de colunas",
+    "voice": "A estrutura separa três responsabilidades. Staging normaliza textos, converte tipos e filtra registros inválidos. Intermediate junta transações ao cliente canônico e calcula quantidades e valores com sinal. Marts entrega dimensão de clientes, fato de transações e carteira por cliente e ativo. Macros reutilizam regras, e testes e documentação acompanham os modelos."
+  },
+  {
+    "id": "semantica",
+    "label": "04 / O QUE O SALDO SIGNIFICA",
+    "title": "Quantidade e valor têm sinais explícitos.",
+    "kind": "semantics",
+    "lines": [
+      "Quantidade líquida = compras − vendas",
+      "Valor financeiro = Σ quantidade × preço, com sinal",
+      "Não é patrimônio, lucro ou valor de mercado"
+    ],
+    "note": "Sem cotações, taxas ou saldo inicial · não inferir rentabilidade",
+    "voice": "A carteira soma compras menos vendas em quantidade e valor financeiro. Valores usam tipos decimais, evitando cálculos aproximados no núcleo. Esse resultado não representa patrimônio, lucro ou valor de mercado: faltam cotações atuais, taxas e saldo inicial. Clientes sem negociação permanecem na dimensão, sem gerar posições artificiais. As seis posições negativas ficam visíveis."
+  },
+  {
+    "id": "qualidade",
+    "label": "05 / QUALIDADE COM EVIDÊNCIA",
+    "title": "Os alertas fazem parte da entrega.",
+    "kind": "quality",
+    "lines": [
+      "71 PASS / 6 WARN no conjunto original",
+      "T021 e T037 rejeitadas; duplicidades sinalizadas",
+      "Modo estrito: 71 PASS / 6 FAIL esperados"
+    ],
+    "note": "dbt --warn-error test --profiles-dir .",
+    "voice": "A validação registrada teve setenta e um testes aprovados e seis alertas. Eles expõem posições negativas, transações inválidas, duplicidades e cadastro incompleto. Invariantes dos modelos continuam sendo erros. Os diagnósticos conhecidos usam avisos, com linhas de falha persistidas. No modo estrito, os seis avisos viram falhas esperadas. Código de saída zero no modo normal não significa fonte sem problemas."
+  },
+  {
+    "id": "incremental",
+    "label": "06 / BÔNUS INCREMENTAL",
+    "title": "Reprocessamento limitado e previsível.",
+    "kind": "incremental",
+    "lines": [
+      "Chave transaction_id · estratégia delete+insert",
+      "Janela de 30 dias a partir da maior data carregada",
+      "Fora da janela, exclusões e invalidações: full-refresh"
+    ],
+    "note": "Data de negócio não substitui updated_at ou CDC",
+    "voice": "O fato é incremental pela chave da transação, usando delete mais insert. A janela padrão reprocessa trinta dias em relação à maior data já carregada, não ao relógio atual. Isso permite repetir a entrada sem duplicar identificadores e aplicar correções dentro da janela. Alterações antigas, exclusões e invalidações exigem reconstrução completa. Esses limites estão documentados e testados."
+  },
+  {
+    "id": "rodar",
+    "label": "07 / COMO REPRODUZIR",
+    "title": "O README é o ponto de partida.",
+    "kind": "commands",
+    "lines": [
+      "dbt seed --profiles-dir .",
+      "dbt run --profiles-dir .",
+      "dbt test --profiles-dir ."
+    ],
+    "note": "Ambiente Python 3.12 ativado · dependências fixadas · executar na raiz",
+    "voice": "Para reproduzir, siga o README da raiz: crie o ambiente Python três ponto doze e instale as dependências fixadas. Com o ambiente ativado, execute dbt seed, dbt run e dbt test, usando profiles dir ponto. O README também traz os caminhos completos para PowerShell, geração de documentação e full refresh. O pipeline não depende da autenticação do site."
+  },
+  {
+    "id": "dashboard",
+    "label": "08 / EXTENSÃO VINEXT",
+    "title": "Do número ao registro que o explica.",
+    "kind": "dashboard",
+    "lines": [
+      "Copper · visão executiva",
+      "Silver · clientes, ativos e transações",
+      "Gold · qualidade, linhagem e evidências"
+    ],
+    "note": "Extensão totalmente opcional · avaliação técnica atendida pelo pipeline local",
+    "voice": "Esta página é completamente desnecessária para cumprir os requisitos do teste. Foi criada apenas para tornar mais visual o processo e seus resultados. O projeto dbt com DuckDB local atende toda a avaliação técnica, sem conta ou serviço externo. Como extensão opcional, Vinext organiza três profundidades: Copper, visão executiva; Silver, investigação de clientes, ativos e transações; e Gold, qualidade, linhagem e evidências. O site consulta um snapshot somente leitura, sem alterar o pipeline."
+  },
+  {
+    "id": "acesso",
+    "label": "09 / DADOS E IDENTIDADE SEPARADOS",
+    "title": "Entrar não é receber permissão.",
+    "kind": "auth",
+    "lines": [
+      "DuckDB → snapshot analítico → Vinext",
+      "Supabase / PostgreSQL → identidade e permissões",
+      "Sessão + role analyst + analytics:read no servidor"
+    ],
+    "note": "SSR / RSC, APIs e CSV validam acesso antes de carregar dados",
+    "voice": "DuckDB guarda a análise; Supabase e PostgreSQL cuidam da identidade e das permissões. O login por código de e-mail cria uma conta sem acesso. A contrassenha é um convite, e só concede permissão depois da verificação do e-mail. Página, APIs e CSV exigem sessão e role de analista no servidor. A confirmação pelo celular preserva comparação de código e aprovação explícita."
+  },
+  {
+    "id": "fechamento",
+    "label": "10 / EVIDÊNCIAS E LIMITES",
+    "title": "Entrega reproduzível. Estado transparente.",
+    "kind": "closing",
+    "lines": [
+      "2 fontes preservadas · 6 modelos · 3 camadas",
+      "71 PASS / 6 WARN · modo estrito documentado",
+      "README · modelos · testes · evidências"
+    ],
+    "note": "Conclusão do núcleo técnico · reprodução local a partir do README",
+    "voice": "A entrega técnica se encerra no núcleo local: duas fontes preservadas, seis modelos em três camadas e regras documentadas. O README reúne os comandos para instalar, executar e testar. As evidências registram setenta e um testes aprovados e seis alertas conhecidos, com modo estrito para tratá-los como falhas. O incremental explicita seus limites e o caminho de reconstrução. Assim, o avaliador pode reproduzir os resultados e conferir cada decisão sem depender da extensão web."
+  }
+]

@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import {fileURLToPath} from 'node:url';
+process.chdir(fileURLToPath(new URL('.',import.meta.url)));
+const scenes=JSON.parse(fs.readFileSync('scenes.json','utf8'));
+scenes[7].voice='Esta página é completamente desnecessária para cumprir os requisitos do teste. Foi criada apenas para tornar mais visual o processo e seus resultados. O projeto dbt com DuckDB local atende toda a avaliação técnica, sem conta ou serviço externo. Como extensão opcional, Vinext organiza três profundidades: Copper, visão executiva; Silver, investigação de clientes, ativos e transações; e Gold, qualidade, linhagem e evidências. O site consulta um snapshot somente leitura, sem alterar o pipeline.';
+scenes[7].note='Extensão totalmente opcional · avaliação técnica atendida pelo pipeline local';
+scenes[9].voice='A entrega técnica se encerra no núcleo local: duas fontes preservadas, seis modelos em três camadas e regras documentadas. O README reúne os comandos para instalar, executar e testar. As evidências registram setenta e um testes aprovados e seis alertas conhecidos, com modo estrito para tratá-los como falhas. O incremental explicita seus limites e o caminho de reconstrução. Assim, o avaliador pode reproduzir os resultados e conferir cada decisão sem depender da extensão web.';
+scenes[9].lines=['2 fontes preservadas · 6 modelos · 3 camadas','71 PASS / 6 WARN · modo estrito documentado','README · modelos · testes · evidências'];
+scenes[9].note='Conclusão do núcleo técnico · reprodução local a partir do README';
+fs.writeFileSync('scenes.json',JSON.stringify(scenes,null,2));
+for(const s of scenes)fs.writeFileSync(`assets/${s.id}.txt`,s.voice);
+let b=fs.readFileSync('build.mjs','utf8');
+b=b.replace('audioTags=[],captions=[]','audioTags=[]');
+b=b.replace(/ const sentences=s\.voice[\s\S]*? const \[tag,headline,body\]/,' const [tag,headline,body]');
+b=b.replace(/const captionHtml=[\s\S]*?const root=/,'const root=');
+b=b.replace('#captions{z-index:10}','');
+b=b.replace(/<div id="captions"[\s\S]*?<\/div>\$\{withAudio/,'${withAudio');
+b=b.replace(/fs\.writeFileSync\('legendas\.srt',[^\n]*\n/,'');
+b=b.replace(/case'closing':return `[\s\S]*?`;\n/,`case'closing':return \`<div class="row"><div class="move" style="width:620px"><div class="big">2</div><p class="sub">fontes preservadas</p></div><div class="move"><div class="big">6</div><p class="sub">modelos em 3 camadas</p></div></div><p class="small" style="margin-top:28px">71 PASS / 6 WARN · defeitos conhecidos explicitados</p><div class="line"></div><div class="move" style="font-size:36px">README <span class="copper">/</span> modelos <span class="copper">/</span> testes e evidências</div>\`;\n`);
+b=b.replace(/fs\.writeFileSync\('ROTEIRO\.md',[\s\S]*?\nconsole\.log/,
+`fs.writeFileSync('FALA-POR-ETAPA.md','# Fala por etapa — versão 3\\n\\nSem legendas sobrepostas. Mesma edição nas versões narrada e sem áudio. Voz sintética local Kokoro pf_dora, pt-BR, velocidade 1.12; não imita o candidato. Cada fala começa 0,5 segundo após a entrada da etapa.\\n\\nÁrea livre para facecam: x=1470, y=770, largura=360, altura=230 em 1920×1080.\\n\\n'+scenes.map((s,i)=>\`## \$\{String(i+1).padStart(2,'0')} — \$\{s.title}\\n\\n**Tela:** \$\{stamp(timing[i].start)} a \$\{stamp(timing[i].start+timing[i].duration)}. **Fala:** \$\{stamp(timing[i].start+.5)} a \$\{stamp(timing[i].start+.5+timing[i].audio)}.\\n\\n\$\{s.voice}\\n\`).join('\\n'));\nconsole.log`);
+fs.writeFileSync('build.mjs',b);
+let v=fs.readFileSync('verify.mjs','utf8').replaceAll('apresentacao-cdv-v2','apresentacao-cdv-v3');
+v=v.replace('v1Preserved:false','v2Preserved:false');
+v=v.replace(/const v1before=[\s\S]*?if\(!report\.v1Preserved\)[^\n]*/,`const before=JSON.parse(fs.readFileSync('evidence/v2-before.json','utf8').replace(/^\\uFEFF/,''));\nreport.v2Preserved=before.every(f=>sha(f.Path).toUpperCase()===f.Hash);\nif(!report.v2Preserved)throw new Error('V2 changed');`);
+v=v.replace('[0,10,31,54,77,102,127,149,170,193,218,230]','JSON.parse(fs.readFileSync("timing.json","utf8")).scenes.map(s=>s.start+Math.floor(s.duration/2))');
+v=v.replace('tile=3x4','tile=2x5');
+fs.writeFileSync('verify.mjs',v);

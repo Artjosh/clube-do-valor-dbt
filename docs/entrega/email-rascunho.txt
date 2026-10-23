@@ -8,15 +8,13 @@ Olá, Fernando,
 Segue minha entrega do teste técnico de Engenharia de Dados:
 
 Repositório: https://github.com/Artjosh/clube-do-valor-dbt
-Vídeo explicativo narrado (3min51s): https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-narrada.mp4
-Alternativa sem áudio para apresentação pessoal (3min51s): https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-sem-audio.mp4
-Página da release: https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.1.0
+Vídeo explicativo (4min03s): https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.2.0/apresentacao-cdv-v3-narrada.mp4
 
 O README contém os comandos de reprodução local com dbt e DuckDB, as decisões de modelagem e os limites do incremental. A entrega inclui os dados originais, seis modelos, documentação de todas as colunas e validação independente.
 
-O vídeo utiliza narração com voz sintética em português para apresentar as decisões e a reprodução do projeto.
+O vídeo utiliza narração com voz sintética em português para apresentar as decisões e a reprodução do projeto. A página mostrada é uma extensão visual opcional, completamente desnecessária para cumprir os requisitos e executar a avaliação local.
 
-Os problemas intencionais da fonte são expostos: a execução padrão apresenta 71 testes aprovados e seis alertas, e o modo estrito promove esses alertas a falhas. As seis posições negativas permanecem auditáveis; o valor financeiro líquido não é apresentado como lucro ou valor de mercado.
+Os problemas intencionais da fonte são expostos: a execução padrão apresenta 71 testes aprovados e seis alertas; o modo estrito promove esses alertas a falhas. As seis posições negativas permanecem auditáveis, e o fluxo financeiro líquido não é apresentado como lucro ou valor de mercado.
 
 Fico à disposição para esclarecer as decisões e os resultados.
 
@@ -24,4 +22,4 @@ Atenciosamente,
 [NOME / ASSINATURA]
 [CONTATO, SE DESEJADO]
 
-NOTA INTERNA — REMOVER ANTES DO ENVIO: os dois arquivos finais foram conferidos com ffprobe: 231 segundos, abaixo de cinco minutos, versão silenciosa sem stream de áudio. Os links acima correspondem aos arquivos finais da release v1.1.0, coordenada separadamente da QA. A v1.0.0 foi preservada como histórico. Assistir ao material para revisar conteúdo, pronúncia e ritmo, substituir nome/assinatura/contato e obter autorização do usuário para envio; nenhum email foi enviado por esta revisão.
+NOTA INTERNA — REMOVER ANTES DO ENVIO: substituir nome/assinatura, assistir ao material e obter autorização do usuário para o envio. Caso grave rosto e voz sobre apresentacao-cdv-v3-sem-audio.mp4, atualizar o link acima para o arquivo final pessoal e retirar a frase sobre voz sintética. O texto para falar está em presentation/v3/FALA-POR-ETAPA.md. Esta revisão não enviou e-mail.

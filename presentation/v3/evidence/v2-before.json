@@ -1,0 +1,617 @@
+﻿[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "7A38EC75EA7464E12E6D30478970B39BAA9661A7484CD977261E04D40187EB21",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\.gitignore"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "E989911C64B1DD01FB0DF1CAA41E17827C4EE27D06FFB3E7B49E13C2CBE3381C",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\BRIEF.md"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "67B77EF8A784A264C1892D7B57A41E4F358E7AE16AD1E0E1724A344C7E42AE37",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\build.mjs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "05EE28C5E24828B517F09CF7B3477B16DA9F2C2E3F7685C21A4A7D33DFF5EE41",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\ENTREGA.md"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F190A78D53C334C3293750393E3C8CAA65D467C6E674077753761EFD16AED0E8",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\hyperframes.lock.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "BD9CFD77320CF00EDC351781F4BD019DDB1376F749CA34E19683B22A6704B39D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\index-sem-audio.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B27EC6DD0F03646336A461E08E8E361AEE701F4A5E16048F339EE907A8A66BBF",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\index.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0EBDD3D6BF2639D31846A841464315CC1788FC42F891EADE947086D0785BA740",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\legendas.srt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0109A1FB3359F6AFF194E787E69FA8172F23064A155052F0B8412B0DEC5AF25E",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\README.md"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B29E4778E454B00C049AF070565B3856E266A88EFDAE2088A58EEA510CCC4749",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\REVIEW.md"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "88A1694772A0F2C866B4FA5DD9D099A60BE832B0EF44A9A1CB38F68108EC0617",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\ROTEIRO.md"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0FE092157155566393C5FF6D24CDE285CF7DCF1F319A52F37FAE28862BAA242D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\scenes.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "5F49A7112B68C81BE0D3496B938A5AF8237FDC5E6F76205E0B77D24765835EA4",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\timing.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C690579339A11B5D3C41DB44085172FBCF1F0CC4D27AC4CD4F1B4BCD45CD6D27",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\verify.mjs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F6F527D4DCFA62F803BB6763B012E07898A431626CC170798F933FE5F8BD6D77",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\.hyperframes\\history-id"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "3C71F99F7D935462C85B9D36E92B7AA448C6CF94AE251B4FFF715F2056E51D0D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\.hyperframes\\render-outputs.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "481AD1E4E0D9F524F4949800F667882409B9D233D0411FE5F53DBE9B8F621149",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\.hyperframes\\video-state.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "D5759EB7E0B60B5B467D13948B7FE3F3BBEAFA5E4C1D50D534176EDCE006B4F0",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\abertura.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "7666C097676EDE4420D8F504E79D375BD83FB9066DAF9E6E667A2928DE236BDB",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\abertura.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "98D28A6F9719B510842F695DF682B25741364EAB6E523D6A7DBB895AE86DD34B",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\acesso.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "357A6C23F9BC01215D4F7EF070197A925F60BA527832A1DA99A8E6E4034297CA",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\acesso.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "BF21EDD92EB41CF87F473550B888C40B711ADFAEC721F780E303BDFA9BAE2E4D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\camadas.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "A54643E643023EFC882FE5B6B5429684297CA12395156D09434A0FC427897739",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\camadas.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F2DF030C32690512B5B83A369E6EC5DDBAEE9B6BD479B69F657FEF5A6B5D4F8A",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\dashboard-crop.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0C9EA6482765879ABCAB709FB2A7AB979E0D9A71ECC614CEC3D8DA7F79B69780",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\dashboard.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "605A099437AABD7C2FCA2E8C3D504DEB9EA66B0C5F4F5E58DDCC8BEBFAD5BA24",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\dashboard.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F1E4E674F32C80144EEA7D7C622741E1D44D68ECBACFA26D16421007AE54EA3A",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\fechamento.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "974AC228CB30BEB7E7E7387C23886D442520E6B880FA856AD4A8909B556C4076",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\fechamento.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C174BFCE53A729418D57A8AD8625E7247C793A22FEF8E2851E3CFA3DE9CD8280",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\gsap.min.js"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "55833C8E18324D6AF5768894FBF231EC73E3DB3776B58992908C5018B1158A07",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\incremental.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B969AC05B4F572BAB4760F309B87AEBA5365A6C7B588EFF5FC1A4C0F8D0292EC",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\incremental.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "514F57C1BEE8E0BC08B6F356987E25751C0EE0D208B41918FD0E28DFE0B7B1DF",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\ledger.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0CE9AD2A6BCD429734A4F43306257CA5F4E0F7B7924BAAF579223CC71259E56F",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\origem.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "AB76D95260AEB8A31195A02E1C7EF21F3B84A44D8D3ADA0F46A6191437E10EED",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\origem.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "BC6348FA6B17779732468634E7C2C37A7BD8536B6C49FC0A8AC8C7D217CDE5C8",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\qualidade.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "1BAF5877563F6C5F86485F2400D9FF533601DE53620BC71CD7A93D39B437777C",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\qualidade.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F94E68CD523FF5167277AC5698E39DD6069D3DD6DE1BF2B9ED5F315A3E9752FF",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\rodar.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "00928FD73A5D2978D215BCAC4F9FA99B9A78EAB02899A991217C0AFB1BC469FC",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\rodar.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0516523962C314E7352DBB173EE909C7146D97BCB392C26420C188BCB5A26765",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\semantica.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "EE0716F1C3E4CA6FCAB0DEBFEFABFD13E7DF55916F3AAFB64CEBAAE70495DC19",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\semantica.wav"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "5F9F2D8104AD5E69E1BE8107224063DC8C36F9E24680B2F9BE324244C0B424A1",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\fonts\\arial.ttf"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "3680A1BBFFAB914F36B27D5FD97B193DE5BCCFAB882C41B41B5F8F99457B4820",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\fonts\\arialbd.ttf"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "CF00B507B3286870CC5064EBD0633C303F70B491A4AF25EEC2D32DF413DB0179",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\fonts\\consola.ttf"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "38DFFCAF1FAC89492F7C56C600A14DAF36AE42F7C21985CD4134AE113124A58F",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\assets\\fonts\\georgia.ttf"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "944FFFA9938EB08FF3C6DAF7862B78E09B8BE97D4F3E52057854447638FCF691",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\abertura.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "95B0931BE70C5896283F850BE128695C71E795623EC212422A9B59A4A6EBEC74",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\acesso.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "6C81444ED86755B171866375B000D7193567DB82EF8B47CAE1B4D2E7FC52E906",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\camadas.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C3EB116263CBFB0CFC17CBB2280B1B45638230CFFC8889A5707C4F32E90F78C7",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\captions.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "51EFAD5D92E9C04F10287DF1E534291C408006879FCE05C9042FC40671F6DE6D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\dashboard.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F12F7F59DC90EA1789801CB5A949AF926689F2E3865B63F06438D6C37B7038DE",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\fechamento.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "5CA19BDB546495E9A9A4A46D33B572FBF48AFF986EB81B20034412FC1314E3A0",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\incremental.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "7851E7FE6D1AAB172511D23F0E0AC54AFBE9DDA3E35FE4596F4F5C0F65B71687",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\origem.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0AB19ADB876664DFA1139C9814DB9A30538AB23E7BF3F4AE4234930AC5535F2D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\qualidade.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0EF29C73A749E6DE28BA19610ABD74EE4F2682A721B9722A545448134030698A",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\rodar.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "7CBE59FF89021275EC09F36671D038D7AC021840E8EDA16CBCB5F05F87BE968E",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\semantica.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C0AC45EDF9D3493E2303052A79ECC650EE03D21D9FDA4680B20577333EDB08EF",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\compositions\\components\\terminal-simulator.html"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "1853A098F1C4E878141437E859C6F04CD42F142ED7DF2F4553C2239210DD1D68",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\audio-ebur128.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "FE4E70097ED9DB067FB9087514AD68CDF9F1317611461015B94C82FF14AB5397",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\build.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "85E90A4EE1274652F2ED840E3892ADA8298BB730EB8FDA39802D4617ED87C663",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\catalog.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "97AAD391E372A23F14555803EE3484A4CE1034CAB258B27E2ABA8CA5C43C8787",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts.log"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "58C70921999784A9B41D677F32F66D99B17FBACD3A71013678D040D05A4A0311",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\final-snapshot.log"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "BFBC90EB06CE6EC4C13336D579E59616E62A9DFB8B2C8C792DC07F3CFE93C20E",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\narrada-ffprobe.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "81F59298402A25769076005245511B91BBEB5B9886247807168474A72779F5FD",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\render-final.log"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "6DEFEC070270CF3FD0C9FD2981D24B397FAC9F5338BF5404ED70D27CDBC5F3D0",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\render.log"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "A28D409C8E798D4F95FE868BAC97FB0B363865AF377A386C4FFA7D35DE9D4A8A",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\sem-audio-ffprobe.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "65B293323493EAF2A78C3E7D972290342F460A32B5A3EC8D8E46A4C976556FAE",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\silent-frame-comparison.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "8C5F911A7D91E82E1522617A5940D59B3B180EF9CD4691D86B410232DFF8EC14",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\snapshot.log"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "5902685E244B674E24BBB7CC4388E6BE7CF62AB5178D65F88976C1568ADE25B5",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\source-hashes.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "77C897CEAB7EDE940A0A46B21354C0E1696D36C6B2A6C4F4487EA3BF105DA4EA",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\usage-final.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0EF37297ADE17300059478EAD0728D97BE38AECA71C27F049E5D069AB5616201",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\v1-before.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "BF102D0AF608BE6692B9DEDE23671A4ABBEC9C8A1BE46C904EB76A27D1A6C9DF",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\verification.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B37C9A49883035E795355F4A3EEC32555F8AC401A8ECBE9C1D8B5C74A326ECA2",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\verify.log"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "9C730A782E49D4C5A5EE8BE2DF6E7B260EF8AFB551EE16A3A9122B279CECFA2D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\contact-sheet-1.jpg"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F53232AF37CF615637CF6F51E3CC20202A4F2F82F0B7C0E044666A13018559BB",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\contact-sheet-2.jpg"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "6954DD1532143CE406D0D62DE9F9C1451B2B49232E384032C7F242D9FC09905D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-00-at-18.9s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "2F21EE4B97A2C84C66B03CF52DC671015DB785AB33518251FA3E246F41AD47F4",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-01-at-19s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "FC1FFDEE85B5656B77DB620111D3B4667CCA4C4EE0B37569CDB1247B8C0AD38E",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-02-at-19.2s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "01EA3D22EE4E85BC870FA9C761233036A2B530660D600C0DDF3ED56863A02040",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-03-at-137.9s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "FEE5B24E38C5E7F5F2B0F543FEC654BD8CB7C69AED79E4D6B75784D81CC0D2A2",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-04-at-138s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F09C842FA5B3024C37367F9503D65AB1F4D5F1160A35557242293A3254EDE7FC",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-05-at-138.2s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "E46A9F254A019E650A6D000BC0AE7BEBAD121D889DF0E6808E09DFCD8DB78820",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-06-at-170s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "8828A39D42FAD2F70E392C54A008F6EF69016A586213E5992CEBAFF4E913A63C",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-07-at-180.9s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "94C9E00B675A411E8DF0588DE39FFF102266608C1F4E314963567B6E38DFA45A",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-08-at-181s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F537769D67E484B5FAACB597B80CA3485ACF2D6E98CC995B67696F5CBB3E5E14",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-09-at-181.2s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "389C95FEE8E9F76D5EAA82169CEEEA8412CAE7DD366525AC210AB24BBE92F20D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\cuts\\frame-10-at-224.07s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C5A39D81588350BFCC295B7DF1482A03C83CF6CF30BF5A55B0DDB1E0917CFB24",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\contact-sheet.jpg"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "EB5EC00FFA64E894AFFF61D90F429B478BABBCE5E51E7EFC0B69D1882ABD74A3",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-00-0s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F52BA21D5C93B244A95B9D0DB386163DE93E4201C4AE32366262F5BB58CA9270",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-01-10s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "EAB531665CDF622D20560B87791AEF9673F03BCA8A645AAB69E2AB30542EFE5A",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-02-31s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "D749B6D5D6EACE11D5B9F636FBE2DE1074C604658A91D1808360A275D306A489",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-03-54s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "D3166C7E07B1D6098F791E271D0F912327279E8900B8EB78FDA77EED1B703BC8",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-04-77s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F025D127C9A9503B04D5B12940C58C32CBB9E702816AF1825D9C22EC2A18D5C2",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-05-102s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "A44F50B34DF09679E4ACB9E3776F7231559D989CFF6E83E9B30033E95C9418FA",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-06-127s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "207CAD076ABDAB62E839D032793F463AC29E4E048E09444091A262476B6CE315",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-07-149s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "70AA1FD7BDA31AB172A377265BE302CE3C3F64612012F520DDDE092FBD31531E",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-08-170s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "8FD72D55B32F9E26FC2F2F8549DCC5A54E2F8ADD2AA336BC936C8E15C92026F7",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-09-193s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0B0D64D970F0D38A003F78A7E3CB82DDF188C6768ECF89A76BBFE1C375F56F5B",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-10-218s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F1BD595E2E64D2D97E180C8DFDD9BB2052CF5F0123C3CEE54AFF8B509B390221",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frame-11-230s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "789D5B256933109283A53F356C00A9D9980D56E68DD6D70062ACD19E4CE56348",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\frames.txt"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "207CAD076ABDAB62E839D032793F463AC29E4E048E09444091A262476B6CE315",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\decoded\\silent-149s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "6273ECB785431C5D98229B64A390545054C879BB5C9E5EFBFB51443F6FD50263",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\final-review\\contact-sheet.jpg"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C6419884ED386028AB4A807CF9106A43BA2FBD25E4D5FC13C5B7A42935A35A80",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\final-review\\frame-00-at-10s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "A1FE788BC76FAD53CA478E3005A74AA6701F85A4AF87D1F4A9C81013A8E56778",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\final-review\\frame-01-at-149s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "011617C6C8FF2E5C14B29397EEAA80373C740A60C297353F079E208BAB782718",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\final-review\\frame-02-at-170s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B3CC76598C195CC004461FA7E412B27881B3D47EB8B664EEC3F32CBC9BFE832F",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\final-review\\frame-03-at-218s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "85BE4262D21F8B1E37C4EF138523AFAE82D673A1A728286F67B5A0D31F0E577A",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\final-review\\frame-04-at-224.07s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "961638A0D6362DCC5C0AEDA7FA698F37753BE611D3DC7B317F2DEE4A82B775EF",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\contact-sheet-1.jpg"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "7019287903D82F746BBFEF307F15424E5876B49E521C48A52AF17EAEFC311FEC",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\contact-sheet-2.jpg"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B821E4BF1903421E1224AC13B3445EF32B5D7E04DE126CE3418E868CFDFC215C",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-00-at-0s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "329A89AFFEBE669386D37E18BDDE47ED7693F070B748E9D7B364E233A85E786A",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-01-at-10s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "DABA425742313B9A9215BDB942F2AF2B279102BAEC74391CE3CAF5ACDBDAD34D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-02-at-31s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "4AC445F4997BFA589AC226BB295C90E0FD0EB0E8B7E551511C4F35C0770C0D58",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-03-at-54s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F1B6D9715FE9B30BBC42C9CB731A5FBC655CC7C5F03A62EAFB2F24BAEBDA79D2",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-04-at-77s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "395BEA259578DAC9C792C0F5660750FAA7AA646193153A145DC711EAC4E1BE11",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-05-at-102s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "7E87B705C9F8545427D74FC9D511D619E2D0BA7F0A79A45CCC652BCB81407CC3",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-06-at-127s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "D40014E647C90D6B1F4CD3A59D695E5DBFBA4D9281D83AC8851AED3393A181FB",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-07-at-149s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "50846DAA177227202FFE10F913E7854025113DA42377D29984479FBEDAC1F267",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-08-at-170s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "AA1CC0DE2A0FD3E1466016A9DBC4540E0A2557167E722ABA50EE2915BB652A9D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-09-at-193s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "2AF497C53ABED3D451C90ECAF43EE36F27D65B26F217C5ACD64B953D5439E153",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-10-at-218s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "80076F1F5B0573105DE9E5AF78C8B9CF42C0548797519668F24F0ABC0EDC4C4C",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-11-at-230.9s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "389C95FEE8E9F76D5EAA82169CEEEA8412CAE7DD366525AC210AB24BBE92F20D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\evidence\\review\\frame-12-at-224.07s.png"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "06115A2D2ADA28866998047DE23461E19138C2484CE60C95B9E7414A47A7271D",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\renders\\apresentacao-cdv-v2-narrada.mp4"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "F256B71C66CD9E16E296343096F5DE53A994F20F6A73FA3CD9EA7B080F71DB58",
+        "Path":  "C:\\Users\\josh\\Desktop\\ClubeDoValor\\presentation\\v2\\renders\\apresentacao-cdv-v2-sem-audio.mp4"
+    }
+]

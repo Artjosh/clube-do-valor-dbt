@@ -1,0 +1,1 @@
+Esta apresentação explica a solução do teste de engenharia de dados do Clube do Valor. O núcleo é um projeto dbt com DuckDB, executável localmente a partir do README. A extensão web transforma os resultados em análise navegável. O foco é preservar a fonte, explicitar decisões e mostrar os limites dos dados.

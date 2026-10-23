@@ -1,0 +1,1 @@
+Para reproduzir, siga o README da raiz: crie o ambiente Python três ponto doze e instale as dependências fixadas. Com o ambiente ativado, execute dbt seed, dbt run e dbt test, usando profiles dir ponto. O README também traz os caminhos completos para PowerShell, geração de documentação e full refresh. O pipeline não depende da autenticação do site.

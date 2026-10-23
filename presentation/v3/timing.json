@@ -1,0 +1,82 @@
+{
+  "duration": 243,
+  "fps": 30,
+  "facecam": {
+    "x": 1470,
+    "y": 770,
+    "width": 360,
+    "height": 230
+  },
+  "scenes": [
+    {
+      "id": "abertura",
+      "title": "Da fonte à análise confiável.",
+      "start": 0,
+      "duration": 19,
+      "audio": 16.938667
+    },
+    {
+      "id": "origem",
+      "title": "Corrigir a leitura. Preservar a origem.",
+      "start": 19,
+      "duration": 24,
+      "audio": 21.674667
+    },
+    {
+      "id": "camadas",
+      "title": "Três camadas, uma responsabilidade por etapa.",
+      "start": 43,
+      "duration": 23,
+      "audio": 20.416
+    },
+    {
+      "id": "semantica",
+      "title": "Quantidade e valor têm sinais explícitos.",
+      "start": 66,
+      "duration": 23,
+      "audio": 21.098667
+    },
+    {
+      "id": "qualidade",
+      "title": "Os alertas fazem parte da entrega.",
+      "start": 89,
+      "duration": 26,
+      "audio": 24.378
+    },
+    {
+      "id": "incremental",
+      "title": "Reprocessamento limitado e previsível.",
+      "start": 115,
+      "duration": 23,
+      "audio": 21.333333
+    },
+    {
+      "id": "rodar",
+      "title": "O README é o ponto de partida.",
+      "start": 138,
+      "duration": 21,
+      "audio": 19.392
+    },
+    {
+      "id": "dashboard",
+      "title": "Do número ao registro que o explica.",
+      "start": 159,
+      "duration": 31,
+      "audio": 29.284667
+    },
+    {
+      "id": "acesso",
+      "title": "Entrar não é receber permissão.",
+      "start": 190,
+      "duration": 23,
+      "audio": 20.501333
+    },
+    {
+      "id": "fechamento",
+      "title": "Entrega reproduzível. Estado transparente.",
+      "start": 213,
+      "duration": 30,
+      "audio": 27.45
+    }
+  ]
+}

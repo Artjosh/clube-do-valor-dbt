@@ -1,3 +1,5 @@
+> **Versão atual: v3**, sem legendas sobrepostas, em versões narrada e sem áudio de 4min03s. Veja [v3/README.md](v3/README.md), [fala por etapa numerada](v3/FALA-POR-ETAPA.md) e [release v1.2.0](https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.2.0). A documentação abaixo é histórica.
+
 > **Versão 2:** edição de 3min51s com pipeline e extensão Vinext, em versões narrada e sem áudio para facecam. Veja [v2/README.md](v2/README.md) e [roteiro por cena](v2/ROTEIRO.md). A versão 1 descrita abaixo permanece preservada.
 
 # Apresentação técnica — Clube do Valor

@@ -1,24 +1,24 @@
 # Índice da entrega
 
-O núcleo dbt/DuckDB foi reproduzido em banco novo e projeto isolado nesta revisão. Comece pelo [README principal](../../README.md): a avaliação não depende do site, Supabase ou credenciais. A [matriz de requisitos](../qa/delivery-review.md) registra o aceite e os limites. Os dois vídeos v2 estão concluídos e validados localmente, com 231s cada; arquivos vinculados à release v1.1.0. A v1.0.0 permanece histórica. O envio depende do usuário.
+O [README principal](../../README.md) contém apenas a reprodução e as decisões do projeto dbt/DuckDB. A [revisão dos requisitos](../qa/requirements-rereview.md) confronta o enunciado com a implementação e as evidências. A revisão v3 altera documentação e apresentação, preservando fontes, modelos e banco; não representa nova execução do pipeline.
 
-## Artefatos concluídos
+## Núcleo técnico
 
 | Artefato | Conteúdo |
 |---|---|
-| [README principal](../../README.md) | Reprodução Windows/POSIX, regras, qualidade e limites do incremental |
+| [README principal](../../README.md) | Instalação, comandos Windows/POSIX, modelagem, qualidade e limites do incremental |
 | [Enunciado original](enunciado.html) | Cópia integral e inalterada, incluindo os CSVs embutidos |
 | [Seeds](../../seeds/) e [modelos](../../models/) | 100 transações e 27 cadastros brutos; seis modelos em três camadas |
 | [Schema](../../models/schema.yml) | Todas as 55 colunas de modelos e seeds documentadas |
-| [Auditoria da fonte](../qa/auditoria.md) e [oracle](../qa/oracle.json) | Cálculo independente com Decimal, preservando T035/T036 |
-| [Validação independente](../qa/validacao.md) e [evidência estruturada](../qa/validation_results.json) | Reprodução isolada e reconciliação integral de fatos e posições |
-| [Evidência funcional de Dados](../../scripts/validation_results.json) | 17 verificações, incluindo idempotência e recuperação por full-refresh |
-| [Revisão da entrega](../qa/delivery-review.md) e [reprodução atual](../../scripts/qa/delivery_results.json) | Matriz do enunciado, seed/run/test/docs em cópia isolada, strict com falha esperada e hashes preservados |
-| [Apresentação v2](../../presentation/v2/README.md), [roteiro](../../presentation/v2/ROTEIRO.md) e [QA independente dos MP4s](../../scripts/qa/delivery_video_results.json) | Duas versões de 231s, fonte editável e metadados/hash conferidos; v1 preservada |
+| [Auditoria da fonte](../qa/auditoria.md) e [oracle](../qa/oracle.json) | Cálculo independente com Decimal; T035/T036 preservadas |
+| [Validação independente](../qa/validacao.md) e [resultados](../qa/validation_results.json) | Reconciliação integral dos fatos e das posições |
+| [Cenários incrementais](../../scripts/validation_results.json) | Idempotência, janela de reprocessamento e recuperação por full-refresh |
+| [Reprodução anterior](../../scripts/qa/delivery_results.json) | Seed/run/test/docs em cópia isolada e banco novo; strict com falha esperada |
+| [Revisão atual](../qa/requirements-rereview.md) | Requisitos, roteiro e conferência dos vídeos v3 |
 
-Resultados executados: seed 2/2, run 6/6, teste padrão 71 PASS e 6 WARN; teste estrito 71 PASS e 6 FAIL, código 1 esperado. Baseline: 98 fatos, 25 clientes, 55 posições, seis negativas. O financeiro líquido BUY menos SELL é 215.915,00, sem interpretação de lucro ou valor de mercado. A quantidade agregada 10.900 é apenas checksum entre ativos distintos.
+Resultados comprovados anteriormente: seed 2/2, run 6/6, teste padrão **71 PASS / 6 WARN**; modo estrito **71 PASS / 6 FAIL**, código 1 esperado. São 98 fatos, 25 clientes, 55 posições e seis posições negativas. O fluxo financeiro BUY menos SELL é 215.915,00, sem interpretação de lucro ou valor de mercado. Os defeitos originais permanecem auditáveis. A ambiguidade entre detectar problemas e exigir todos os testes aprovados está explícita na revisão dos requisitos.
 
-Os logs e artefatos completos das execuções locais ficam em `target/evidence/` e `target/qa/`, ignorados pelo Git. Os relatórios e JSONs ligados acima são evidências duráveis incluídas no projeto. A instalação de dependências foi executada na fase de Dados; QA reutilizou esse runtime e validou os pins, sem alegar reinstalação limpa. POSIX está documentado, mas não foi executado nesta máquina.
+A QA da reprodução reutilizou o runtime existente; não certifica instalação limpa nem execução POSIX. Logs locais completos ficam em `target/`, ignorado pelo Git; os relatórios vinculados são evidências versionadas.
 
 ## Origem do enunciado
 
@@ -43,38 +43,24 @@ python scripts/qa/audit_source.py docs/entrega/enunciado.html --seeds-dir seeds
 
 No macOS, pode-se substituir `sha256sum` por `shasum -a 256`. As referências absolutas dos relatórios históricos descrevem a execução original; novas auditorias devem apontar para a cópia relativa incluída.
 
-## Apresentação e passos externos
+## Vídeos v3 e fala por etapa
 
-**Versão 2 validada:** ambos os MP4s têm **231 segundos (3min51s), H.264, 1920×1080 e 30 fps**, conferidos independentemente com ffprobe. O roteiro explica decisões, estrutura e como rodar. A narrada é a apresentação explicativa; a silenciosa é alternativa para gravação pessoal, não outro vídeo obrigatório. A sequência visual é idêntica conforme hashes de pacotes verificados pelo Frontend; a QA independente confirmou duração, resolução, fps, streams e hashes dos arquivos.
+Dois MP4s sem legendas sobrepostas, com as mesmas imagens e dez etapas numeradas. Ambos têm **243 segundos (4min03s), H.264, 1920×1080, 30 fps e 7290 quadros**, abaixo do limite obrigatório de cinco minutos. A apresentação cobre decisões, estrutura e como executar o projeto.
 
-| Arquivo local | Áudio | Tamanho |
+| Arquivo | Áudio | Bytes |
 |---|---|---:|
-| `presentation/v2/renders/apresentacao-cdv-v2-narrada.mp4` | AAC, voz sintética pt-BR Kokoro pf_dora | 11.622.435 bytes |
-| `presentation/v2/renders/apresentacao-cdv-v2-sem-audio.mp4` | Nenhum stream de áudio | 6.371.871 bytes |
+| [Vídeo narrado](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.2.0/apresentacao-cdv-v3-narrada.mp4) | Voz sintética pt-BR, AAC | 11.104.683 |
+| [Vídeo sem áudio](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.2.0/apresentacao-cdv-v3-sem-audio.mp4) | Nenhum stream de áudio | 5.582.294 |
+| [Fala por etapa (.md)](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.2.0/FALA-POR-ETAPA.md) | Texto e timecodes das etapas 01–10 | — |
 
-Links dos arquivos finais da release v1.1.0:
+Fontes locais: [fala por etapa](../../presentation/v3/FALA-POR-ETAPA.md), [instruções de edição e facecam](../../presentation/v3/README.md), [relatório técnico](../../presentation/v3/RELATORIO.md) e [metadados/hashes](../../presentation/v3/evidence/verification.json). Os MP4s ficam em `presentation/v3/renders/`, fora do Git, e são distribuídos como assets da [release v1.2.0](https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.2.0).
 
-- [Release v1.1.0](https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.1.0).
-- [Vídeo v2 narrado](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-narrada.mp4).
-- [Vídeo v2 sem áudio](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.1.0/apresentacao-cdv-v2-sem-audio.mp4).
-- [Roteiro/timecodes v2](../../presentation/v2/ROTEIRO.md) e [instruções para rosto/voz](../../presentation/v2/README.md).
+Foram verificados streams, duração, resolução, fps, decodificação integral, igualdade dos pacotes de vídeo e amostras das dez etapas. O áudio foi medido tecnicamente, sem alegação de escuta humana. O roteiro da etapa 08 declara que a página é **completamente desnecessária para cumprir os requisitos**, servindo apenas para visualizar o processo e os resultados. A avaliação do núcleo é local e não depende de conta ou serviço externo.
 
-Os arquivos locais não foram editados por QA. Evidência independente: `python scripts/qa/delivery_video_check.py`, exit 0, [resultado estruturado](../../scripts/qa/delivery_video_results.json). Não houve escuta humana certificada. A referência a seguir é histórica.
+## Compartilhamento
 
-O vídeo local está em `presentation/renders/apresentacao-cdv.mp4`: **124 segundos (2min04s), 1920×1080, 30 fps e 6.178.878 bytes**, comprovados pelo ffprobe e registrados no [relatório de entrega](../../presentation/ENTREGA.md). A duração está abaixo dos cinco minutos exigidos. A narração usa voz sintética local em português, sem imitar o candidato; houve verificação técnica e visual, mas não escuta humana certificada.
+O enunciado pede o link do vídeo junto do [repositório](https://github.com/Artjosh/clube-do-valor-dbt). Isso não exige inserir apresentação ou extensão web no README principal.
 
-Links da entrega:
+Antes de encaminhar, assistir à versão escolhida e revisar o [rascunho de e-mail](email-rascunho.txt), inclusive nome e assinatura. O vídeo sem áudio é uma base para gravar rosto e voz; a versão narrada utiliza voz sintética. Nenhum e-mail foi enviado nesta revisão.
 
-- [Repositório](https://github.com/Artjosh/clube-do-valor-dbt).
-- [Dashboard Copper / Silver / Gold](https://clube-do-valor-intelligence.artjosh.chatgpt.site) — extensão opcional; entrada por OTP e dados restritos à role de analista, concedida por contrassenha. Brevo/templates configurados, login habilitado e primeiro recebimento de e-mail confirmados pelo coordenador; OTP6 e templates HTML responsivos publicados na versão 5; jornada entre aparelhos em validação. Não exigir esse acesso para avaliar o núcleo nem tratar esta revisão como certificação da jornada final de e-mail.
-- [Release v1.0.0](https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.0.0).
-- [Download do vídeo MP4](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.0.0/apresentacao-cdv.mp4).
-
-O MP4 é distribuído como asset da release, separado do código versionado.
-
-1. Assistir ao vídeo antes do envio e revisar conteúdo, pronúncia e ritmo da voz sintética.
-2. Usar os links do repositório e da release acima para compartilhar código e vídeo.
-3. Confirmar publicação e acesso aos links v1.1.0; revisar o [rascunho de e-mail](email-rascunho.txt), nome, assinatura e contato. Duração e arquivos locais já foram conferidos.
-4. Enviar somente após autorização do usuário. O rascunho local não representa mensagem enviada; esta edição documental não publica conteúdo nem envia e-mail.
-
-Uma extensão web foi implementada após a release v1.0.0: [dashboard Vinext](../../web/README.md), [arquitetura](../web-architecture.md) e [autenticação Supabase/PostgreSQL](../web-auth.md). Copper, Silver e Gold são níveis de análise sem cobrança. O pipeline e os dados originais foram preservados. O usuário determinou entrada aberta com OTP e dados privados: primeiro login sem acesso, role de analista somente via contrassenha. Consulte o [guia Brevo](../brevo-activation.md) para configuração e validação pendente; esta revisão não enviou e-mail. O vídeo v1.0.0 explica o pipeline e não apresenta a extensão posterior.
+Histórico preservado: [release v1.1.0 / vídeos v2 de 3min51s](https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.1.0), [fonte v2](../../presentation/v2/README.md) e [release v1.0.0 / vídeo inicial de 2min04s](https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.0.0).
