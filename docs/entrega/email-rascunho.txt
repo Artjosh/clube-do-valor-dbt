@@ -1,25 +1,23 @@
-RASCUNHO LOCAL — NÃO ENVIADO
-
 Para: fernando@clubedovalor.com.br
-Assunto: Teste técnico — Engenheiro de Dados — [NOME DO CANDIDATO]
+Assunto: Entrega do teste técnico — Engenheiro de Dados
 
-Olá, Fernando,
+Olá, Fernando!
 
 Segue minha entrega do teste técnico de Engenharia de Dados:
 
 Repositório: https://github.com/Artjosh/clube-do-valor-dbt
-Vídeo explicativo (4min03s): https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.2.0/apresentacao-cdv-v3-narrada.mp4
+Vídeo explicativo (4min49s): https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.3.0/apresentacao.mp4
+Site demonstrativo: https://clube-do-valor.vercel.app
 
-O README contém os comandos de reprodução local com dbt e DuckDB, as decisões de modelagem e os limites do incremental. A entrega inclui os dados originais, seis modelos, documentação de todas as colunas e validação independente.
+O README apresenta a instalação e os comandos para executar o projeto localmente. No vídeo, explico a estrutura, as decisões de implementação e o tratamento dos problemas de qualidade dos dados.
 
-O vídeo utiliza narração com voz sintética em português para apresentar as decisões e a reprodução do projeto. A página mostrada é uma extensão visual opcional, completamente desnecessária para cumprir os requisitos e executar a avaliação local.
+Também desenvolvi o site como complemento para explorar os resultados. Para acessá-lo, entre com seu e-mail, confirme o código recebido e, em seguida, cole esta contrassenha para liberar os dados:
 
-Os problemas intencionais da fonte são expostos: a execução padrão apresenta 71 testes aprovados e seis alertas; o modo estrito promove esses alertas a falhas. As seis posições negativas permanecem auditáveis, e o fluxo financeiro líquido não é apresentado como lucro ou valor de mercado.
+[CONTRASSENHA]
 
-Fico à disposição para esclarecer as decisões e os resultados.
+A execução do projeto dbt é independente do site e não exige esse acesso.
+
+Obrigado pela oportunidade! Fico à disposição para conversar sobre a solução.
 
 Atenciosamente,
-[NOME / ASSINATURA]
-[CONTATO, SE DESEJADO]
-
-NOTA INTERNA — REMOVER ANTES DO ENVIO: substituir nome/assinatura, assistir ao material e obter autorização do usuário para o envio. Caso grave rosto e voz sobre apresentacao-cdv-v3-sem-audio.mp4, atualizar o link acima para o arquivo final pessoal e retirar a frase sobre voz sintética. O texto para falar está em presentation/v3/FALA-POR-ETAPA.md. Esta revisão não enviou e-mail.
+[Seu nome]

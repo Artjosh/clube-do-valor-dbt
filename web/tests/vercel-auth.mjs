@@ -22,7 +22,7 @@ if (env.SUPABASE_URL !== `https://${REF}.supabase.co` || !env.SUPABASE_SERVICE_R
 const report = { executedAt: new Date().toISOString(), target: TARGET, projectRef: REF,
   deployment: process.env.CDV_VERCEL_DEPLOYMENT || 'coordinator-confirmed-ready',
   mode: 'vercel-http-no-email', checks: [], responses: [], emailSent: false, hostedDeviceStartCalls: 0,
-  generatedLinks: 0, cleanup: false, limitations: ['HTTP clients simulate PC and phone; physical devices and SMTP delivery are outside this run.', 'Challenge creation uses dedicated RPC fixtures to avoid SMTP.'] };
+  generatedLinks: 0, cleanup: false, limitations: ['HTTP client simulates the PC; Chromium runs automatic phone confirmation. Physical devices and SMTP delivery are outside this run.', 'Challenge creation uses dedicated RPC fixtures to avoid SMTP.'] };
 const owned = { users: [], challenges: [], claims: [], invites: [] };
 const temp = await mkdtemp(path.join(tmpdir(), 'cdv-vercel-qa-'));
 const secret = () => randomBytes(32).toString('hex');
@@ -168,10 +168,21 @@ try {
   check(phoneSession.r.status === 200 && !phoneSession.data?.authenticated, 'Phone callback creates no authenticated session');
   check((await http(`/api/auth/device/poll?challengeId=${cross.id}`, { cookies: phone })).r.status === 401, 'Phone cannot poll using confirmation cookie as PC binding');
   check((await http('/api/auth/device/approve', { method: 'POST', cookies: phone, value: { displayCode: cross.displayCode }, headers: { origin: 'https://example.test' } })).r.status === 403, 'Cross-origin approval is denied');
-  const wrong = await http('/api/auth/device/approve', { method: 'POST', cookies: phone, value: { displayCode: cross.displayCode === '00000000' ? '11111111' : '00000000' } });
-  check(wrong.r.status === 410, 'Incorrect visual code rejected before token consumption');
-  const approved = await http('/api/auth/device/approve', { method: 'POST', cookies: phone, value: { displayCode: cross.displayCode } });
-  check(approved.r.status === 200 && approved.data?.approved && !cookie(approved.r, 'session'), 'Phone approves valid token after scanner GETs without receiving PC session');
+  const {default:puppeteer}=await import(process.env.CDV_PUPPETEER_MODULE || 'puppeteer-core');
+  const browser=await puppeteer.launch({executablePath:process.env.CDV_BROWSER_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
+  try {
+    const page=await browser.newPage();
+    let approvalPosts=0;
+    page.on('request',r=>{if(new URL(r.url()).pathname==='/api/auth/device/approve'&&r.method()==='POST')approvalPosts++});
+    const separator=phone.indexOf('=');
+    await browser.setCookie({name:phone.slice(0,separator),value:phone.slice(separator+1),url:TARGET,secure:true,httpOnly:true,sameSite:'Lax'});
+    await page.goto(TARGET+'/confirm',{waitUntil:'networkidle0'});
+    await page.waitForFunction(()=>document.body.innerText.includes('Navegador autenticado'),{timeout:25000});
+    check(await page.locator('h2').map(e=>e.textContent).wait()==='Navegador autenticado','Phone page automatically approves on load without typing or clicking');
+    check(approvalPosts===1,'Phone makes exactly one automatic approval POST');
+    check((await page.$$('input,button')).length===0,'Phone confirmation has no input or additional approval button');
+    check(!(await browser.cookies()).some(c=>c.name==='__Host-cdv-session'),'Phone does not receive original PC session');
+  }finally{await browser.close()}
   await new Promise(resolve => setTimeout(resolve, 3100));
   const consumed = await http(`/api/auth/device/poll?challengeId=${cross.id}`, { cookies: cross.device });
   check(consumed.r.status === 200 && consumed.data?.status === 'approved' && consumed.data.authorized && consumed.data.role === 'analyst', 'Original PC polling issues authorized analyst session');
@@ -183,6 +194,20 @@ try {
   for (const [name, cookies] of [['anonymous', undefined], ['no-role', normalCookie]]) check((await http('/api/analytics', { cookies })).r.status === (name === 'anonymous' ? 401 : 403), `${name}: remains denied after analyst cache warmup`);
   const count = await sql(`select count(*) as sessions from cdv_private.browser_sessions where challenge_id='${cross.id}';`);
   check(Number(count.rows?.[0]?.sessions) === 1, 'Polling retries create exactly one database session');
+  const loginPage=await http('/login');
+  check(loginPage.r.status===200&&!loginPage.text.includes('auth-methods')&&!loginPage.text.includes('Entre por contrassenha'),'Login has a single email entry');
+  const unlockPage=await http('/acesso-negado',{cookies:normalCookie});
+  check(unlockPage.r.status===200&&unlockPage.text.includes('access-code'),'Authenticated account sees contrassenha form');
+  check((await http('/api/auth/invite/activate',{method:'POST',value:{code:invite.code}})).r.status===401,'Anonymous activation denied');
+  check((await http('/api/auth/invite/activate',{method:'POST',cookies:normalCookie,value:{code:invite.code},headers:{origin:'https://example.test'}})).r.status===403,'Cross-origin activation denied');
+  check((await http('/api/auth/invite/activate',{method:'POST',cookies:normalCookie,value:{code:secret()}})).r.status===403,'Invalid contrassenha denied');
+  const activated=await http('/api/auth/invite/activate',{method:'POST',cookies:normalCookie,value:{code:invite.code,user_id:analyst.id}});
+  check(activated.r.status===200&&activated.data?.authorized,'Existing OTP session activated without second login');
+  check(!cookie(activated.r,'session'),'Activation preserves existing session cookie');
+  await matrix('activated',normalCookie,200);
+  await sql(`update cdv_private.entitlements set revoked_at=now() where user_id='${normal.id}';`);
+  check((await http('/api/analytics',{cookies:normalCookie})).r.status===403,'Revocation immediately denies activated user');
+  check((await http('/api/auth/invite/activate',{method:'POST',cookies:normalCookie,value:{code:invite.code}})).r.status===403,'Contrassenha cannot restore revoked entitlement');
   for (const [name, cookies, device] of [['analyst', analystCookie, cross.device], ['no-role', normalCookie, f.device]]) {
     const out = await http('/api/auth/logout', { method: 'POST', cookies: `${cookies}; ${device}`, value: {} });
     check(out.r.status === 200 && out.data?.authenticated === false, `${name}: HTTP logout succeeds`);
@@ -203,7 +228,7 @@ try {
   if (path.dirname(resolvedTemp) !== path.resolve(tmpdir()) || !path.basename(resolvedTemp).startsWith('cdv-vercel-qa-')) throw new Error('Unexpected temporary directory');
   await rm(resolvedTemp, { recursive: true, force: true });
   await writeFile(path.join(WEB, '../docs/qa/vercel-auth.json'), JSON.stringify(report, null, 2) + '\n');
-  await writeFile(path.join(WEB, '../docs/qa/vercel-auth.md'), `# Vercel authentication HTTP QA\n\nExecuted: ${report.executedAt}. Target: ${TARGET}. Dedicated Supabase: ${REF}.\n\nResult: **${report.result}**; ${report.checks.length} passed assertions. Cleanup: **${report.cleanup}**. No email sent and no hosted device/start calls.\n\n${report.failure ? `Failure: ${report.failure}.\n\n` : ''}Coverage and sanitized metadata: [vercel-auth.json](vercel-auth.json). Fixtures use admin generate_link and dedicated challenge RPC; subsequent callback, OTP, approval, polling, guards and logout use real Vercel HTTP. Only this execution's exact fixture IDs are removed; shared rate buckets and real invitations are preserved.\n\n${report.cleanupRemaining ? `Remaining owned records: ${JSON.stringify(report.cleanupRemaining)}.\n\n` : ''}HTTP clients simulate PC and phone; this does not prove physical-device UX or SMTP delivery. Secrets, generated tokens, cookies, emails and response bodies are never persisted. No typecheck, linter, runtime/config changes, migrations, resets or paid upgrades were run.\n`);
+  await writeFile(path.join(WEB, '../docs/qa/vercel-auth.md'), `# Vercel authentication HTTP QA\n\nExecuted: ${report.executedAt}. Target: ${TARGET}. Dedicated Supabase: ${REF}.\n\nResult: **${report.result}**; ${report.checks.length} passed assertions. Cleanup: **${report.cleanup}**. No email sent and no hosted device/start calls.\n\n${report.failure ? `Failure: ${report.failure}.\n\n` : ''}Coverage and sanitized metadata: [vercel-auth.json](vercel-auth.json). Fixtures use admin generate_link and dedicated challenge RPC; subsequent callback, OTP, approval, polling, guards and logout use real Vercel HTTP. Only this execution's exact fixture IDs are removed; shared rate buckets and real invitations are preserved.\n\n${report.cleanupRemaining ? `Remaining owned records: ${JSON.stringify(report.cleanupRemaining)}.\n\n` : ''}Chromium verifies automatic confirmation without interaction; PC polling uses HTTP. This does not prove physical-device UX or SMTP delivery. Secrets, generated tokens, cookies, emails and response bodies are never persisted. No typecheck, linter, runtime/config changes, migrations, resets or paid upgrades were run.\n`);
 }
 console.log(JSON.stringify({ result: report.result, checks: report.checks.length, cleanup: report.cleanup, emailSent: false, failure: report.failure }));
 if (report.result !== 'passed' || !report.cleanup) process.exitCode = 1;

@@ -75,7 +75,7 @@ test('Next production preserves SSR/RSC, API authorization, cookies and device p
     const confirmCookie = callback.headers.getSetCookie()[0].split(';')[0];
     const confirmation = await request('/api/auth/device/confirmation', { cookie: confirmCookie });
     assert.equal(confirmation.status, 200); assert.equal((await confirmation.json()).displayCode, null); checks += 2;
-    const approval = await request('/api/auth/device/approve', { cookie: confirmCookie, method: 'POST', body: { displayCode: '12345678' } });
+    const approval = await request('/api/auth/device/approve', { cookie: confirmCookie, method: 'POST', body: {} });
     assert.equal(approval.status, 200); assert.equal((await approval.json()).approved, true); privateResponse(approval); checks += 2;
     const otp = await request('/api/auth/device/verify', { cookie: device(id), method: 'POST', body: { challengeId: id, code: '123456' } });
     assert.equal(otp.status, 200); assert.equal((await otp.json()).authorized, true); assert.equal(otp.headers.getSetCookie().length, 2); privateResponse(otp); checks += 3;

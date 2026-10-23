@@ -65,3 +65,19 @@ O coordenador publicou [https://clube-do-valor.vercel.app](https://clube-do-valo
 No Supabase, `site_url` e a allowlist `/api/auth/confirm**` foram aplicados via `config push`: duas propriedades alteradas e 12 propriedades remotas preservadas. O SMTP existente foi mantido. O coordenador também atualizou a description e a homepage do GitHub; nenhum README integra essa atualização.
 
 O smoke do coordenador confirmou login HTTP 200, health HTTP 200, auth com `configured: true`, analytics anônimo HTTP 401 e sessão anônima HTTP 200. A QA real do backend ainda estava em andamento neste registro; esses resultados não antecipam sua conclusão nem comprovam a jornada completa de autenticação no domínio publicado.
+
+## Login único e contrassenha após OTP — 24/10/2026
+
+Publicado no deployment `dpl_GnV1cPv75FS4i1WeZgNAzFMrK4XK`, no mesmo alias de produção. A entrada tem somente e-mail/OTP. Após autenticar, contas sem permissão informam a contrassenha em `/acesso-negado`; a nova API `/api/auth/invite/activate` ativa o acesso na sessão existente, sem novo OTP. Contas já autorizadas seguem para o dashboard.
+
+A migration aditiva `202610240001_session_invite.sql` foi aplicada diretamente ao projeto dedicado via `supabase db query --file`, sem reaplicar migrations anteriores. A função nova é exclusiva de service_role, valida sessão/e-mail confirmado, limita tentativas e preserva revogações. Não executar novamente a criação da função sem verificar o estado remoto. A permissão continua verificada no servidor para páginas, APIs e CSVs.
+
+Build remoto aprovado sem typecheck/linter. Os 24 testes locais de autenticação passaram; a QA HTTP em produção está em `docs/qa/vercel-auth.json`. A contrassenha privada de entrega foi conferida como ativa no banco; não está versionada.
+
+## E-mail minimalista e link automático — 24/10/2026
+
+Deployment `dpl_JBJJ3FDSchdzhRUqC6dz3TPPQMv1`, alias de produção preservado. Templates de confirmação e magic link publicados via Supabase config push (somente dois conteúdos alterados; SMTP e demais propriedades preservados). E-mail: código de seis dígitos, botão Autenticar navegador e instruções curtas.
+
+Abrir o botão carrega `/confirm`, que aprova automaticamente por POST sem digitar código, marcar caixa ou clicar novamente. O polling autentica o navegador original; o dispositivo que abre o link não recebe essa sessão. A migration aditiva `202610240002_email_link.sql` foi aplicada ao projeto dedicado. Referência de comportamento: Cecchin `confirmarLink` e rota operacional de confirmação, consultados sem alteração.
+
+27 testes locais de autenticação e 25 verificações dos templates passaram. Build remoto sem typecheck/linter. A QA de produção inclui Chromium abrindo a confirmação sem interação adicional e polling HTTP no PC. Não houve envio de e-mail de teste nesta rodada; a entrega SMTP anterior permanece evidência histórica.

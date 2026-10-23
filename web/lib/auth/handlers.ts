@@ -8,6 +8,27 @@ function boundDevice(request: Request, cfg: ReturnType<typeof requireConfig>, id
   return { id, secret: binding[1] };
 }
 
+export async function activateInvite(request: Request): Promise<Response> {
+  try {
+    const cfg = requireConfig(); sameOrigin(request, cfg);
+    const token = readCookie(request, cookieName("session", cfg));
+    if (!isId(token)) throw new AuthError(401, "session_required");
+    const code = (await body(request)).code;
+    if (typeof code !== "string" || !/^[a-fA-F0-9]{64}$/.test(code.trim())) throw new AuthError(400, "invalid_invite_format");
+    const result = await provider(cfg, "/rest/v1/rpc/cdv_activate_invite", {
+      p_session_hash: await hash(token),
+      p_code_hash: await hash(`cdv-invite-v1:${code.trim().toLowerCase()}`),
+      p_address_key: await addressKey(request, cfg),
+    }, true);
+    if (result.status === "anonymous") throw new AuthError(401, "session_required");
+    if (result.status === "limited") throw new AuthError(429, "rate_limited");
+    if (result.status === "invalid_invite") throw new AuthError(403, "invalid_invite");
+    if (result.status === "denied") throw new AuthError(403, "permission_denied");
+    if (result.status !== "authorized") throw new AuthError(503, "auth_unavailable");
+    return json({ authorized: true });
+  } catch (error) { return failure(error); }
+}
+
 export async function claimInvite(request: Request): Promise<Response> {
   try {
     const cfg = requireConfig(); sameOrigin(request, cfg);
@@ -89,17 +110,18 @@ export async function confirmation(request: Request): Promise<Response> {
 export async function approve(request: Request): Promise<Response> {
   try {
     const cfg = requireConfig(); sameOrigin(request, cfg);
-    const input = await body(request);
-    if (typeof input.displayCode !== "string" || !/^\d{8}$/.test(input.displayCode)) throw new AuthError(400, "invalid_display_code");
     const pending = await unseal(cfg, readCookie(request, cookieName("confirm", cfg)));
-    // This checks the code + durable attempt count BEFORE consuming the provider token.
-    const prepared = await rpc(cfg, "prepare_approval", { id: pending.challengeId, display_code: input.displayCode, address_key: await addressKey(request, cfg) });
+    // The sealed email link is the proof; no second code is requested on the phone.
+    const prepared = await provider(cfg, "/rest/v1/rpc/cdv_prepare_email_link", {
+      p_id: pending.challengeId, p_address_key: await addressKey(request, cfg),
+    }, true);
+    if (prepared.status === "limited") throw new AuthError(429, "rate_limited");
     if (prepared.status !== "pending") throw new AuthError(410, "challenge_expired_or_invalid_code");
     const verified = await provider(cfg, "/auth/v1/verify", { token_hash: pending.tokenHash, type: "email" });
     const user = verified.user;
     // Provider access/refresh tokens stay in this scope only; never persisted, returned or logged.
     if (!user?.id || typeof user.email !== "string" || !user.email_confirmed_at || email(user.email) !== prepared.email) throw new AuthError(403, "email_mismatch");
-    const result = await rpc(cfg, "approve", { id: pending.challengeId, email: email(user.email), user_id: user.id, display_code: input.displayCode });
+    const result = await rpc(cfg, "approve", { id: pending.challengeId, email: email(user.email), user_id: user.id, display_code: prepared.display_code });
     if (result.status !== "approved") throw new AuthError(410, "challenge_expired");
     const response = json({ approved: true });
     setCookie(response, cfg, "confirm", "", 0);

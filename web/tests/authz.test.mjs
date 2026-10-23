@@ -2,8 +2,8 @@ import test, { beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
 import { registerHooks } from 'node:module';
 import { readAnalyticsAccess } from '../lib/auth/guard.ts';
-import { claimInvite, start, verifyOtp, session } from '../lib/auth/handlers.ts';
-import { hash } from '../lib/auth/core.ts';
+import { approve, activateInvite, claimInvite, start, verifyOtp, session } from '../lib/auth/handlers.ts';
+import { hash, seal, config } from '../lib/auth/core.ts';
 
 // Any accidental eager import or denied-request import of the snapshot fails this suite.
 const hooks=registerHooks({resolve(specifier,context,next){
@@ -112,5 +112,49 @@ test('session explicitly distinguishes authenticated account from authorized ana
   mock(()=>({status:'authenticated',email:'user@example.test',role:null,permissions:[]}));
   const response=await session(request('/api/auth/session','GET',undefined,sessionCookie));
   const state=await response.json();assert.equal(state.authenticated,true);assert.equal(state.authorized,false);assert.equal(state.role,null);assert.deepEqual(state.permissions,[]);
+});
+test('post-login activation requires session and same origin before provider call',async()=>{
+  assert.equal((await activateInvite(request('/api/auth/invite/activate','POST',{code:'ef'.repeat(32)}))).status,401);
+  assert.equal((await activateInvite(request('/api/auth/invite/activate','POST',{code:'ef'.repeat(32)},sessionCookie,{origin:'https://evil.test'}))).status,403);
+  assert.equal(calls.length,0);
+});
+test('activation binds identity to hashed cookie and never trusts supplied user or role',async()=>{
+  mock(()=>({status:'authorized'}));
+  const code='ef'.repeat(32);
+  const r=await activateInvite(request('/api/auth/invite/activate','POST',{code,user_id:'attacker',role:'analyst'},sessionCookie));
+  assert.equal(r.status,200);assert.deepEqual(await r.json(),{authorized:true});
+  assert.equal(calls[0].payload.p_session_hash,await hash(secret));
+  assert.equal(calls[0].payload.p_code_hash,await hash(`cdv-invite-v1:${code}`));
+  assert.equal(calls[0].payload.user_id,undefined);
+  assert.equal(r.headers.get('set-cookie'),null);
+});
+test('activation rejects expired sessions, invalid codes, revocation and rate limits',async()=>{
+  for(const [status,expected] of [['anonymous',401],['invalid_invite',403],['denied',403],['limited',429],['unexpected',503]]){
+    mock(()=>({status}));
+    assert.equal((await activateInvite(request('/api/auth/invite/activate','POST',{code:'ef'.repeat(32)},sessionCookie))).status,expected);
+  }
+});
+test('automatic link approval needs a sealed proof and same origin',async()=>{
+  assert.equal((await approve(request('/api/auth/device/approve','POST',{}))).status,401);
+  assert.equal((await approve(request('/api/auth/device/approve','POST',{},undefined,{origin:'https://evil.test'}))).status,403);
+  assert.equal(calls.length,0);
+});
+test('automatic approval verifies email link and uses server-bound challenge without typed code',async()=>{
+  const proof=await seal(config(),{challengeId:id,tokenHash:'ab'.repeat(32),exp:Date.now()+60000});
+  mock((url,p)=>{
+    if(url.endsWith('/rpc/cdv_prepare_email_link'))return{status:'pending',email:'user@example.test',display_code:'12345678'};
+    if(url.endsWith('/auth/v1/verify'))return{user:{id:'user-id',email:'user@example.test',email_confirmed_at:new Date().toISOString()}};
+    if(p.p_action==='approve'){assert.equal(p.p_payload.display_code,'12345678');return{status:'approved'}};
+    throw new Error('Unexpected call');
+  });
+  const r=await approve(request('/api/auth/device/approve','POST',{},`__Host-cdv-confirm=${proof}`));
+  assert.equal(r.status,200);assert.deepEqual(await r.json(),{approved:true});
+  assert.ok(!r.headers.get('set-cookie').includes('cdv-session'));
+});
+test('automatic approval rejects a provider identity for another email',async()=>{
+  const proof=await seal(config(),{challengeId:id,tokenHash:'ab'.repeat(32),exp:Date.now()+60000});
+  mock((url)=>url.endsWith('/rpc/cdv_prepare_email_link')?{status:'pending',email:'owner@example.test',display_code:'12345678'}:{user:{id:'other',email:'other@example.test',email_confirmed_at:new Date().toISOString()}});
+  assert.equal((await approve(request('/api/auth/device/approve','POST',{},`__Host-cdv-confirm=${proof}`))).status,403);
+  assert.equal(calls.length,2);
 });
 process.on('exit',()=>hooks.deregister());

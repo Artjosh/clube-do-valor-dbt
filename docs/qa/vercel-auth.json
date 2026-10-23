@@ -1,8 +1,8 @@
 {
-  "executedAt": "2026-10-23T21:53:57.441Z",
+  "executedAt": "2026-10-24T12:04:20.973Z",
   "target": "https://clube-do-valor.vercel.app",
   "projectRef": "igucxanapndewkbtarfn",
-  "deployment": "dpl_CQU7f2AbjUi6h5sQUC3SvS6oxqzB",
+  "deployment": "dpl_JBJJ3FDSchdzhRUqC6dz3TPPQMv1",
   "mode": "vercel-http-no-email",
   "checks": [
     "Vercel reports configured authentication",
@@ -98,8 +98,10 @@
     "Phone callback creates no authenticated session",
     "Phone cannot poll using confirmation cookie as PC binding",
     "Cross-origin approval is denied",
-    "Incorrect visual code rejected before token consumption",
-    "Phone approves valid token after scanner GETs without receiving PC session",
+    "Phone page automatically approves on load without typing or clicking",
+    "Phone makes exactly one automatic approval POST",
+    "Phone confirmation has no input or additional approval button",
+    "Phone does not receive original PC session",
     "Original PC polling issues authorized analyst session",
     "session cookie has secure host-only attributes",
     "Polling retry recovers identical session",
@@ -137,6 +139,46 @@
     "anonymous: remains denied after analyst cache warmup",
     "no-role: remains denied after analyst cache warmup",
     "Polling retries create exactly one database session",
+    "Login has a single email entry",
+    "Authenticated account sees contrassenha form",
+    "Anonymous activation denied",
+    "Cross-origin activation denied",
+    "Invalid contrassenha denied",
+    "Existing OTP session activated without second login",
+    "Activation preserves existing session cookie",
+    "activated: HTTP session distinguishes authentication and authorization",
+    "activated: /api/analytics status 200",
+    "activated: API response is no-store",
+    "activated: API varies by cookie",
+    "activated: authorized payload present",
+    "activated: /api/export?kind=transactions status 200",
+    "activated: API response is no-store",
+    "activated: API varies by cookie",
+    "activated: authorized payload present",
+    "activated: /api/export?kind=clients status 200",
+    "activated: API response is no-store",
+    "activated: API varies by cookie",
+    "activated: authorized payload present",
+    "activated: /api/export?kind=portfolios status 200",
+    "activated: API response is no-store",
+    "activated: API varies by cookie",
+    "activated: authorized payload present",
+    "activated: /api/analytics?from=invalid status 400",
+    "activated: API response is no-store",
+    "activated: API varies by cookie",
+    "activated: denied API contains no dataset markers",
+    "activated: /api/export?kind=invalid status 400",
+    "activated: API response is no-store",
+    "activated: API varies by cookie",
+    "activated: denied API contains no dataset markers",
+    "activated: HTML/RSC response is no-store",
+    "activated: HTML/RSC authorized data present",
+    "activated: HTML/RSC response is no-store",
+    "activated: HTML/RSC authorized data present",
+    "activated: HTML/RSC response is no-store",
+    "activated: Next prefetch returns only an empty Flight shell",
+    "Revocation immediately denies activated user",
+    "Contrassenha cannot restore revoked entitlement",
     "analyst: HTTP logout succeeds",
     "analyst: logout clears all four cookies",
     "analyst: replay of revoked session rejected",
@@ -405,22 +447,6 @@
       "bytes": 26
     },
     {
-      "route": "/api/auth/device/approve",
-      "method": "POST",
-      "status": 410,
-      "cacheControl": "no-store, private",
-      "vary": "Cookie",
-      "bytes": 45
-    },
-    {
-      "route": "/api/auth/device/approve",
-      "method": "POST",
-      "status": 200,
-      "cacheControl": "no-store, private",
-      "vary": "Cookie",
-      "bytes": 17
-    },
-    {
       "route": "/api/auth/device/poll",
       "method": "GET",
       "status": 200,
@@ -533,6 +559,150 @@
       "bytes": 37
     },
     {
+      "route": "/login",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 10085
+    },
+    {
+      "route": "/acesso-negado",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 9716
+    },
+    {
+      "route": "/api/auth/invite/activate",
+      "method": "POST",
+      "status": 401,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 28
+    },
+    {
+      "route": "/api/auth/invite/activate",
+      "method": "POST",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 26
+    },
+    {
+      "route": "/api/auth/invite/activate",
+      "method": "POST",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 26
+    },
+    {
+      "route": "/api/auth/invite/activate",
+      "method": "POST",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 19
+    },
+    {
+      "route": "/api/auth/session",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 188
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 60591
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-store",
+      "vary": "Cookie",
+      "bytes": 11818
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-store",
+      "vary": "Cookie",
+      "bytes": 1922
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-store",
+      "vary": "Cookie",
+      "bytes": 4128
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 400,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 27
+    },
+    {
+      "route": "/api/export",
+      "method": "GET",
+      "status": 400,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 31
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 122272
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 63648
+    },
+    {
+      "route": "/",
+      "method": "GET",
+      "status": 200,
+      "cacheControl": "private, no-cache, no-store, max-age=0, must-revalidate",
+      "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+      "bytes": 211
+    },
+    {
+      "route": "/api/analytics",
+      "method": "GET",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 37
+    },
+    {
+      "route": "/api/auth/invite/activate",
+      "method": "POST",
+      "status": 403,
+      "cacheControl": "no-store, private",
+      "vary": "Cookie",
+      "bytes": 29
+    },
+    {
       "route": "/api/auth/logout",
       "method": "POST",
       "status": 200,
@@ -586,7 +756,7 @@
   "generatedLinks": 2,
   "cleanup": true,
   "limitations": [
-    "HTTP clients simulate PC and phone; physical devices and SMTP delivery are outside this run.",
+    "HTTP client simulates the PC; Chromium runs automatic phone confirmation. Physical devices and SMTP delivery are outside this run.",
     "Challenge creation uses dedicated RPC fixtures to avoid SMTP."
   ],
   "otpLength": 6,

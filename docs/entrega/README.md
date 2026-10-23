@@ -2,6 +2,9 @@
 
 O [README principal](../../README.md) contém apenas a reprodução e as decisões do projeto dbt/DuckDB. A [revisão dos requisitos](../qa/requirements-rereview.md) confronta o enunciado com a implementação e as evidências. A revisão v3 altera documentação e apresentação, preservando fontes, modelos e banco; não representa nova execução do pipeline.
 
+## Apresentação final
+
+A versão final gravada pelo candidato está na [release v1.3.0](https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.3.0): [baixar vídeo de 4min49s](https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.3.0/apresentacao.mp4). Esta é a versão indicada para entrega; as versões anteriores abaixo ficam como histórico. O rascunho de e-mail foi atualizado com esse link. A contrassenha do site deve ser compartilhada no e-mail privado, nunca neste repositório.
 ## Núcleo técnico
 
 | Artefato | Conteúdo |

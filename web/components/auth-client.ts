@@ -1,4 +1,5 @@
 const messages:Record<string,string>={
+ session_required:'Sua sessão expirou. Entre novamente com seu e-mail.',
  auth_not_configured:'O serviço de autenticação não está habilitado neste ambiente.',
  auth_unavailable:'O serviço de autenticação está indisponível. Tente novamente mais tarde.',
  rate_limited:'Muitas tentativas em pouco tempo. Aguarde antes de tentar novamente.',

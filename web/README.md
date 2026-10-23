@@ -28,7 +28,7 @@ Na raiz, com a venv existente, execute `./.venv/Scripts/python.exe scripts/expor
 
 Rotas em `app/api/auth`, código de servidor em `lib/auth` e schema em `supabase/migrations`. As migrations 001/002 já foram aplicadas ao projeto dedicado; não as reaplique. Consulte o relatório de publicação antes de aplicar migrations posteriores. SMTP Brevo e templates estão configurados; a publicação usa `AUTH_ENABLED=true` na revisão de ambiente 5. Localmente a configuração permanece desabilitada até ser preparada, bloqueando login e dados. O usuário confirmou o recebimento do primeiro OTP real. A jornada completa PC/celular está em validação; não há envio/login simulado na aplicação.
 
-Login normal por OTP cria uma conta sem privilégio. O botão Contrassenha inicia um convite; após verificar o e-mail, a role `analyst` permite ler todos os níveis. A permissão é verificada no servidor em SSR/RSC, APIs e exportações; mudar o estado do frontend não concede acesso.
+O login único por OTP confirma o e-mail. Contas sem permissão recebem então o formulário de contrassenha, que libera a role `analyst` na sessão existente, sem solicitar outro OTP. Contas já autorizadas entram diretamente. A migration aditiva `202610240001_session_invite.sql` implementa a ativação autenticada; convites e contas revogados continuam bloqueados. A permissão é verificada no servidor em SSR/RSC, APIs e exportações; mudar o estado do frontend não concede acesso.
 
 Configure `.dev.vars` localmente conforme [web-auth.md](../docs/web-auth.md). Nunca exponha chaves de serviço com prefixo NEXT_PUBLIC_. Na hospedagem, valores ficam em secrets nativos, fora do código. `.openai/hosting.json` registra a identidade do Site sem credenciais.
 

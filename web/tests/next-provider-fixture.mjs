@@ -8,6 +8,7 @@ globalThis.fetch = async (url, init) => {
   let result;
   if (target.endsWith('/auth/v1/verify')) result = { user: { id: 'offline-user', email: 'analyst@example.test', email_confirmed_at: new Date().toISOString() } };
   else if (target.includes('/auth/v1/otp')) throw new Error('Email is forbidden in this suite');
+  else if (target.endsWith('/rpc/cdv_prepare_email_link')) result = { status: 'pending', email: 'analyst@example.test', display_code: '12345678' };
   else {
     const p = input.p_payload;
     switch (input.p_action) {

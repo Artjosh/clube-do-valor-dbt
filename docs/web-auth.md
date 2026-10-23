@@ -1,6 +1,6 @@
 # Dashboard privado: identidade e autorização no servidor
 
-O dashboard exige sessão válida **e** papel `analyst` com permissão `analytics:read`. Entrar por e-mail prova identidade e cria a conta implicitamente, sem senha e sem acesso automático aos dados. A Contrassenha é um convite compartilhado de alta entropia, não uma senha pessoal: só habilita o processo de comprovação de e-mail. Nenhum estado do cliente ou `user_metadata` concede permissão.
+O dashboard exige sessão válida **e** papel `analyst` com permissão `analytics:read`. Entrar por e-mail prova identidade e cria a conta implicitamente, sem senha e sem acesso automático aos dados. A Contrassenha é um convite compartilhado de alta entropia, não uma senha pessoal: libera os dados na sessão já autenticada após a comprovação de e-mail. Nenhum estado do cliente ou `user_metadata` concede permissão.
 
 Identidade, desafios, convites, sessões e permissões ficam no PostgreSQL do Supabase dedicado `igucxanapndewkbtarfn`. DuckDB continua exclusivamente analítico; os handlers não escrevem nele. Os access/refresh tokens do Supabase ficam apenas no escopo da verificação server-side, nunca são persistidos pelo aplicativo ou retornados ao navegador.
 
@@ -27,7 +27,7 @@ Todos os endpoints de identidade são server-side. Mutações exigem JSON e `Ori
 | POST `/api/auth/device/verify` | `{challengeId,code}` (OTP e-mail) → `{authenticated:true,authorized,role,permissions}` e sessão no PC |
 | GET `/api/auth/confirm` | Callback do link → 303 `/confirm` e cookie cifrado; não verifica token |
 | GET `/api/auth/device/confirmation` | `{challengeId,displayCode:null,email,expiresAt}`; e-mail mascarado |
-| POST `/api/auth/device/approve` | `{displayCode}` (código visual PC de 8 dígitos) → `{approved:true}` |
+| POST `/api/auth/device/approve` | POST automático da página `/confirm`, usando o cookie cifrado do link → `{approved:true}` |
 | GET `/api/auth/device/poll?challengeId=…` | `{status:pending\|approved\|expired}`; aprovado inclui `authorized,role,permissions` e cookie de sessão |
 | POST `/api/auth/logout` | Revoga sessão, cancela desafio/claim conhecidos, limpa cookies → `{authenticated:false}` |
 
@@ -43,7 +43,7 @@ A página SSR/RSC deve ler o header Cookie no servidor, chamar `readAnalyticsAcc
 
 Cada leitura consulta a sessão, usuário atual, role, entitlement e convite de origem no PostgreSQL. Sem cache de permissão em JWT/cookie: revogar role, entitlement ou convite impede a próxima leitura. Sessão expirada/revogada, usuário excluído/banido, e-mail alterado ou confirmação removida também impedem acesso.
 
-## Login OTP no PC e concessão por convite
+## Fluxo legado de convite antes do login (compatibilidade)
 
 1. Login normal chama `start` sem `useInvite`; não concede role/permissão. Não há senha nem cadastro separado.
 2. Contrassenha chama `claim` com segredo aleatório de 256 bits em 64 caracteres hex. O servidor normaliza para minúsculas, calcula SHA-256 de `cdv-invite-v1:<segredo>` e consulta somente o hash. O banco registra claim de 10 minutos com ID aleatório e hash de segredo do navegador. O segredo bruto só fica no cookie HttpOnly.
@@ -55,14 +55,17 @@ Cada leitura consulta a sessão, usuário atual, role, entitlement e convite de 
 
 Revogações individuais são tombstones: `ON CONFLICT DO NOTHING` não reativa role/entitlement revogados nem mediante novo convite e OTP. Restaurar acesso exige decisão administrativa explícita. Revogar o convite compartilhado invalida todos os grants associados; **expirar** o convite impede novas admissões/concessões, mas conserva grants já duráveis. Não apagar registros de revogação para “limpar” histórico enquanto a identidade permanecer ativa.
 
-## Link PC → celular → PC preservado
+## Link PC → celular → PC automático
 
-O link contém `challengeId`, `token_hash` descartável e `type=email`. GET do callback **não chama verify**, não aprova e não cria sessão: sela o token em cookie AES-256-GCM e redireciona para `/confirm` sem parâmetros. O celular recebe e-mail mascarado, nunca o código visual; a pessoa precisa digitar o código de oito dígitos exibido no PC. Esse código é independente do OTP recebido por e-mail.
+O e-mail contém o código de seis dígitos e o botão **Autenticar navegador**. O código pode ser digitado no PC; clicar no botão, inclusive no celular, dispensa qualquer outra interação.
 
-POST approve valida código visual, TTL e limite antes de consumir o token no Supabase; compara o e-mail confirmado com o desafio. O PC consulta poll a cada três segundos, com seu cookie original e evidência same-origin. A RPC consome a aprovação e eventual claim atomicamente. O celular não recebe a sessão do PC. PKCE não é usado, evitando exigir no celular verifier preso ao PC. Scanners que apenas fazem GET não consomem a verificação.
+O callback GET sela `challengeId` e `token_hash` em cookie AES-256-GCM e redireciona para `/confirm` sem parâmetros. Ao carregar, essa página envia um único POST automático para `/api/auth/device/approve`. O servidor valida o cookie, a origem, o prazo e os limites, verifica o token no Supabase e confere o e-mail do desafio. A função `cdv_prepare_email_link` é exclusiva de service_role; o código interno legado nunca é solicitado ao usuário.
 
-Logout revoga a sessão e cancela o desafio; replay não ressuscita sessão. Uma falha após consumir o token Supabase pode exigir novo desafio. Novo start substitui o cookie device e não estende desafios anteriores. Sessões e segredos device nunca entram em URL ou JSON.
+O PC consulta o polling com seu cookie de dispositivo a cada três segundos e recebe a sessão. O celular mostra sucesso, sem receber a sessão do PC. Contas sem permissão seguem para a contrassenha; contas autorizadas abrem o dashboard. GET isolado não consome o token; executar a página com JavaScript dispara a aprovação automática.
 
+A migration `202610240002_email_link.sql` foi aplicada ao Supabase dedicado em 24/10/2026. Os testes atuais de produção estão em `web/tests/vercel-auth.mjs` e `docs/qa/vercel-auth.json`; scripts e relatórios antigos com digitação de oito dígitos representam o fluxo anterior.
+
+Logout revoga a sessão e cancela o desafio; replay não ressuscita sessão. Falha após consumir o token pode exigir novo pedido de login.
 ## Variáveis e implantação
 
 Modelo sem credenciais: [auth.env.example](../web/supabase/auth.env.example). Todas são server-only; jamais usar prefixos `NEXT_PUBLIC_`/`VITE_`, incluir no bundle ou imprimir em logs.

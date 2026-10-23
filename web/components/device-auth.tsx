@@ -1,11 +1,20 @@
 "use client";
-import {FormEvent,useEffect,useState} from 'react';
-import {Check,ShieldCheck,Smartphone,TriangleAlert} from 'lucide-react';
+import {useEffect,useRef,useState} from 'react';
+import {Check,Smartphone,TriangleAlert} from 'lucide-react';
 import {AuthShell} from './auth-shell';
-import {authRequest as request} from './auth-client';
+import {authRequest} from './auth-client';
 export {DeviceLogin} from './private-login';
-export function DeviceConfirm(){const [confirmation,setConfirmation]=useState<{email:string;expiresAt:string;challengeId:string}|null>(null),[code,setCode]=useState(''),[checked,setChecked]=useState(false),[busy,setBusy]=useState(false),[approved,setApproved]=useState(false),[error,setError]=useState(''),[loading,setLoading]=useState(true);
- useEffect(()=>{let alive=true;request('/api/auth/device/confirmation').then(v=>{if(alive)setConfirmation(v)}).catch(e=>{if(alive)setError(e.message)}).finally(()=>{if(alive)setLoading(false)});return()=>{alive=false}},[]);
- async function approve(e:FormEvent){e.preventDefault();setBusy(true);setError('');try{await request('/api/auth/device/approve',{displayCode:code.trim()});setApproved(true)}catch(e){setError(e instanceof Error?e.message:'Não foi possível confirmar')}finally{setBusy(false)}}
- return <AuthShell confirm><div className="auth-icon"><Smartphone size={26}/></div><span className="eyebrow">CONFIRMAÇÃO NO CELULAR</span><h2>{approved?'Computador autorizado':'Reconhece este acesso?'}</h2><p className="auth-description">{approved?'Volte à aba do computador. Ela identificará sua aprovação automaticamente.':'Confirme apenas se você iniciou a solicitação no seu computador. O código deve ser lido naquela tela, nunca enviado por outra pessoa.'}</p>{error&&<div role="alert" className="auth-error"><TriangleAlert size={18}/><span>{error}</span></div>}{loading?<p role="status">Verificando o link de confirmação…</p>:approved?<div className="auth-success"><Check size={34}/><strong>Confirmação concluída</strong><p>Você pode fechar esta aba com segurança.</p></div>:confirmation?<form className="auth-form" onSubmit={approve}><p className="confirmation-email">Solicitação para <strong>{confirmation.email}</strong></p><label htmlFor="display-code">Código exibido no computador</label><input className="code-input" id="display-code" inputMode="numeric" autoComplete="off" maxLength={8} pattern="[0-9]{8}" value={code} onChange={e=>setCode(e.target.value.replace(/[^0-9]/g,''))} placeholder="Digite o código" required/><label className="confirm-checkbox"><input type="checkbox" checked={checked} onChange={e=>setChecked(e.target.checked)} required/><span>Eu iniciei esta solicitação e conferi o código no meu computador.</span></label><button className="primary-button" disabled={!checked||code.length!==8||busy}>{busy?'Confirmando…':'Confirmar acesso ao computador'}<ShieldCheck size={17}/></button><p className="small muted">Link temporário, válido somente para esta solicitação.</p></form>:<div className="auth-unavailable"><strong>Não há confirmação válida nesta aba</strong><p>Abra o link do e-mail recebido. Se ele expirou ou já foi utilizado, inicie uma nova solicitação no computador.</p><a href="/login" className="secondary-button">Voltar ao acesso</a></div>}<div className="auth-assurance"><ShieldCheck size={19}/><p>Se você não reconhece esta solicitação, não digite o código e feche esta página.</p></div></AuthShell>;
+export function DeviceConfirm(){
+ const approval=useRef<Promise<unknown>|null>(null);
+ const [approved,setApproved]=useState(false),[error,setError]=useState('');
+ useEffect(()=>{
+  let alive=true;
+  // Reuse the request across StrictMode effects: the provider token is single-use.
+  approval.current??=authRequest('/api/auth/device/approve',{});
+  approval.current.then(()=>{if(alive)setApproved(true)}).catch(e=>{if(alive)setError(e instanceof Error?e.message:'Não foi possível confirmar o acesso.')});
+  return()=>{alive=false};
+ },[]);
+ return <AuthShell confirm><div className="auth-icon"><Smartphone size={26}/></div><h2>{approved?'Navegador autenticado':error?'Link indisponível':'Autenticando seu navegador…'}</h2>
+ {approved?<div className="auth-success" role="status"><Check size={34}/><p>Volte à aba onde pediu o acesso. Ela continuará automaticamente.</p><p>Você já pode fechar esta página.</p></div>:error?<div role="alert" className="auth-error"><TriangleAlert size={18}/><span>{error} Volte à aba original para solicitar outro e-mail.</span></div>:<p role="status" className="auth-description">Aguarde um instante. Não é preciso digitar nada.</p>}
+ </AuthShell>;
 }

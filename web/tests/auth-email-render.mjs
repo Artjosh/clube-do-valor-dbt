@@ -1,9 +1,9 @@
 // Local-only rendering with dummy OTP/link; never clicks or submits the email CTA.
-import puppeteer from '../../presentation/node_modules/puppeteer-core/lib/puppeteer/puppeteer-core.js';
+const {default:puppeteer}=await import(process.env.CDV_PUPPETEER_MODULE || 'puppeteer-core');
 import { readFile,writeFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const report={at:new Date().toISOString(),checks:[],networkRequests:0,emailSent:false};
-const browser=await puppeteer.launch({executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
+const browser=await puppeteer.launch({executablePath:process.env.CDV_BROWSER_PATH || 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe',headless:true});
 const page=await browser.newPage();
 await page.setRequestInterception(true);
 page.on('request',r=>{report.networkRequests++;r.abort();});
@@ -18,14 +18,14 @@ try{
    await page.setViewport({width,height:1100,deviceScaleFactor:1});
    await page.setContent(html,{waitUntil:'domcontentloaded'});
    const state=await page.evaluate(()=>{
-    const otp=[...document.querySelectorAll('td')].find(e=>e.textContent.trim()==='012345');
+    const otp=[...document.querySelectorAll('p')].find(e=>e.textContent.trim()==='012345');
     const a=document.querySelector('a');
     return {scroll:document.documentElement.scrollWidth,width:innerWidth,text:document.body.innerText,otp:otp?.innerText,otpSize:otp?parseFloat(getComputedStyle(otp).fontSize):0,href:a?.href,cta:a?.textContent.trim(),ctaHeight:a?.getBoundingClientRect().height,tables:document.querySelectorAll('table[role="presentation"]').length};
    });
    check(state.scroll<=state.width,`${name}/${width}: no horizontal overflow`);
    check(state.otp==='012345'&&state.otpSize>=32,`${name}/${width}: six-digit OTP including leading zero legible`);
-   check(state.text.includes('6 dígitos')&&state.text.includes('8 dígitos')&&state.text.includes('5 minutos'),`${name}/${width}: email OTP, PC code and expiry distinct`);
-   check(state.cta==='Confirmar acesso no celular'&&state.ctaHeight>=44&&state.tables>=4,`${name}/${width}: table layout and touch-sized CTA`);
+   check(!state.text.includes('8 dígitos')&&state.text.includes('5 minutos')&&state.text.length<300,`${name}/${width}: minimal email includes expiry and no second code`);
+   check(state.cta==='Autenticar navegador'&&state.ctaHeight>=44&&state.tables>=2,`${name}/${width}: table layout and touch-sized CTA`);
    const link=new URL(state.href);
    check(link.origin==='https://example.test'&&link.pathname==='/api/auth/confirm'&&link.searchParams.get('challengeId')==='qa-challenge'&&link.searchParams.get('token_hash')==='qa-token-hash'&&link.searchParams.get('type')==='email',`${name}/${width}: rendered callback parameters intact`);
    await page.screenshot({path:`web/tests/auth-email-${name}-${width}.png`,fullPage:true});
