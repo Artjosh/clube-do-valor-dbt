@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-23T00:03:52.402128+00:00",
+  "tag": "v1.2.0",
+  "releaseUrl": "https://github.com/Artjosh/clube-do-valor-dbt/releases/tag/v1.2.0",
+  "targetCommit": "f44eb84f632bb59d66acea8ede34ce8430634111",
+  "publishedAt": "2026-10-23T00:03:35Z",
+  "anonymousDownloadVerified": true,
+  "assets": [
+    {
+      "file": "presentation/v3/renders/apresentacao-cdv-v3-narrada.mp4",
+      "url": "https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.2.0/apresentacao-cdv-v3-narrada.mp4",
+      "httpStatus": 200,
+      "bytes": 11104683,
+      "sha256": "5dd65ba01c511d4541f2fb6c800a491f75f849c6935ee5a229f1f9f88fc73e24",
+      "matchesLocal": true
+    },
+    {
+      "file": "presentation/v3/renders/apresentacao-cdv-v3-sem-audio.mp4",
+      "url": "https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.2.0/apresentacao-cdv-v3-sem-audio.mp4",
+      "httpStatus": 200,
+      "bytes": 5582294,
+      "sha256": "9d7026a06d5e1843d87555dc9eb325203816d3143d88fc4f34387f0fb3bd99ef",
+      "matchesLocal": true
+    },
+    {
+      "file": "presentation/v3/FALA-POR-ETAPA.md",
+      "url": "https://github.com/Artjosh/clube-do-valor-dbt/releases/download/v1.2.0/FALA-POR-ETAPA.md",
+      "httpStatus": 200,
+      "bytes": 5720,
+      "sha256": "935a14ad98d15834033c3f693a9299a007f4b3a8f3c5adf9ca460cb7115fe2c3",
+      "matchesLocal": true
+    }
+  ]
+}

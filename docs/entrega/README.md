@@ -57,6 +57,8 @@ Fontes locais: [fala por etapa](../../presentation/v3/FALA-POR-ETAPA.md), [instr
 
 Foram verificados streams, duração, resolução, fps, decodificação integral, igualdade dos pacotes de vídeo e amostras das dez etapas. O áudio foi medido tecnicamente, sem alegação de escuta humana. O roteiro da etapa 08 declara que a página é **completamente desnecessária para cumprir os requisitos**, servindo apenas para visualizar o processo e os resultados. A avaliação do núcleo é local e não depende de conta ou serviço externo.
 
+Publicação confirmada pelo coordenador: os três downloads públicos retornaram HTTP 200 e SHA-256 idêntico aos arquivos locais. [Recibo de verificação da release](../qa/release-v1.2.0.json).
+
 ## Compartilhamento
 
 O enunciado pede o link do vídeo junto do [repositório](https://github.com/Artjosh/clube-do-valor-dbt). Isso não exige inserir apresentação ou extensão web no README principal.

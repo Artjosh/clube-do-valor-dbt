@@ -73,3 +73,7 @@ Conferi visualmente a contact sheet das dez etapas em `presentation/v3/evidence/
 Também calculei independentemente o hash do stream de vídeo de ambos com `ffmpeg -v error -i <mp4> -map 0:v:0 -c:v copy -f hash -hash sha256 -`, exit 0: ambos `fb16dc3ffe62e80f450bcc1da228bd63b0c899c6e2770e3f2cabf4636b8dba90`. Portanto, compartilham os mesmos pacotes de vídeo. Evidência complementar do Frontend, claramente separada desta QA: `presentation/v3/evidence/verification.json` registra decode integral exit 0, v2 preservada e áudio -21,7 LUFS / pico -1,5 dBFS. Não repeti o decode integral nem afirmo audição humana completa; metadados e texto não comprovam cada pronúncia da voz sintética.
 
 **Situação final:** README restrito ao core, matriz concluída, roteiro e arquivos locais v3 conferidos. Nenhuma nova divergência funcional identificada nesta revisão. Persistem apenas o risco de interpretação do critério “todos passando”, os limites incrementais declarados e as ações externas de publicar/acompanhar o link e enviar a entrega, sob responsabilidade do coordenador/candidato. A publicação planejada v1.2.0 não foi executada ou verificada por este worker.
+
+## Complemento do coordenador — publicação
+
+Após a conclusão da QA, o coordenador publicou a release v1.2.0 no commit `f44eb84f632bb59d66acea8ede34ce8430634111`. Os dois MP4s e `FALA-POR-ETAPA.md` foram baixados sem autenticação e conferidos por SHA-256: todos HTTP 200 e idênticos aos arquivos locais. [Recibo](release-v1.2.0.json). Isso encerra a pendência de publicação; o e-mail ao avaliador não foi enviado.
